@@ -4,6 +4,8 @@
 **UPDATE IN PROGRESS:** This code reference book is undergoing a major update to replace the [old version](https://docs.idew.org/internet-of-things-project/). Please check back later.  _Notice posted: June 5, 2018_
 {% endhint %}
 
+## Copyright and License
+
 Copyright © 2016-2018 Michael Frontz and Jim Lyst, Indiana University School of Informatics and Computing at IUPUI
 
 Part of the [Computing by Design](https://cxd.gitbooks.io/the-cxd-framework/) high school curriculum developed for the [Informatics Diversity-Enhanced Workforce \(iDEW\) Program](http://soic.iupui.edu/idew/)
