@@ -1,5 +1,7 @@
 # Prerequisite Knowledge
 
+Electrical Circuits
+
 HTML
 
 CSS
