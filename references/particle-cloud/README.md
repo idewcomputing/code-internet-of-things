@@ -4,5 +4,5 @@ Summary & code examples for how device app & web app can interact through Partic
 
 * Read Device Variable through cloud
 * Call Device Function through cloud
-* Get Event Notifications through cloud
+* Get Device Event Notifications through cloud
 

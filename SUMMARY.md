@@ -14,7 +14,10 @@
 
 * [Device App](references/device-app.md)
 * [Web App](references/web-app.md)
-* [Particle Cloud](references/particle-cloud.md)
+* [Particle Cloud](references/particle-cloud/README.md)
+  * [Read Device Variable](references/particle-cloud/read-device-variable.md)
+  * [Call Device Function](references/particle-cloud/call-device-function.md)
+  * [Get Device Events](references/particle-cloud/get-device-events.md)
 * [Physical Inputs](references/physical-inputs/README.md)
   * [Push Button](references/physical-inputs/push-button.md)
   * [Trimpot Dial](references/physical-inputs/trimpot-dial.md)
