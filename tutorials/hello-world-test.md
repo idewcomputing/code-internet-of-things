@@ -1,4 +1,4 @@
 # 2. Hello World Test
 
-Hello World app for Photon device using built-in LED
+Step-by-step instructions to create Hello World app for Photon device using built-in LED
 
