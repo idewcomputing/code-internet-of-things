@@ -5,18 +5,31 @@
 
 ## Tutorials
 
-* [Meet Your IoT Kit](tutorials/meet-your-iot-kit.md)
-* [Hello World Test](tutorials/hello-world-test.md)
-* [Create Smart Light](tutorials/create-smart-light.md)
-* [Create Security System](tutorials/create-security-system.md)
+* [1. Meet Your IoT Kit](tutorials/meet-your-iot-kit.md)
+* [2. Hello World Test](tutorials/hello-world-test.md)
+* [3. Create Smart Light](tutorials/create-smart-light.md)
+* [4. Create Security System](tutorials/create-security-system.md)
 
 ## References
 
 * [Device App](references/device-app.md)
 * [Web App](references/web-app.md)
 * [Particle Cloud](references/particle-cloud.md)
-* [Physical Inputs](references/physical-inputs.md)
-* [Physical Outputs](references/physical-outputs.md)
+* [Physical Inputs](references/physical-inputs/README.md)
+  * [Push Button](references/physical-inputs/push-button.md)
+  * [Trimpot Dial](references/physical-inputs/trimpot-dial.md)
+  * [Motion Sensor](references/physical-inputs/motion-sensor.md)
+  * [Magnetic Switch](references/physical-inputs/magnetic-switch.md)
+  * [Light Sensor](references/physical-inputs/light-sensor.md)
+  * [Temperature Sensor](references/physical-inputs/temperature-sensor.md)
+  * [Soil Moisture Sensor](references/physical-inputs/soil-moisture-sensor.md)
+  * [Accelerometer](references/physical-inputs/accelerometer.md)
+  * [Ultrasonic Sensor](references/physical-inputs/ultrasonic-sensor.md)
+* [Physical Outputs](references/physical-outputs/README.md)
+  * [LED Light](references/physical-outputs/led-light.md)
+  * [Speaker](references/physical-outputs/speaker.md)
+  * [Servo Motor](references/physical-outputs/servo-motor.md)
+  * [Micro OLED Display](references/physical-outputs/micro-oled-display.md)
 
 ## Links
 
