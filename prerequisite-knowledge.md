@@ -6,7 +6,7 @@ Previous experience building and programming devices using an Arduino electronic
 
 ## Web Development
 
-Familiarity with the following is highly recommended before programming apps for an IoT device – however, mastery is NOT required:
+Previous experience and familiarity with the following web development concepts is highly recommended before programming apps for an IoT device – however, mastery is NOT required:
 
 ### HTML
 
@@ -16,7 +16,7 @@ Familiarity with the following is highly recommended before programming apps for
 
 ### CSS
 
-* CSS selectors for elements, classes, and ids
+* CSS selectors for HTML elements, classes, and ids
 * Common properties used in styles – such as: `background-color`, `color`, `font-size`, `margin`, `padding`, `border`, `width`, `height`, `display`, etc.
 
 ### JavaScript \(including jQuery\)
@@ -29,7 +29,7 @@ Familiarity with the following is highly recommended before programming apps for
 * Conditional Statements using `if` and `else`
 * Loops – such as: `for`, `while`, etc.
 * Events – such as: `onclick`, `onchange`, etc.
-* jQuery selectors for elements, classes, and ids
+* jQuery selectors for HTML elements, classes, and ids
 * jQuery syntax for basic functions – such as: `.html()`, `.show()`, `.hide()`, `.addClass()`, `.removeClass()`, etc.
 
 
