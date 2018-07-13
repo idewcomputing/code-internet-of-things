@@ -2,7 +2,7 @@
 
 ## Physical Computing
 
-Previous experience building and programming devices using an Arduino electronics kit \(such as: robotics kit, etc.\) is very helpful – however, it is NOT required. The IoT tutorials will assume that students have no prior experience in physical computing.
+Previous experience building and programming devices using an Arduino electronics kit \(such as: robotics kit, etc.\) is very helpful – however, it is NOT required. The IoT tutorials will assume that students have no prior experience in developing physical computing devices.
 
 ## Web Development
 
