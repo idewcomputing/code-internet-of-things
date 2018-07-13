@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Code Tutorial for Internet of Things](README.md)
+* [IoT Code Tutorial](README.md)
 * [Prerequisite Knowledge](prerequisite-knowledge.md)
 
 ## Tutorials
