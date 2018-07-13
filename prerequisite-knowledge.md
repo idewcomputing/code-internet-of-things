@@ -24,12 +24,13 @@ Familiarity with the following is highly recommended before programming apps for
 * Variables – declaring names \(unique identifiers\), assigning and changing values, data types \(numbers, strings, boolean, etc.\), global vs. local scope
 * Functions – creating function, calling function, passing arguments, returning value
 * Objects – constructing new object using defined class, using object properties and methods
-* Comparison Operators -- such as: `>`, `<`, `==`, `!=`, etc.
+* Comparison Operators – such as: `>`, `<`, `==`, `!=`, etc.
+* Logical Operators \(NOT, AND, OR\): `!`, `&&`, `||`
 * Conditional Statements using `if` and `else`
-* Loops -- such as: `for`, `while`, etc.
-* Events -- such as: `onclick`, `onchange`, etc.
+* Loops – such as: `for`, `while`, etc.
+* Events – such as: `onclick`, `onchange`, etc.
 * jQuery selectors for elements, classes, and ids
-* jQuery syntax for basic functions -- such as: `.html()`, `.show()`, `.hide()`, `.addClass()`, `.removeClass()`, etc.
+* jQuery syntax for basic functions – such as: `.html()`, `.show()`, `.hide()`, `.addClass()`, `.removeClass()`, etc.
 
 
 
