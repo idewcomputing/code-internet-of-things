@@ -1,12 +1,10 @@
 # Prerequisite Knowledge
 
-Electrical Circuits
-
 HTML
 
 CSS
 
 JavaScript
 
-Wiring or Arduino
+Building and programming electronics kit using Wiring or Arduino
 
