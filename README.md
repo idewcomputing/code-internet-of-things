@@ -10,7 +10,7 @@ This guidebook contains a **series of IoT code tutorials** to help you get famil
 
 In addition, this guidebook contains **coding references** to help show and explain how to create a device app and web app that interact with each other through the internet. There are also references that show and explain how to connect specific inputs and outputs to your device and add code for them in your device app.
 
-Finally, this guidebook also contains **links to external resources**, such as an online code editor \(web IDE\) for creating your device app, programming references, and additional experiments for learning how to use your IoT kit.
+Finally, this guidebook also contains **links to external resources**, such as an online code editor \(web IDE\) for creating your device app, programming language references, and additional experiments for learning how to use your IoT kit.
 
 {% hint style="success" %}
 Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowledge.md) that will help ensure students are successful with this IoT project.
