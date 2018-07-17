@@ -4,7 +4,7 @@
 **UPDATE IN PROGRESS:** This code reference book is undergoing a major update to replace the [old version](https://docs.idew.org/internet-of-things-project/). Please check back later.  _Notice posted: June 5, 2018_
 {% endhint %}
 
-## What's in this guidebook?
+## What's in this Guidebook?
 
 This guidebook contains a **series of IoT code tutorials** to help you get familiar with using your IoT electronics kit to build smart devices and program apps for them.
 
@@ -18,10 +18,10 @@ Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowl
 
 ## Your IoT Electronics Kit
 
-This guidebook is tailored for an IoT electronics kit called the [SparkFun Inventor's Kit for Photon](https://www.sparkfun.com/products/13320), which will simply be referred to as the Photon kit in this guidebook.
+This guidebook is tailored for an IoT electronics kit called the [SparkFun Inventor's Kit for Photon](https://www.sparkfun.com/products/13320), which will simply be referred to as the Photon kit.
 
 {% hint style="warning" %}
-**NOTE:** Your instructor may have provided you with a different IoT electronics kit. If your IoT  kit uses **Arduino**, then you can still use this guidebook to help get familiar with using your IoT kit to build smart devices and program apps for them. This is because the Photon kit uses a programming language called [Wiring](http://www.wiring.org.co/reference/) that is nearly identical to [Arduino](https://www.arduino.cc/reference/en/). In addition, the [Photon circuit board](https://learn.sparkfun.com/tutorials/photon-redboard-hookup-guide) is very similar to an Arduino circuit board. 
+**NOTE:** Your instructor may have provided you with a different IoT electronics kit. If your IoT  kit uses **Arduino**, then you can still use this guidebook to help get familiar with using your IoT kit to build smart devices and program apps for them. This is because the Photon kit uses a programming language called [Wiring](http://www.wiring.org.co/reference/) that is nearly identical to [Arduino](https://www.arduino.cc/reference/en/). In addition, the [Photon circuit board](https://learn.sparkfun.com/tutorials/photon-redboard-hookup-guide) is similar to an Arduino circuit board. 
 {% endhint %}
 
 ## Copyright and License
