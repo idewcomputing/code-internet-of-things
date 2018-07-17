@@ -29,7 +29,16 @@
   * [3.8 Web App CSS](tutorials/create-smart-light/3.8-web-app-css.md)
   * [3.9 Web App JS](tutorials/create-smart-light/3.9-web-app-js.md)
   * [3.10 Finish Web App](tutorials/create-smart-light/3.10-finish-web-app.md)
-* [4. Create Security System](tutorials/create-security-system.md)
+* [4. Create Security System](tutorials/create-security-system/README.md)
+  * [4.1 Connect Motion Sensor](tutorials/create-security-system/4.1-connect-motion-sensor.md)
+  * [4.2 Connect Speaker](tutorials/create-security-system/4.2-connect-speaker.md)
+  * [4.3 Copy Smart Light App](tutorials/create-security-system/4.3-copy-smart-light-app.md)
+  * [4.4 Motion Sensor Code](tutorials/create-security-system/4.4-motion-sensor-code.md)
+  * [4.5 Speaker Code](tutorials/create-security-system/4.5-speaker-code.md)
+  * [4.6 Particle Cloud Code](tutorials/create-security-system/4.6-particle-cloud-code.md)
+  * [4.7 Web App HTML](tutorials/create-security-system/4.7-web-app-html.md)
+  * [4.8 Web App CSS](tutorials/create-security-system/4.8-web-app-css.md)
+  * [4.9 Web App JS](tutorials/create-security-system/4.9-web-app-js.md)
 
 ## References
 
