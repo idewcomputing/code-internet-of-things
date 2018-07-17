@@ -2,17 +2,18 @@
 
 ## Physical Computing
 
-Previous experience building and programming devices using an Arduino electronics kit \(such as: robotics kit, etc.\) is very helpful – however, it is NOT required. The IoT tutorials will assume that students have no prior experience in developing physical computing devices.
+Previous experience building and programming devices using an Arduino electronics kit – such as a robotics kit, etc. – is very helpful. However, it is NOT required. The IoT tutorials will assume that students have no prior experience in developing physical computing devices.
 
 ## Web Development
 
-Previous experience and familiarity with the following web development concepts is highly recommended before programming apps for an IoT device – however, mastery is NOT required:
+Previous experience and familiarity with the following web development concepts and skills is highly recommended before programming apps for an IoT device – however, mastery is NOT required:
 
 ### HTML
 
-* Tag syntax for common HTML elements – such as: `<div>`, `<h1>`, `<p>`, `<span>`, `<a>`,`<img>`, `<button>`, etc.
+* Tag syntax for common HTML elements – such as: `<div>`, `<h1>`, `<h2>`, `<p>`, `<span>`, `<a>`,`<img>`, `<button>`, `<input>`, `<ul>`, `<li>`, etc.
 * Nesting of HTML elements within other elements
 * Use of `class` and `id` attributes for HTML elements
+* Loading external files – such as: CSS style sheets, JavaScript files, images, other web pages, etc. 
 
 ### CSS
 
