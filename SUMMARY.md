@@ -18,7 +18,17 @@
   * [2.6 Loop Function](tutorials/hello-world-test/2.6-loop-function.md)
   * [2.7 Flash App to Device](tutorials/hello-world-test/2.7-flash-app-to-device.md)
   * [2.8 Modify App](tutorials/hello-world-test/2.8-modify-app.md)
-* [3. Create Smart Light](tutorials/create-smart-light.md)
+* [3. Create Smart Light](tutorials/create-smart-light/README.md)
+  * [3.1 Connect LED](tutorials/create-smart-light/3.1-connect-led.md)
+  * [3.2 Modify Hello World](tutorials/create-smart-light/3.2-modify-hello-world.md)
+  * [3.3 Connect Button](tutorials/create-smart-light/3.3-connect-button.md)
+  * [3.4 Add Button Code](tutorials/create-smart-light/3.4-add-button-code.md)
+  * [3.5 Modify Button Code](tutorials/create-smart-light/3.5-modify-button-code.md)
+  * [3.6 Particle Cloud Code](tutorials/create-smart-light/3.6-particle-cloud-code.md)
+  * [3.7 Web App HTML](tutorials/create-smart-light/3.7-web-app-html.md)
+  * [3.8 Web App CSS](tutorials/create-smart-light/3.8-web-app-css.md)
+  * [3.9 Web App JS](tutorials/create-smart-light/3.9-web-app-js.md)
+  * [3.10 Finish Web App](tutorials/create-smart-light/3.10-finish-web-app.md)
 * [4. Create Security System](tutorials/create-security-system.md)
 
 ## References
