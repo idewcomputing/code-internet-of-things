@@ -4,7 +4,7 @@
 
 The goals of this second tutorial are to help you:
 
-* Verify your Photon device connects to Wi-Fi and Particle Cloud
+* Verify your Photon device connects to Wi-Fi and the Particle Cloud service
 * Understand how to use Particle Build to create Photon device apps
 * Create a Hello World app to test your Photon device
 
