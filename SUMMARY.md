@@ -20,7 +20,7 @@
   * [2.8 Modify App](tutorials/hello-world-test/2.8-modify-app.md)
 * [3. Smart Light Device](tutorials/create-smart-light/README.md)
   * [3.1 Connect LED](tutorials/create-smart-light/3.1-connect-led.md)
-  * [3.2 Modify Hello World](tutorials/create-smart-light/3.2-modify-hello-world.md)
+  * [3.2 Copy Hello World App](tutorials/create-smart-light/3.2-modify-hello-world.md)
   * [3.3 Connect Button](tutorials/create-smart-light/3.3-connect-button.md)
   * [3.4 Add Button Code](tutorials/create-smart-light/3.4-add-button-code.md)
   * [3.5 Modify Button Code](tutorials/create-smart-light/3.5-modify-button-code.md)
