@@ -1,4 +1,4 @@
-# 3. Create Smart Light
+# 3. Smart Light Device
 
 ## Tutorial Goals
 
