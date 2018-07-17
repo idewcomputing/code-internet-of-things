@@ -10,11 +10,11 @@ The goals of this first tutorial are to help you:
 
 ## Photon Kit
 
-This guidebook is tailored for an IoT electronics kit called the [SparkFun Inventor's Kit for Photon](https://www.sparkfun.com/products/13320), which will simply be referred to as the Photon kit in this guidebook.
+This guidebook is tailored for an IoT electronics kit called the [SparkFun Inventor's Kit for Photon](https://www.sparkfun.com/products/13320), which will simply be referred to as the Photon kit.
 
 [SparkFun](https://www.sparkfun.com/) is a company that sells products to help people build and program electronics devices. [Photon](https://www.particle.io/products/hardware/photon-wifi) is a Wi-Fi enabled microcontroller \(small computer\) from a company called [Particle](https://www.particle.io/) that sells IoT hardware and services that help inventors and other companies create their own IoT products.
 
-SparkFun created its own Photon kit by incorporating the Photon P1 microcontroller into an easy-to-use circuit board and packaged it with a set of inputs, outputs, wires, and other parts to help you start inventing your own IoT devices.
+SparkFun created its own Photon kit by incorporating the Photon P1 microcontroller into an easy-to-use circuit board and packaged it with a set of inputs, outputs, wires, and other parts to help you start inventing your own IoT devices. It is also possible to purchase additional parts \(sensors, motors, etc.\) that can be used with this Photon kit.
 
 ![SparkFun Inventor&apos;s Kit for Photon](../.gitbook/assets/sparkfun-photon-kit.jpg)
 
