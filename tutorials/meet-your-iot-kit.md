@@ -16,5 +16,5 @@ This guidebook is tailored for an IoT electronics kit called the [SparkFun Inven
 
 SparkFun created its own Photon kit by incorporating the Photon P1 microcontroller into an easy-to-use circuit board and packaged it with a set of inputs, outputs, wires, and other parts to help you start inventing your own IoT devices.
 
-![](../.gitbook/assets/sparkfun-photon-kit.jpg)
+![SparkFun Inventor&apos;s Kit for Photon](../.gitbook/assets/sparkfun-photon-kit.jpg)
 
