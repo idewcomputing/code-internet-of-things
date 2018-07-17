@@ -5,7 +5,10 @@
 
 ## Tutorials
 
-* [1. Meet Your IoT Kit](tutorials/meet-your-iot-kit.md)
+* [1. Meet Your IoT Kit](tutorials/meet-your-iot-kit/README.md)
+  * [1.1 Circuit Board](tutorials/meet-your-iot-kit/1.1-circuit-board.md)
+  * [1.2 Other Parts in Kit](tutorials/meet-your-iot-kit/1.2-other-parts-in-kit.md)
+  * [1.3 Simple Circuits](tutorials/meet-your-iot-kit/1.3-simple-circuits.md)
 * [2. Hello World Test](tutorials/hello-world-test.md)
 * [3. Create Smart Light](tutorials/create-smart-light.md)
 * [4. Create Security System](tutorials/create-security-system.md)
