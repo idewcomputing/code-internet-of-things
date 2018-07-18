@@ -70,5 +70,6 @@
 * [Wiring Language](http://www.wiring.org.co/reference/)
 * [Photon Firmware](https://docs.particle.io/reference/firmware/photon/#cloud-functions)
 * [Particle API JS](https://docs.particle.io/reference/javascript/#callfunction)
+* [W3Schools](https://www.w3schools.com/)
 * [Photon Kit Experiments](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-photon-experiment-guide)
 
