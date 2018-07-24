@@ -4,6 +4,17 @@
 
 Previous experience building and programming devices using an Arduino electronics kit – such as a robotics kit, etc. – is very helpful. However, it is NOT required. The IoT tutorials will assume that students have no prior experience in developing physical computing devices.
 
+## Electric Circuits
+
+Having a basic conceptual understanding of electric circuits is very helpful, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\). However, understanding how to solve quantitative problems using equations for electric circuits \(e.g., Ohm's Law, etc.\) is NOT required. The IoT tutorials will provide a limited explanation of electric circuits sufficient for completing the IoT project.
+
+* Atoms and Electrons
+* Static Electricity vs. Current Electricity
+* Conductors vs. Insulators
+* Closed Circuit vs. Open Circuit
+* Voltage, Current, and Resistance
+* Series Circuit vs. Parallel Circuit
+
 ## Web Development
 
 Previous experience and familiarity with the following web development concepts and skills is highly recommended before programming apps for an IoT device – however, mastery is NOT required:
