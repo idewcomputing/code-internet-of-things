@@ -6,7 +6,7 @@ Previous experience building and programming devices using an Arduino electronic
 
 ## Electric Circuits
 
-Having a basic conceptual understanding of electric circuits is very helpful, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\). However, understanding how to solve quantitative problems using equations for electric circuits \(e.g., Ohm's Law, etc.\) is NOT required. The IoT tutorials will provide a limited explanation of electric circuits sufficient for completing the IoT project.
+Having a basic conceptual understanding of electric circuits is very helpful, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\). However, understanding how to solve quantitative equations involving electric circuits \(e.g., Ohm's Law, etc.\) is NOT required. The IoT tutorials will provide a limited explanation of electric circuits, which should be sufficient for using the IoT kit to create devices.
 
 * Atoms and Electrons
 * Static Electricity vs. Current Electricity
