@@ -18,3 +18,7 @@ SparkFun created its own Photon kit by incorporating the Photon P1 microcontroll
 
 ![SparkFun Inventor&apos;s Kit for Photon](../../.gitbook/assets/sparkfun-photon-kit.jpg)
 
+{% hint style="warning" %}
+**NOTE:** Your instructor may have provided you with a different IoT electronics kit. If your IoT kit is programmed using **Wiring** or **Arduino**, then you can still use this guidebook to help get familiar with using your IoT kit to build smart devices and program apps for them.
+{% endhint %}
+
