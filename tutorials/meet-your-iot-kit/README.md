@@ -5,7 +5,7 @@
 The goals of this first tutorial are to help you:
 
 * Understand the features of your IoT circuit board \(pins, ports, buttons, LED lights\)
-* Identify the other parts in your IoT kit and their purposes \(inputs, outputs, connectors/cables\)
+* Identify the other parts in your IoT kit and their purposes \(inputs, outputs, connectors, cables\)
 * Understand how to create electric circuits by connecting parts to the IoT circuit board \(use of pins, jumper wires, breadboard, and power\)
 
 ## Photon Kit
