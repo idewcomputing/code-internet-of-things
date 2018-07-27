@@ -2,7 +2,7 @@
 
 ## Electric Circuits
 
-Having a basic conceptual understanding of electric circuits is **very helpful**, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\). However, understanding how to solve quantitative equations involving electric circuits \(e.g., Ohm's Law, etc.\) is NOT required. The IoT tutorials will provide a limited explanation of electric circuits, which should be sufficient for using the IoT kit to create devices.
+Having a basic conceptual understanding of electric circuits is **very helpful**, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\) – however, it is NOT required:
 
 * Atoms and Electrons
 * Static Electricity vs. Current Electricity
@@ -10,6 +10,10 @@ Having a basic conceptual understanding of electric circuits is **very helpful**
 * Closed Circuit vs. Open Circuit
 * Voltage, Current, and Resistance
 * Series Circuit vs. Parallel Circuit
+
+Being able to solve quantitative equations involving circuits \(Ohm's Law, etc.\) is NOT required.
+
+The IoT tutorials will provide a limited explanation of electric circuits, which should be sufficient for using the IoT kit to create devices.
 
 ## Physical Computing
 
@@ -22,7 +26,7 @@ Previous experience and familiarity with the following Arduino development conce
 * Variables – declaring data type \(`int`, `float`, `boolean`, `String`, etc.\) and name \(unique identifier\), assigning and changing values, converting data type, global vs. local scope
 * Program Functions – `setup()` function, `loop()` function, creating custom functions, calling a custom function, passing arguments into a function, returning value from a function
 * Input/Output Functions – such as: `pinMode()`, `digitalRead()`, `digitalWrite()`, `analogRead()`, `analogWrite()`, `tone()`, etc.
-* Libraries and Objects – including library in device app, constructing new object using defined class in library, using object properties and methods
+* Libraries and Objects – including external library file in device app, constructing new object using defined class in library, using object properties and methods
 * Comparison Operators – such as: `>`, `<`, `==`, `!=`, etc.
 * Logical Operators \(NOT, AND, OR\): `!`, `&&`, `||`
 * Conditional Statements using `if` and `else`
