@@ -4,6 +4,8 @@
 **UPDATE IN PROGRESS:** This code reference book is undergoing a major update to replace the [old version](https://docs.idew.org/internet-of-things-project/). Please check back later.  _Notice posted: June 5, 2018_
 {% endhint %}
 
+This IoT code guidebook is a supplement the [IoT project guidebook](https://docs.idew.org/project-internet-of-things/).
+
 ## What's in this Guidebook?
 
 This guidebook contains a **series of IoT code tutorials** to help you get familiar with using your IoT electronics kit to build smart devices and program apps for them.
