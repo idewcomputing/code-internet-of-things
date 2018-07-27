@@ -15,7 +15,7 @@ In addition, this guidebook contains **coding references** to help show and expl
 Finally, this guidebook also contains **links to external resources**, such as an online code editor \(web IDE\) for creating your device app, programming language references, and additional experiments for learning how to use your IoT kit.
 
 {% hint style="success" %}
-Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowledge.md) that will help ensure students are successful with this IoT project.
+Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowledge.md) that will help ensure students are successful with the IoT code tutorials and IoT project.
 {% endhint %}
 
 ## Your IoT Electronics Kit
