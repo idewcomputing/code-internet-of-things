@@ -66,6 +66,7 @@
 
 ## Links
 
+* [IoT Project Guidebook](https://docs.idew.org/project-internet-of-things/)
 * [Particle Build \(Web IDE\)](https://build.particle.io/)
 * [Wiring Language](http://www.wiring.org.co/reference/)
 * [Photon Firmware](https://docs.particle.io/reference/firmware/photon/#cloud-functions)
