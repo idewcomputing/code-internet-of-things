@@ -8,7 +8,7 @@ The goals of this second tutorial are to help you:
 * Understand how to use Particle Build to create Photon device apps
 * Create a Hello World app to test your Photon device
 
-## How does the Photon connect to Wi-Fi?
+## How does Photon connect to Wi-Fi?
 
 When your Photon is powered on \(or restarted\), it will automatically try to connect to a Wi-Fi network.  It does this by using a saved list of Wi-Fi logins \(network names and passwords\). The Photon can be programmed to store login information for up to 5 different Wi-Fi networks.
 
@@ -38,11 +38,28 @@ Your team will need a Particle account to login to Particle Build.  However, you
 
 ## What is a Hello World app?
 
-Explain purpose of Hello World app
+When learning a new programming language, the first step that most people take is to create what is called a ["Hello World"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) program. Traditionally, this involves displaying the text "Hello World" on a screen. Often, the program is just a few lines of code. The purpose is to demonstrate that you can create a simple yet functional program in the new coding language.
 
-Explain what this specific app will do \(make built-in LED blink repeatedly\)
+However, your Photon circuit board does **not** have a built-in screen. Your Photon kit has a micro OLED screen that can be connected to the Photon – but that would require connecting 8 different jumper wires and coding a more complex app.  Eventually, you'll be able to do this, but we need something much simpler for your first experience using and programming your Photon.
 
-Explain that Photon device apps coded in Wiring programming language \(nearly identical to Arduino\)
+The good news is your Photon circuit board has a built-in LED light \(D7\) that can be controlled by your device's app. You won't have to connect any extra parts or wires yet – and you can program a simple app that simply **makes the built-in LED blink on and off repeatedly**, as a way of saying "Hello World."
+
+### Wiring Programming Language
+
+All the apps that run on your Photon device will be coded using Particle's version of the [Wiring](http://www.wiring.org.co/reference/) programming language for microcontrollers.
+
+The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language that has some minor differences as well as several additions in order to support the Photon hardware.
+
+One example of a minor difference:
+
+* In the original Wiring language, the `analogRead()` method reads the value of an analog input pin and returns the value as an integer \(whole number\) between 0-1023.
+* In the Particle firmware, the `analogRead()` method does the same thing but returns the value as an integer between 0-4095.
+
+The Particle firmware contains additional methods that are **not** part of the original Wiring language. For example, there are methods which allow the Photon device to interact with Particle Cloud. There are other methods which can control built-in hardware components on the Photon circuit board \(such as the Wi-Fi module, RGB light, etc.\).
+
+{% hint style="info" %}
+**WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions.
+{% endhint %}
 
 
 
