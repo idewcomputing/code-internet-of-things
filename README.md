@@ -28,6 +28,10 @@ SparkFun sells a variety of other sensors and outputs that can be used with the 
 **NOTE:** Your instructor may have provided you with a different IoT electronics kit. If your IoT  kit uses **Arduino**, then you can still use this guidebook to help get familiar with using your IoT kit to build smart devices and program apps for them. The Photon kit is programmed using a language called [Wiring](http://www.wiring.org.co/reference/) that is nearly identical to [Arduino](https://www.arduino.cc/reference/en/). In addition, the [Photon circuit board](https://learn.sparkfun.com/tutorials/photon-redboard-hookup-guide) is similar to an Arduino circuit board \(though there are a few differences\). 
 {% endhint %}
 
+{% hint style="info" %}
+**FYI:**  This IoT code tutorial focuses on coding **web apps** \(using JavaScript\) that interact with a Photon device. However, it is also possible to code [native mobile apps for iOS and Android](https://docs.particle.io/guide/how-to-build-a-product/mobile-app/) \(using Objective-C, Swift, or Java\) that interact with a Photon device.
+{% endhint %}
+
 ## Copyright and License
 
 Copyright © 2016-2018 Michael Frontz and Jim Lyst, Indiana University School of Informatics and Computing at IUPUI
