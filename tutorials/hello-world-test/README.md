@@ -58,7 +58,7 @@ One example of a minor difference:
 The Particle firmware contains additional methods that are **not** part of the original Wiring language. For example, there are methods which allow the Photon device to interact with Particle Cloud. There are other methods which can control built-in hardware components on the Photon circuit board \(such as the Wi-Fi module, RGB light, etc.\).
 
 {% hint style="info" %}
-**WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions.
+**WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
 {% endhint %}
 
 
