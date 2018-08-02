@@ -34,7 +34,11 @@ Particle Cloud can be used to:
 
 The Photon device itself can only store and run one app at a time. However, you can create and save multiple apps in Particle Build. When you need to update the specific app stored on your Photon device, you'll do this in Particle Build – and your Photon will download the new app over Wi-Fi.
 
-Your team will need a Particle account to login to Particle Build.  However, your teacher will most likely provide your team with a **pre-existing** Particle account username & password that is already associated with your specific Photon device. Every Photon has a unique device ID that it uses to communicate with Particle Build and Particle Cloud. Each Photon device ID can only be associated with one Particle account.
+Your team will need a Particle account to login to Particle Build.  However, your teacher will most likely provide your team with a **pre-existing** Particle account login \(email & password\) that is already associated with your specific Photon device. Every Photon has a unique device ID that it uses to communicate with Particle Build and Particle Cloud. Each Photon device ID can only be associated with one Particle account.
+
+{% hint style="info" %}
+**SETUP NEW DEVICE:**  The Photon device provided to you by your teacher should **already** be setup with a Wi-Fi login and Particle account that you will use. If not, then the Photon will need to be [setup as a new device](https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon) by programming it with a Wi-Fi login, creating a Particle account, and adding the device to your account in Particle Build by claiming its device ID.
+{% endhint %}
 
 ## What is a Hello World app?
 
