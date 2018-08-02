@@ -31,6 +31,8 @@ The Particle firmware contains additional methods \(functions\) that are **not**
 
 {% hint style="info" %}
 **WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
+
+Both Wiring and Arduino are code frameworks written in C++, so you can also use C or C++ code in your device app. Your device app gets compiled into C++ before it is downloaded onto your device.
 {% endhint %}
 
 
