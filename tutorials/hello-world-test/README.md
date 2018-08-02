@@ -8,51 +8,19 @@ The goals of this second tutorial are to help you:
 * Understand how to use Particle Build to create Photon device apps
 * Create a Hello World app to test your Photon device
 
-## How does Photon connect to Wi-Fi?
-
-When your Photon is powered on \(or restarted\), it will automatically try to connect to a Wi-Fi network.  It does this by using its saved list of Wi-Fi logins \(network names and passwords\). The Photon can be programmed to store login information for up to 5 different Wi-Fi networks.
-
-A brand new Photon will **not** have any Wi-Fi logins saved yet. However, the Photon provided to you by your teacher will most likely already have a Wi-Fi login programmed into it.
-
-## What is Particle Cloud?
-
-Once your Photon is connected to Wi-Fi, the Photon will automatically try to connect to Particle Cloud, which is a cloud service that Particle provides for all of its microcontroller devices. All of your Photon's internet communications are routed through Particle Cloud.
-
-Particle Cloud can be used to:
-
-* Code and store all your different Photon device apps \(using Particle Build code editor\)
-* Update the app stored on your Photon device
-* Update the firmware on your Photon device
-* Send and receive data between your Photon device app and your web app
-* Manage your Photon device remotely
-
-![](../../.gitbook/assets/particle-cloud%20%281%29.png)
-
-## What is Particle Build?
-
-[Particle Build](https://login.particle.io/build) is an online code editor \(web IDE\) provided by Particle.  Particle Build is part of the Particle Cloud platform. You will login to Particle Build to code and store all your Photon device apps.
-
-The Photon device itself can only store and run **one** app at a time. However, you can create and save multiple apps in Particle Build. When you need to update the specific app stored on your Photon device, you'll do this in Particle Build – and your Photon will download the new app over Wi-Fi.
-
-Your team will need a Particle account to login to Particle Build.  However, your teacher will most likely provide your team with an **existing** Particle account login \(email & password\) that's already associated with your specific Photon device. Every Photon has a unique device ID it uses to communicate with Particle Cloud. Each Photon device ID can only be associated with one Particle account.
-
-{% hint style="info" %}
-**SETUP NEW DEVICE:**  The Photon device provided to you by your teacher should **already** be setup with a Wi-Fi login and Particle account that you will use. If **not**, then the Photon will need to be [setup as a new device](https://docs.particle.io/guide/getting-started/start/photon/#connect-your-photon) by programming it with a Wi-Fi login, creating a Particle account, and adding the device to your account in Particle Build by claiming its device ID.
-{% endhint %}
-
 ## What is a Hello World app?
 
-When learning a new programming language, the first step that most people take is to create what is called a ["Hello World"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) program. Traditionally, this involves displaying the text "Hello World" on a screen. Often, the program is just a few lines of code. The purpose is to demonstrate that you can create a simple yet functional program in the new coding language.
+When learning a new programming language, the first step that most people take is to create what is called a ["Hello World"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) program. Traditionally, this program simply displays the text "Hello World" on the screen. Typically, this simple program is just a few lines of code. The purpose is to demonstrate that you can create a simple yet functional program in the new coding language. It's the first step before creating more complex programs.
 
-However, your Photon circuit board does **not** have a built-in screen. Your Photon kit has a micro OLED screen that can be connected to the Photon – but that would require connecting 8 different jumper wires and coding a more complex app.  Eventually, you'll be able to do this, but we need something much simpler for your first experience using and programming your Photon.
+However, your Photon circuit board does **not** have a built-in screen. Your Photon kit does have a micro OLED screen that can be connected to the Photon – but that would require connecting 8 different jumper wires and coding a more complex app.  Eventually, you'll be able to do this – but we need to do something much simpler for your first Photon app.
 
-The good news is your Photon circuit board has a built-in LED light \(D7\) that can be controlled by your device's app. You won't have to connect any extra parts or wires yet – and you can program a simple app that simply **makes the built-in LED blink on and off repeatedly**, as a way of saying "Hello World."
+The good news is your Photon circuit board has a built-in LED light \(D7\) that can be controlled by your device's app. You won't have to connect any extra parts or wires yet – and you can program a simple app that **makes the built-in LED blink on and off repeatedly**, as a way of saying "Hello World."
 
-### Wiring Programming Language
+## Wiring Programming Language
 
-All the apps that run on your Photon device will be coded using Particle's version of the [Wiring](http://www.wiring.org.co/reference/) programming language for microcontrollers.
+All the apps that run on your Photon device will be coded using Particle's version of the open-source [Wiring](http://www.wiring.org.co/reference/) programming language for microcontrollers.
 
-The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language that has some minor differences as well as several additions in order to support the Photon hardware.
+The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language which has a few minor differences, as well as additional methods customized for the Photon hardware.
 
 One example of a minor difference:
 
