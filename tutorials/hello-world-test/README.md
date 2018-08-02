@@ -20,14 +20,14 @@ The good news is your Photon circuit board has a built-in LED light \(D7\) that 
 
 All the apps that run on your Photon device will be coded using Particle's version of the open-source [Wiring](http://www.wiring.org.co/reference/) programming language for microcontrollers.
 
-The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language which has a few minor differences, as well as additional methods customized for the Photon hardware.
+The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language which has a few minor differences, as well as additional methods \(functions\) customized for the Photon hardware.
 
 One example of a minor difference:
 
 * In the original Wiring language, the `analogRead()` method reads the value of an analog input pin and returns the value as an integer \(whole number\) between 0-1023.
 * In the Particle firmware, the `analogRead()` method does the same thing but returns the value as an integer between 0-4095.
 
-The Particle firmware contains additional methods that are **not** part of the original Wiring language. For example, there are methods which allow the Photon device to interact with Particle Cloud. There are other methods which can control built-in hardware components on the Photon circuit board \(such as the Wi-Fi module, RGB light, etc.\).
+The Particle firmware contains additional methods \(functions\) that are **not** part of the original Wiring language. For example, there are methods which are used to make the Photon interact with Particle Cloud. There are methods which can be used to control built-in hardware components on the Photon circuit board \(such as the Wi-Fi module, RGB light, etc.\).
 
 {% hint style="info" %}
 **WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
