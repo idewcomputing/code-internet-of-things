@@ -18,9 +18,9 @@ The good news is your Photon circuit board has a built-in LED light \(D7\) that 
 
 ## Wiring Programming Language
 
-All the apps that run on your Photon device will be coded using Particle's version of the open-source [Wiring](http://www.wiring.org.co/reference/) programming language for microcontrollers.
+All the apps that run on your Photon device will be coded using Particle's version of the open-source [Wiring](http://www.wiring.org.co/reference/) programming language framework for microcontrollers.
 
-The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a version of the Wiring language which has a few minor differences, as well as additional methods \(functions\) customized for the Photon hardware.
+The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a modified version of the Wiring language which has a few minor differences, as well as additional methods \(functions\) customized for the Photon hardware.
 
 One example of a minor difference:
 
@@ -30,10 +30,10 @@ One example of a minor difference:
 The Particle firmware contains additional methods \(functions\) that are **not** part of the original Wiring language. For example, there are methods which are used to make the Photon interact with Particle Cloud. There are methods which can be used to control built-in hardware components on the Photon circuit board \(such as the Wi-Fi module, RGB light, etc.\).
 
 {% hint style="info" %}
-**WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language commonly used by microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
-
-Both Wiring and Arduino are code frameworks written in C++, so you can also use C or C++ code in your device app. Your device app gets compiled into C++ before it is downloaded onto your device.
+**WIRING VS. ARDUINO:**  [Arduino](https://www.arduino.cc/reference/en/) is another programming language framework for microcontrollers. It turns out that Arduino was based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
 {% endhint %}
 
-
+{% hint style="info" %}
+**WIRING VS. C++:**  Wiring \(like Arduino\) is a programming framework written in C++, so you can also incorporate C++ code within your device app.
+{% endhint %}
 
