@@ -1,6 +1,6 @@
 # LED Lights
 
-LEDs \(light-emitting diodes\) are small, bright, long-lasting, energy-efficient lights.  LEDs have been commonly used in electronic products for decades. More recently, incandescent light bulbs used in homes and other buildings are now being replaced with LED light bulbs due to their energy efficiency.
+LEDs \(light-emitting diodes\) are small, bright, long-lasting, energy-efficient lights.  LEDs have been commonly used in electronic products for decades. More recently, incandescent light bulbs used in homes and other buildings are being replaced with LED light bulbs due to their energy efficiency.
 
 Your Photon kit should have a set of LED lights in various colors:  red, yellow, green, and blue.
 
@@ -30,13 +30,13 @@ Your Photon kit contains a set of resistors with a resistance rating of 330 Ohms
 
 ![Resistor with Bent Legs](../../.gitbook/assets/resistor-bend-legs.png)
 
-### Breadboard Connections
+### Connect to Breadboard
 
-To connect an LED light to your Photon, you will need:
+To connect an LED light to your Photon using the breadboard, you will need:
 
 * LED light with bent positive leg
 * Resistor with bent legs
-* 2 jumper wires \(use two different colors to help identify them\)
+* 2 jumper wires \(use different colors to help identify them\)
 
 | LED Light | Photon Pin |
 | :--- | :--- |
@@ -46,19 +46,19 @@ To connect an LED light to your Photon, you will need:
 Here are the steps to connect the LED light to your Photon using the breadboard:
 
 1. Insert the positive and negative legs of the LED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
-2. Plug one end of a **jumper wire** into the **same** terminal strip row as the bent **positive** leg of the LED. Plug the other end of this jumper wire into an I/O pin on the Photon circuit board.
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as the bent **positive** leg of the LED. Plug the other end of this same jumper wire into an I/O pin on the Photon circuit board.
 3. Insert one end of the **resistor** into the **same** terminal strip row as the **negative** leg of the LED. Insert the other end of the resistor into a pin hole of the negative column of the closest power rail on the breadboard.
-4. If the negative power rail isn't already connected to a GND pin on the Photon circuit board, then plug one end of the **other** jumper wire into another pin hole in the negative power rail, and plug the other end of this jumper wire into a GND pin on the Photon circuit board.
+4. If the negative power rail isn't already connected to a GND pin on the Photon circuit board, then plug one end of the **other** jumper wire into another pin hole in the negative power rail, and plug the other end of this same jumper wire into a GND pin on the Photon circuit board.
 
-Here's an example diagram showing one possible way to connect an LED light:
+Here's an example diagram showing a possible way to connect an LED light:
 
 ![](../../.gitbook/assets/experiment-1.jpg)
 
-Keep in mind that your connection could look different than this example diagram:
+Keep in mind that your connection could look different than this example:
 
 * Your LED legs could be inserted into different row numbers on the breadboard than the example \(which happens to connect the positive leg to row 20 and the negative leg to row 21\).
 * Your LED legs could be inserted into different columns on the breadboard than the example \(which happens to connect the LED legs into column I of the terminal strip rows\).
-* The positive leg of your LED could connect to a different I/O pin than the example \(which happens to  connect to the D0 pin on the Photon circuit board\).
+* The positive leg of your LED could connect to a different I/O pin than the example \(which happens to connect to the D0 pin on the Photon circuit board\).
 * Your negative power rail on the breadboard could connect to a different GND pin than the example  \(there are two other available GND pins on the Photon circuit board\).
 
 ## How to Code LED
@@ -98,7 +98,7 @@ int greenLED = D1;
 
 You need to set the pin mode for the LED to be an output.
 
-Add this code **within** the `setup()` function, you have to include a statement to set the pin mode for the LED pin variable:
+Add this code **within** the `setup()` function \(be sure to modify this code as necessary\):
 
 ```cpp
 pinMode(LED, OUTPUT);
@@ -122,7 +122,7 @@ pinMode(greenLED, OUTPUT);
 
 You can use the `digitalWrite()` method to turn an LED on or off.
 
-Add this code to your app within the `setup()` function, `loop()` function, or a custom function:
+Add this code to your app within the `setup()` function, `loop()` function, or a custom function \(be sure to modify this code as necessary\):
 
 ```cpp
 digitalWrite(LED, HIGH);
@@ -141,13 +141,13 @@ If you need an LED light to be **turned off** when your app first starts running
 
 ### Adjust LED Brightness
 
-Alternatively, you can use the `analogWrite()` method to adjust the brightness of an LED.
+Alternatively, you can use the `analogWrite()` method to adjust the brightness of an LED from minimum \("off"\) to maximum – or any value in-between.
 
 However, the LED light must be connected to an I/O pin capable of PWM output. PWM stands for [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation), which is used to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\). 
 
 * These I/O pins are capable of PWM output:  D0, D1, D2, D3, A4, A5.
 
-Add this code to your app within the `setup()` function, `loop()` function, or a custom function:
+Add this code to your app within the `setup()` function, `loop()` function, or a custom function \(be sure to modify this code as necessary\):
 
 ```cpp
 analogWrite(LED, 128);
