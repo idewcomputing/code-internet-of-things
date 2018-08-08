@@ -7,7 +7,7 @@
 
 * [1. Meet Your IoT Kit](tutorials/meet-your-iot-kit/README.md)
   * [1.1 Circuit Board](tutorials/meet-your-iot-kit/1.1-circuit-board.md)
-  * [1.2 Other Parts in Kit](tutorials/meet-your-iot-kit/1.2-other-parts-in-kit.md)
+  * [1.2 Other Components](tutorials/meet-your-iot-kit/1.2-other-components.md)
   * [1.3 Electronic Circuits](tutorials/meet-your-iot-kit/1.3-electronic-circuits.md)
 * [2. Hello World Test](tutorials/hello-world-test/README.md)
   * [2.1 Start IoT Device](tutorials/hello-world-test/2.1-start-iot-device.md)
