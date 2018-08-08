@@ -1,12 +1,14 @@
 # 2. Hello World Test
 
+In this second tutorial, you'll create a "Hello World" app for your IoT device.
+
 ## Tutorial Goals
 
 The goals of this second tutorial are to help you:
 
 * Verify your Photon device connects to Wi-Fi and the Particle Cloud service
 * Understand how to use Particle Build to create Photon device apps
-* Create a Hello World app to test your Photon device
+* Create a Hello World app to learn how to program your Photon device
 
 ## What is a Hello World app?
 
