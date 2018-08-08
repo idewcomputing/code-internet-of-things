@@ -1,5 +1,7 @@
 # 4. Smart Security Device
 
+In this fourth tutorial, you'll create a Smart Security device and program its apps.
+
 ## Tutorial Goals
 
 The goals of this fourth tutorial are to help you:
