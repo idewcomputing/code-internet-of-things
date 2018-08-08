@@ -28,7 +28,7 @@ An LED can be easily burned out if it receives too much power. Therefore, a [res
 
 Your Photon kit contains a set of resistors with a resistance rating of 330 Ohms. In order to insert a resistor into the pin holes of a breadboard, you will need to bend both resistor legs into ~90° angles:
 
-![Resistor with Bent Legs](../../.gitbook/assets/resistor-bend-legs.png)
+![Bending Resistor Legs](../../.gitbook/assets/resistor-bend-legs.png)
 
 ### Connect to Breadboard
 
@@ -50,11 +50,11 @@ Here are the steps to connect the LED light to your Photon using the breadboard:
 3. Insert one end of the **resistor** into the **same** terminal strip row as the **negative** leg of the LED. Insert the other end of the resistor into a pin hole of the negative column of the closest power rail on the breadboard.
 4. If the negative power rail isn't already connected to a GND pin on the Photon circuit board, then plug one end of the **other** jumper wire into another pin hole in the negative power rail, and plug the other end of this same jumper wire into a GND pin on the Photon circuit board.
 
-Here's an example diagram showing a possible way to connect an LED light:
+Here's a wiring diagram showing a possible way to connect an LED light:
 
 ![](../../.gitbook/assets/experiment-1.jpg)
 
-Keep in mind that your connection could look different than this example:
+Keep in mind that your connection can look different than this example diagram:
 
 * Your LED legs could be inserted into different row numbers on the breadboard than the example \(which happens to connect the positive leg to row 20 and the negative leg to row 21\).
 * Your LED legs could be inserted into different columns on the breadboard than the example \(which happens to connect the LED legs into column I of the terminal strip rows\).
