@@ -1,6 +1,6 @@
 # 2. Hello World Test
 
-In this second tutorial, you'll create a "Hello World" app for your IoT device.
+In this second tutorial, you'll program a "Hello World" app for your IoT device.
 
 ## Tutorial Goals
 

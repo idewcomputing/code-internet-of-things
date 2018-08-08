@@ -6,9 +6,9 @@ In this first tutorial, you'll become familiar with your team's IoT electronics 
 
 The goals of this first tutorial are to help you:
 
-* Understand the features of your IoT circuit board \(pins, ports, buttons, LED lights\)
-* Identify each component in your IoT kit and its purpose \(inputs, outputs, connectors, and cables\)
-* Understand how to create electronic circuits by connecting parts to the IoT circuit board \(using power pins, I/O pins, jumper wires, and breadboard\)
+* Understand the features of your Photon circuit board \(pins, ports, buttons, LED lights\)
+* Identify each of the other components in your Photon kit and its purpose \(inputs, outputs, connectors, and cables\)
+* Understand how to create electronic circuits by connecting components to the Photon circuit board \(using power pins, I/O pins, jumper wires, and breadboard\)
 
 ## Photon Kit
 
