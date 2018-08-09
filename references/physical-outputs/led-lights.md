@@ -4,7 +4,7 @@ LEDs \(light-emitting diodes\) are small, bright, long-lasting, energy-efficient
 
 Your Photon kit should have a set of LED lights in various colors:  red, yellow, green, and blue.
 
-![LED Lights in Various Colors](../../.gitbook/assets/led-assorted.jpg)
+![LED Lights in various colors](../../.gitbook/assets/led-assorted.jpg)
 
 ## How to Connect LED
 
@@ -82,7 +82,7 @@ int LED = D0;
 This line of code does 3 things \(in order\):
 
 1. **It declares a data type for the variable's value.**  In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
-2. **It declares the variable's name.** In this example, the variable will be called `LED`. You can modify this variable name, but choose a name that will make sense to anyone reviewing your code.
+2. **It declares the variable's name.** In this example, the variable will be called `LED`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your LED is connected to.
 
 #### MULTIPLE LED LIGHTS
@@ -106,7 +106,7 @@ pinMode(LED, OUTPUT);
 
 The `pinMode()` method requires two parameters inside its parentheses \(in this order\):
 
-1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `LED` is listed. If necessary, modify this to match the variable name for your LED.
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `LED` is listed. If necessary, change this to match the variable name for your LED.
 2. **The mode value**, which will always be `OUTPUT` for an LED light because your app will send "on" and "off" signals \(or brightness signals\) to the LED light.
 
 #### MULTIPLE LED LIGHTS
