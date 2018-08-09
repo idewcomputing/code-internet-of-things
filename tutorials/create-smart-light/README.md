@@ -6,7 +6,7 @@ In this third tutorial, you'll create a Smart Light device and program its apps.
 
 The goals of this third tutorial are to help you:
 
-* Connect physical inputs and outputs to your Photon device
+* Practice connecting physical inputs and outputs to your Photon device
 * Program a Photon app that controls your device's physical inputs and outputs
 * Program a web app that interacts with your Photon device through Particle Cloud
 
