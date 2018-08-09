@@ -128,7 +128,7 @@ The `digitalRead()` method will return either `HIGH` or `LOW` \(which are treate
 
 The condition listed inside the parentheses of the [if statement](http://www.wiring.org.co/reference/if_.html) checks whether the value of `buttonState` is [equivalent](http://www.wiring.org.co/reference/equality.html) to `LOW`:
 
-* If this condition is **true**, then the code inside the curly braces will be performed. You will need to add code statements to do something if the button is pressed. 
+* If this condition is **true**, then the code inside the curly braces will be performed. You will need to add code statements within the curly braces to do something if the button is pressed. 
 * If this condition is **false** \(because the `buttonState` is `HIGH`\), the code inside the curly braces will **NOT** be performed.
 
 
