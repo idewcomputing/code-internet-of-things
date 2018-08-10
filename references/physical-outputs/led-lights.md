@@ -134,7 +134,7 @@ The `digitalWrite()` method requires two parameters inside its parentheses \(in 
 2. **The signal value**, which can be `HIGH` or `LOW`. Your Photon uses this value to send an electrical signal through the pin: `HIGH` is a signal of 3.3 volts which represents "on," while `LOW` is a signal of 0 volts which represents "off."  Modify this value to either turn the LED on or off.
 
 {% hint style="warning" %}
-**DIM LED WHEN PHOTON STARTS:**  Depending on which I/O pin an LED is connected to, the LED light might be on \(at a lower brightness\) when your Photon app first starts.
+**DIM LED WHEN PHOTON STARTS:**  Depending on which I/O pin an LED is connected to, the LED light might be on \(at a dim brightness\) when your Photon app first starts.
 
 If you need an LED light to be **turned off** when your app first starts running, then be sure to include code to turn off the LED within the `setup()` function after setting its pin mode.
 {% endhint %}
@@ -143,7 +143,7 @@ If you need an LED light to be **turned off** when your app first starts running
 
 Alternatively, you can use the `analogWrite()` method to adjust the brightness of an LED from minimum \("off"\) to maximum – or any value in-between.
 
-However, the LED light must be connected to an I/O pin capable of PWM output. PWM stands for [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation), which is used to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\). 
+However, the LED light must be connected to an I/O pin capable of PWM output. PWM stands for [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation), which is a way to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\). 
 
 * These I/O pins are capable of PWM output:  D0, D1, D2, D3, A4, A5.
 
@@ -165,7 +165,12 @@ The `analogWrite()` and `digitalWrite()` methods are both capable of setting an 
 * Setting an LED to **minimum brightness** \("off"\) using `analogWrite(LED, 0)` produces the same result as using `digitalWrite(LED, LOW)` 
 * Setting an LED to **maximum brightness** using `analogWrite(LED, 255)` produces the same result as using `digitalWrite(LED, HIGH)`
 
-However, the `analogWrite()` method is the only way to set an LED to a brightness value in-between these two extremes.
+However, the `analogWrite()` method is the only way to set an LED to a brightness value in-between these two extremes:
+
+* `analogWrite(LED, 64)` would set the LED to 25% brightness
+* `analogWrite(LED, 128)` would set the LED to 50% brightness
+* `analogWrite(LED, 192)` would set the LED to 75% brightness
+* etc.
 
 
 
