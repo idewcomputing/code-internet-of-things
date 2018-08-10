@@ -49,13 +49,13 @@ The basic steps to use a push button in your app code are:
 
 1. Declare a global variable to store the I/O pin number for the button.
 2. Set the pin mode for the button pin in the `setup()` function.
-3. Use a `digitalRead()` statement to check whether the button is currently pressed.
+3. Use a `digitalRead()` statement to check whether the button is currently pressed, and add code statements that should be performed if the button is pressed \(or not pressed\).
 
 ### Global Variable {#global-variable}
 
 You should declare a global variable to store the I/O pin number that the button is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the button to a different pin number\).
 
-Add this code **before** the `setup()` function \(be sure to modify this code as necessary\):
+Add this code statement \(modify if necessary\) **before** the `setup()` function:
 
 ```cpp
 int button = D2;
@@ -78,9 +78,9 @@ int button2 = D3;
 
 ### Set Pin Mode {#set-pin-mode}
 
-You need to set the pin mode for the LED to be an output.
+You need to set the pin mode for the button to be used as an input.
 
-Add this code **within** the `setup()` function \(be sure to modify this code as necessary\):
+Add this code statement \(modify if necessary\) **within** the `setup()` function:
 
 ```cpp
 pinMode(button, INPUT_PULLUP);
@@ -104,7 +104,7 @@ pinMode(button2, INPUT_PULLUP);
 
 You can use the `digitalRead()` method to check whether a button is currently pressed.
 
-Add this code to your app within the `setup()` function, `loop()` function, or a custom function \(be sure to modify this code as necessary\):
+Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 
 ```cpp
 int buttonState = digitalRead(button);

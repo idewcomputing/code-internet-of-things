@@ -73,7 +73,7 @@ The basic steps to control an LED light in your app code are:
 
 You should declare a global variable to store the I/O pin number that the LED is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the LED to a different pin number\).
 
-Add this code **before** the `setup()` function \(be sure to modify this code as necessary\):
+Add this code statement \(modify if necessary\) **before** the `setup()` function:
 
 ```cpp
 int LED = D0;
@@ -98,7 +98,7 @@ int greenLED = D1;
 
 You need to set the pin mode for the LED to be an output.
 
-Add this code **within** the `setup()` function \(be sure to modify this code as necessary\):
+Add this code statement \(modify if necessary\) **within** the `setup()` function:
 
 ```cpp
 pinMode(LED, OUTPUT);
@@ -122,7 +122,7 @@ pinMode(greenLED, OUTPUT);
 
 You can use the `digitalWrite()` method to turn an LED on or off.
 
-Add this code to your app within the `setup()` function, `loop()` function, or a custom function \(be sure to modify this code as necessary\):
+Add this code statement \(modify if necessary\) to your app within the `setup()` function, `loop()` function, or a custom function:
 
 ```cpp
 digitalWrite(LED, HIGH);
@@ -134,7 +134,7 @@ The `digitalWrite()` method requires two parameters inside its parentheses \(in 
 2. **The signal value**, which can be `HIGH` or `LOW`. Your Photon uses this value to send an electrical signal through the pin: `HIGH` is a signal of 3.3 volts which represents "on," while `LOW` is a signal of 0 volts which represents "off."  Modify this value to either turn the LED on or off.
 
 {% hint style="warning" %}
-**DIM LED WHEN PHOTON STARTS:**  Depending on which I/O pin an LED is connected to, the LED light might be on \(at a low brightness\) when your Photon app first starts.
+**DIM LED WHEN PHOTON STARTS:**  Depending on which I/O pin an LED is connected to, the LED light might be on \(at a lower brightness\) when your Photon app first starts.
 
 If you need an LED light to be **turned off** when your app first starts running, then be sure to include code to turn off the LED within the `setup()` function after setting its pin mode.
 {% endhint %}
@@ -147,7 +147,7 @@ However, the LED light must be connected to an I/O pin capable of PWM output. PW
 
 * These I/O pins are capable of PWM output:  D0, D1, D2, D3, A4, A5.
 
-Add this code to your app within the `setup()` function, `loop()` function, or a custom function \(be sure to modify this code as necessary\):
+Add this code statement \(modify as necessary\) to your app within the `setup()` function, `loop()` function, or a custom function:
 
 ```cpp
 analogWrite(LED, 128);
@@ -158,11 +158,14 @@ The `analogWrite()` method requires two parameters inside its parentheses \(in t
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `LED` is listed. If necessary, modify this to match the variable name for your LED.
 2. **The signal value**, which can be any integer value \(whole number\) between 0-255. Your Photon uses this value to send a PWM electrical signal through the pin: `0` is minimum brightness \(LED will be off\) while `255` is maximum brightness. In this example, a value of `128` represents 50% brightness. Modify this value based on the brightness needed.
 
-{% hint style="info" %}
-**ANALOG VS. DIGITAL:**  Using `analogWrite()` to set the brightness of an LED to `0` produces the same result as using `digitalWrite()` to set the LED to `LOW`.
+#### ANALOG VS. DIGITAL
 
-Using `analogWrite()` to set the brightness of an LED to `255` produces the same result as using `digitalWrite()` to set the LED to `HIGH`.
-{% endhint %}
+The `analogWrite()` and `digitalWrite()` methods are both capable of setting an LED to either minimum or maximum brightness:
+
+* Setting an LED to **minimum brightness** \("off"\) using `analogWrite(LED, 0)` produces the same result as using `digitalWrite(LED, LOW)` 
+* Setting an LED to **maximum brightness** using `analogWrite(LED, 255)` produces the same result as using `digitalWrite(LED, HIGH)`
+
+However, the `analogWrite()` method is the only way to set an LED to a brightness value in-between these two extremes.
 
 
 
