@@ -8,6 +8,8 @@ All of your Photon's internet communications are routed through the Particle Clo
 2. Web app can **call device function** through Particle Cloud
 3. Web app can **get device event notifications** through Particle Cloud
 
+![](../../.gitbook/assets/particle-cloud%20%281%29.png)
+
 In order to make your Photon interact with your web app, you'll need to add special code to both your Photon device app and your web app:
 
 * The Particle firmware on your Photon device has built-in cloud functions to allow your device to interact with a web app through Particle Cloud. You'll need to add code statements using these cloud functions in your Photon device app.
