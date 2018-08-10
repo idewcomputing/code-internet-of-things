@@ -28,8 +28,8 @@ To connect a push button to your Photon using the breadboard, you will need:
 
 Here are the steps to connect the push button to your Photon using the breadboard:
 
-1. Place the push button along the middle divider of the breadboard, so two legs on the same side of its base will align with **pin holes in column D** on the left half of the breadboard, while the other two legs on the opposite side will align with **pin holes in column G** on the right half of the breadboard. If necessary, you can gently bend the metal legs to align them better with the pin holes.
-2. Firmly press the button down to "snap" its base into place, so it is flat against the breadboard.
+1. Place the push button along the middle divider of the breadboard, so one pair of legs will align with **pin holes in column D** on the left half of the breadboard, while the other pair of legs \(on the opposite side\) will align with **pin holes in column G** on the right half of the breadboard. If necessary, you can gently bend the metal legs to align them better with the pin holes.
+2. Firmly press the button down to "snap" its base into place, so it's flat against the breadboard.
 3. Plug one end of a **jumper wire** into the **same** terminal strip row as **one of the button legs** on the right half of the breadboard. Plug the other end of this same jumper wire into an I/O pin on the Photon circuit board.
 4. Plug one end of the **other jumper wire** into the **same** terminal strip row as the **other button leg** on the right half of the breadboard. Plug the other end of this same jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
@@ -41,7 +41,7 @@ Keep in mind that your connection can look different than this example diagram:
 
 * Your button legs could be inserted into different row numbers on the breadboard than the example \(which happens to connect the button legs to row 4 and row 6\).
 * Your button leg could connect to a different I/O pin than the example \(which happens to connect to the D2 pin on the Photon circuit board\).
-* Your negative power rail on the breadboard could connect to a different GND pin than the example  \(there are two other available GND pins on the Photon circuit board\).
+* Your negative power rail on the breadboard could connect to a different GND pin than the example  \(there are two other available GND pins on the Photon circuit board\) – or your button could be connected directly to a GND pin on the Photon circuit board.
 
 ## How to Code Button
 
@@ -115,21 +115,23 @@ if(buttonState == LOW) {
 }
 ```
 
-A local variable named `buttonState` is declared that will have a data type of `int` \(integer\).  This variable is assigned the value returned by the `digitalRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the button pin number.
+In the first code statement, a local variable named `buttonState` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `digitalRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the button pin number.
 
 The `digitalRead()` method requires one parameter insides its parentheses: 
 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, a variable named `button` is listed. If necessary, change this to match the variable name for your button's pin number.
 
-The `digitalRead()` method will return either `HIGH` or `LOW` \(which are treated as `int` values\):
+The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
 
 * `HIGH` indicates that the button is **NOT** currently pressed.
 * `LOW` indicates that the button is currently pressed.
 
 The condition listed inside the parentheses of the [if statement](http://www.wiring.org.co/reference/if_.html) checks whether the value of `buttonState` is [equivalent](http://www.wiring.org.co/reference/equality.html) to `LOW`:
 
-* If this condition is **true**, then the code inside the curly braces will be performed. You will need to add code statements within the curly braces to do something if the button is pressed. 
-* If this condition is **false** \(because the `buttonState` is `HIGH`\), the code inside the curly braces will **NOT** be performed.
+* If this condition is **true**, the code within the curly braces of the `if` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want. 
+* If this condition is **false** \(because the `buttonState` is `HIGH`\), the code within the curly braces will **NOT** be performed. Optionally, you can add an [else statement](http://www.wiring.org.co/reference/else.html) to perform a different set of code statements when the button is **not** pressed.
+
+
 
 
 
