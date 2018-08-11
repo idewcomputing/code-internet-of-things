@@ -45,7 +45,7 @@
 * [Device App](references/device-app.md)
 * [Web App](references/web-app.md)
 * [Particle Cloud](references/particle-cloud/README.md)
-  * [Load Particle JS](references/particle-cloud/load-particle-js.md)
+  * [Web App Prep Steps](references/particle-cloud/web-app-prep-steps.md)
   * [Read Device Variable](references/particle-cloud/read-device-variable.md)
   * [Call Device Function](references/particle-cloud/call-device-function.md)
   * [Get Device Events](references/particle-cloud/get-device-events.md)
