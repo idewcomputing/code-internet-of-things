@@ -1,9 +1,9 @@
 # Web App Prep Steps
 
-In order to start interacting with Particle Cloud, your web app will first need to do the following:
+In order to interact with Particle Cloud, your web app will need the following:
 
-1. Your web app HTML file needs to load several JS files, including the Particle API JS library.
-2. Your web app JS file needs to create a `Particle()` object.
+1. Your web app HTML file needs to load several JS files \(such as:  Particle API JS library, etc.\).
+2. Your web app JS file needs to create a new `Particle()` object.
 3. Your web app JS file needs to declare variables to store your Photon device ID and access token.
 
 ## Load JS Files
@@ -46,7 +46,9 @@ Add this to your web app HTML file **within** the `<body>` section \(just before
 <script src="code.js"></script>
 ```
 
-{% hint style="warning" %}
+Be sure the file names listed in the `<script>` tags match the file names in your web app folder.
+
+{% hint style="success" %}
 **IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file must be listed **before** the `<script>` tag that loads your web app JS file \(`code.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
 {% endhint %}
 
