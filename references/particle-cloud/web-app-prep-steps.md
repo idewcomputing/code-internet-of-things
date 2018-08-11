@@ -52,7 +52,7 @@ Add this to your web app HTML file **within** the `<body>` section \(just before
 
 ## Create Web App JS File
 
-Be sure your web app folder contains a blank JavaScript file named:  `code.js`
+Be sure your web app folder contains a JavaScript file named:  `code.js`
 
 This web app JS file will contain your JavaScript code to interact with your Photon device through Particle Cloud. Your JS code will also dynamically modify your HTML and CSS to display updated information from your Photon device.
 
@@ -81,20 +81,24 @@ var myDevice = "0000"; // Photon device ID
 var myToken = "0000"; // Photon access token
 ```
 
+{% hint style="success" %}
 **IMPORTANT:**  You must modify this code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
+{% endhint %}
 
 Your Photon's unique **device ID** is listed in the **Devices** menu of your Particle Build account:
 
 1. Click the **Devices** icon in the left navigation bar.
 2. In the **Devices** menu panel, click the drop-down arrow to the right of your Photon device name.
 3. Select and copy the device ID.
-4. Paste the device ID into your JS code as the value for `myDevice` \(device ID must be listed within quotation marks\).
+4. Paste the device ID into your JS code as the value for `myDevice` \(the device ID must be listed within quotation marks\).
 
 Your Photon's unique **access token** is listed in the **Settings** menu of your Particle Build account:
 
 1. Click the **Settings** icon in the left navigation bar.
 2. In the **Settings** menu panel, select and copy the access token.
-3. Paste the access token into your JS code as the value for `myToken` \(access token must be listed within quotation marks\).
+3. Paste the access token into your JS code as the value for `myToken` \(the access token must be listed within quotation marks\).
 
-
+{% hint style="info" %}
+**RESET TOKEN:**  If desired, you can reset your access token in the Settings menu of Particle Build. This generates a new random access token. However, your existing web apps will need to be updated with the new access token, in order to connect to Particle Cloud.
+{% endhint %}
 
