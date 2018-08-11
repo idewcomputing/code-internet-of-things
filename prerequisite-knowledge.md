@@ -13,7 +13,7 @@ Having a basic conceptual understanding of electric circuits is **very helpful**
 
 Being able to solve quantitative equations involving circuits \(Ohm's Law, etc.\) is NOT required.
 
-The IoT tutorials will provide a limited explanation of electric circuits, which should be sufficient for using the IoT kit to create devices.
+The IoT tutorials will provide a limited explanation of circuits, which should be sufficient for using the IoT kit to create devices.
 
 ## Physical Computing
 
