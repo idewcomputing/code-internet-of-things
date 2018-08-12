@@ -20,15 +20,15 @@ Your web app HTML file \(`index.html`\) should include `<script>` tags to load t
 
 ### Option 1: Load from CDN
 
-If possible, use a content delivery network \(such as [jsDelivr](https://www.jsdelivr.com/)\) to load the Particle API JS library and jQuery JS library.
+If possible, use a content delivery network \(such as [cdnjs](https://cdnjs.com/) or [jsDelivr](https://www.jsdelivr.com/)\) to load the Particle API JS library and jQuery JS library.
 
 Your web app JS file will be loaded as a local file from your web app folder \(where your HTML and CSS files are located\).
 
 Add this to your web app HTML file **within** the `<body>` section \(just before the closing `</body>` tag\):
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/particle-api-js@7.2.3/lib/Particle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.2.3/particle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="code.js"></script>
 ```
 

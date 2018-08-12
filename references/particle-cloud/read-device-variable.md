@@ -56,14 +56,14 @@ function myFunction() {
 ```
 
 {% hint style="success" %}
-**MODIFY CODE:**  You will need to make changes in this code example:
+**MODIFY CODE:**  You will need to make these changes to example code:
 
 1. Change `myFunction()` to the name you want to use for your custom function
 2. Change `"myVariable"` to the name of your cloud variable whose value you want
-3. Add code to do something with the value returned as `data.body.result`
+3. Add code to do something with the variable value returned as `data.body.result`
 {% endhint %}
 
-This code adds a custom function named `myFunction()` to your web app JS.  This custom function contains the `particle.getVariable()` function \(which will contain code that you'll add to do something with the variable value returned by Particle Cloud\).
+This code adds a custom function named `myFunction()` to your web app JS.  This custom function contains the `particle.getVariable()` function, which will contain code that you'll add to do something with the variable value returned by Particle Cloud.
 
 Be sure to change `myFunction()` to the name that you want to use for your custom function.  For example, if you were getting the value of a temperature variable from your Photon device, you might name the function `getTemperature()`.
 
@@ -75,7 +75,7 @@ The `particle.getVariable()` function requires your Photon device ID, the name o
 
 When Particle Cloud returns the value of your cloud variable, this value gets temporarily stored in a local variable called: `data.body.result`
 
-You will need to add code within the particle.getVariable\(\) function to do something with the value stored in `data.body.result`. For example, you could add code to:
+You will need to add code within the `particle.getVariable()` function to do something with the value stored in `data.body.result`. For example, you could add code to:
 
 * Display the value in your web app \(by using jQuery to modify the HTML\)
 * Change the style of your web app based on the value \(by using jQuery to modify the CSS\)
