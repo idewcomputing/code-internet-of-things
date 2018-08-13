@@ -1,10 +1,12 @@
 # Web App Prep Steps
 
-In order to interact with Particle Cloud, your web app will need the following:
+In order for your web app to interact with your Photon device through Particle Cloud, you'll need to complete the following preparation steps:
 
 1. Your web app HTML file needs to load several JS files \(such as:  Particle API JS library, etc.\).
 2. Your web app JS file needs to create a new `Particle()` object.
 3. Your web app JS file needs to declare variables to store your Photon device ID and access token.
+
+Once these steps have been completed, you'll be ready to add code in your web app JS to read device variables, call device functions, and get device event notifications.
 
 ## Load JS Files
 
@@ -14,8 +16,12 @@ Your web app HTML file \(`index.html`\) should include `<script>` tags to load t
 2. jQuery JS library:  `jquery.min.js`
 3. Your web app JS file:  `code.js`
 
-{% hint style="success" %}
+{% hint style="info" %}
 **JQUERY = OPTIONAL:**  Loading jQuery is optional. However, it will be much easier to program your web app JS if you can incorporate jQuery statements into your code.
+{% endhint %}
+
+{% hint style="warning" %}
+**IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file must be listed **before** the `<script>` tag that loads your web app JS file \(`code.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
 {% endhint %}
 
 ### Option 1: Load from CDN
@@ -47,10 +53,6 @@ Add this to your web app HTML file **within** the `<body>` section \(just before
 ```
 
 Be sure the file names listed in the `<script>` tags match the file names in your web app folder.
-
-{% hint style="success" %}
-**IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file must be listed **before** the `<script>` tag that loads your web app JS file \(`code.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
-{% endhint %}
 
 ## Create Web App JS File
 
