@@ -16,6 +16,8 @@ Your web app will use the `particle.callFunction()` method to make the custom fu
 
 Your Photon device app will use the `Particle.function()` method to share a custom function through Particle Cloud by creating a cloud function.  In addition, you will also need to modify the custom function to work with Particle Cloud.
 
+### Share Device Function
+
 Add this code statement \(**be sure to modify**\) within the `setup()` function of your Photon app:
 
 ```cpp
@@ -65,11 +67,11 @@ Here are the 3 modifications that you would make:
 **IMPORTANT:**  Your custom function **must** have these modifications – even if your custom function doesn't do anything with the text passed into the `data` parameter – and even if your device app doesn't do anything with the integer value returned by the custom function.
 {% endhint %}
 
-### Calling Function
+### Calling Device Function
 
-Once a custom function in your Photon device app has been modified to be shared through Particle Cloud, your Photon app and your web app **must** include a text string parameter whenever the function is called.
+Once a custom function in your Photon device app has been modified to be shared through Particle Cloud, your Photon app and your web app **must** include a text parameter when calling the function.
 
-If the custom function **doesn't** do anything with the parameter, then this text string parameter can be any text – even an empty text string of `""` will work.
+If the custom function **doesn't** actually do anything with the parameter, then this text string parameter can be **any text** – even an empty text string of `""` will work.
 
 For example, in your Photon app, a code statement to call the custom function would be:
 
@@ -78,7 +80,7 @@ myFunction("text");
 ```
 
 * `myFunction` represents the name of the custom function. Change this to the name of your custom function.
-* `"text"` represents the text string being passed into the function as a parameter. If this text parameter is not actually used within the function, then it can be any text string enclosed within double quotation marks – even an empty text string of `""`.
+* `"text"` represents the text string being passed into the function as a parameter. If this text parameter is not actually used within the function, then it can be any text string enclosed within double quotation marks – even an empty text string of `""` will work.
 
 ### Using String Parameter
 
