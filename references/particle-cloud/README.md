@@ -2,11 +2,11 @@
 
 The defining feature of an IoT device is its ability to send and receive information through the internet. This allows an IoT device to interact with other apps or other IoT devices. For this project, you'll be creating a web app that interacts with your Photon device through the internet.
 
-All of your Photon's internet communications are routed through the Particle Cloud service, which offers these three ways that your web app can interact with your Photon device:
+All of your Photon's internet communications are routed through the Particle Cloud service, which offers these ways that your web app can interact with your Photon device through Particle Cloud:
 
-1. Web app can **read device variable** through Particle Cloud
-2. Web app can **call device function** through Particle Cloud
-3. Web app can **get device event notifications** through Particle Cloud
+1. A web app can **get the value of a Photon device variable**
+2. A web app can **call a custom function on a Photon device**
+3. A web app can **get event notifications from a Photon device**
 
 ![](../../.gitbook/assets/particle-cloud%20%281%29.png)
 

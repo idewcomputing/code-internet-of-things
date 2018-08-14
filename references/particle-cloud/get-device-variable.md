@@ -1,8 +1,8 @@
-# Read Device Variable
+# Get Device Variable
 
-Your Photon device app can share a variable through Particle Cloud, so your web app can read the value of the variable.
+Your Photon device app can share a variable through Particle Cloud, so your web app can get the value of the variable.
 
-For example, your Photon device app could measure the temperature of a room using a sensor, store the measurement in a variable, and share this variable through Particle Cloud, so your web app can read the variable's value and display it.
+For example, your Photon device app could measure the temperature of a room using a sensor, store the measurement in a variable, and share this variable's value through Particle Cloud, so your web app can get the variable's value and display it.
 
 ![](../../.gitbook/assets/particle-cloud-variable.png)
 
@@ -10,7 +10,7 @@ Your Photon device app will use the `Particle.variable()` method to share the va
 
 A "cloud variable" will be created to store the value of your device variable. Whenever the value of your device variable changes, the value stored in the cloud variable will be automatically synced to match.
 
-Your web app will use the `particle.getVariable()` method to read the value of your cloud variable.
+Your web app will use the `particle.getVariable()` method to get the value of your cloud variable.
 
 ## Photon Device App
 
@@ -43,7 +43,7 @@ Be sure each Photon device variable being shared as a cloud variable uses one of
 
 ## Web App JS
 
-Your web app JS will use the `particle.getVariable()` method to read the value of a Photon device variable stored as a cloud variable in Particle Cloud.
+Your web app JS will use the `particle.getVariable()` method to get the value of a Photon device variable stored as a cloud variable in Particle Cloud.
 
 Add this code \(**be sure to modify**\) in your web app JS:
 
@@ -69,7 +69,7 @@ function webFunction() {
 
 This code adds a custom function named `webFunction()` to your web app JS.  This custom function contains the `particle.getVariable()` method, which will contain code that you'll add to do something with the variable value returned by Particle Cloud.
 
-Be sure to change `webFunction()` to the actual name that you want to use for this JS function.  For example, if the function is supposed to get the value of a temperature variable from your Photon device, you might name the function `getTemperature()`.
+Be sure to change `webFunction()` to the actual name that you want to use for this JS function.  For example, if the function is supposed to get the value of a temperature variable from your Photon device, you might name the function something like: `getTemperature()`
 
 The `particle.getVariable()` method requires your Photon device ID, the name of your cloud variable, and your Photon access token:
 
