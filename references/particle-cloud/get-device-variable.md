@@ -25,7 +25,7 @@ Particle.variable("cloudVar", deviceVar);
 The `Particle.variable()` method requires two parameters inside its parentheses \(in this order\):
 
 1. **The cloud variable name**, which can be up to 12 characters in length. If possible \(for simplicity\), make your cloud variable name match your device variable name. However, the cloud variable is allowed to have a different name. The cloud variable name must be listed within double quotation marks. Change `"cloudVar"` to the actual name that you want to use for the cloud variable.
-2. **The Photon device variable name**, which is the variable in your Photon device app whose value will be shared in Particle Cloud. Change `deviceVar` to the actual name of the variable in your Photon device app that you want to share.
+2. **The Photon device variable name**, which is the variable in your Photon device app whose value will be shared in Particle Cloud. Change `deviceVar` to the actual name of the variable in your Photon app that you want to share.
 
 Particle Cloud will let your Photon device share up to 20 cloud variables at one time. Each of your cloud variables in Particle Cloud has to be given a unique name \(up to 12 characters in length\).
 
