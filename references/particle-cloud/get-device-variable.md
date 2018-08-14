@@ -87,7 +87,7 @@ For example, you could add code to:
 * Change the style of your web app based on the value \(by using jQuery to modify the CSS\)
 * Save the value in your web app \(by assigning the value to a JS global variable\)
 
-### Continuously Get Variable
+### Set Interval to Get Variable
 
 If your web app needs to continuously monitor the value of a cloud variable, you can use the `window.setInterval()` method to automatically call \(perform\) a function at a set time interval \(such as every 0.5 seconds, etc.\).
 

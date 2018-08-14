@@ -78,14 +78,14 @@ In order for a web app to interact with a Photon device through Particle Cloud, 
 
 Your web app JS code will declare global variables to store your Photon device ID and access token. You'll get their values from your Particle Build account.
 
-Add this code \(modify as necessary\) towards the beginning of your web app JS code:
+Add this code towards the beginning of your web app JS code, and then modify it:
 
 ```javascript
 var myDevice = "0000"; // Photon device ID
 var myToken = "0000"; // Photon access token
 ```
 
-{% hint style="success" %}
+{% hint style="danger" %}
 **IMPORTANT:**  You must modify this code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
 {% endhint %}
 
