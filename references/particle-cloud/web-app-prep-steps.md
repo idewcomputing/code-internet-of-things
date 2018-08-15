@@ -16,6 +16,10 @@ Your web app HTML file \(`index.html`\) should include `<script>` tags to load t
 2. jQuery JS library:  `jquery.min.js`
 3. Your web app JS file:  `code.js`
 
+The [Particle API JS library](https://docs.particle.io/reference/javascript/) contains methods to allow your web app to interact with your Photon device through Particle Cloud. You'll use Particle methods in your web app JS file.
+
+The [jQuery JS library](https://api.jquery.com/) contains methods that make it easy to modify the content and style of your web app by dynamically changing its HTML and CSS. You'll use jQuery methods in your web app JS file.
+
 {% hint style="info" %}
 **JQUERY = OPTIONAL:**  Loading jQuery is optional. However, it will be much easier to program your web app JS if you can incorporate jQuery statements into your code.
 {% endhint %}
