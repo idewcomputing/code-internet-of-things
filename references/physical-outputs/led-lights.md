@@ -2,7 +2,7 @@
 
 LEDs \(light-emitting diodes\) are small, bright, long-lasting, energy-efficient lights.  LEDs have been commonly used in electronic products for decades. More recently, incandescent light bulbs used in homes and other buildings are being replaced with LED light bulbs due to their energy efficiency.
 
-Your Photon kit should have a set of LED lights in various colors:  red, yellow, green, and blue.
+Your Photon kit has a set of LED lights in different bulb colors:  red, yellow, green, and blue.
 
 ![LED Lights in various colors](../../.gitbook/assets/led-assorted.jpg)
 
@@ -46,9 +46,9 @@ To connect an LED light to your Photon using the breadboard, you will need:
 Here are the steps to connect the LED light to your Photon using the breadboard:
 
 1. Insert the positive and negative legs of the LED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
-2. Plug one end of a **jumper wire** into the **same** terminal strip row as the bent **positive** leg of the LED. Plug the other end of this same jumper wire into an I/O pin on the Photon circuit board.
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as the bent **positive** leg of the LED. Plug the other end of this jumper wire into an I/O pin on the Photon circuit board.
 3. Insert one end of the **resistor** into the **same** terminal strip row as the **negative** leg of the LED. Insert the other end of the resistor into a pin hole of the negative column of the closest power rail on the breadboard.
-4. If the negative power rail isn't already connected to a GND pin on the Photon circuit board, then plug one end of the **other** jumper wire into another pin hole in the negative power rail, and plug the other end of this same jumper wire into a GND pin on the Photon circuit board.
+4. If the negative power rail isn't already connected to a GND pin on the Photon circuit board, then plug one end of the **other** jumper wire into another pin hole in the negative power rail, and plug the other end of this jumper wire into a GND pin on the Photon circuit board.
 
 Here's a wiring diagram showing a possible way to connect an LED light:
 
