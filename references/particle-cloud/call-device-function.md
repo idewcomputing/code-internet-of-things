@@ -26,8 +26,8 @@ Particle.function("cloudFunc", deviceFunc);
 
 The `Particle.function()` method requires two parameters inside its parentheses \(in this order\):
 
-1. **The cloud function name**, which can be up to 12 characters in length. If possible \(for simplicity\), make your cloud function name match your device function name. However, the cloud function is allowed to have a different name. The cloud function name must be listed within double quotation marks. Change `"cloudFunc"` to the actual name that you want to use for the cloud function.
-2. **The Photon device function name**, which is the custom function in your Photon device app that will be shared through Particle Cloud. Change `deviceFunc` to the actual name of the custom function in your Photon device app that you want to share.
+1. **The cloud function name**, which can be up to 12 characters in length. If possible \(for simplicity\), make your cloud function name match your device function name. However, the cloud function is allowed to have a different name. The cloud function name must be listed within double quotation marks **without** parentheses after its name. Change `"cloudFunc"` to the actual name that you want to use for the cloud function.
+2. **The Photon device function name**, which is the custom function in your Photon device app that will be shared through Particle Cloud. List the function name **without** parentheses after its name. Change `deviceFunc` to the actual name of the custom function in your Photon device app that you want to share.
 
 Particle Cloud will let your Photon device share up to 15 cloud functions at one time. Each of your cloud functions in Particle Cloud has to be given a unique name \(up to 12 characters in length\).
 
