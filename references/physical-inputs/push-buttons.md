@@ -2,7 +2,7 @@
 
 Physical buttons that people can push are used as inputs on many different types of devices.
 
-Your Photon kit should have a set of 4 push buttons in various colors: red, yellow, green, and blue.
+Your Photon kit has a set of 4 push buttons with different cap colors: red, yellow, green, and blue.
 
 ![Push Buttons in various colors](../../.gitbook/assets/buttons-assorted.jpg)
 
@@ -24,14 +24,14 @@ To connect a push button to your Photon using the breadboard, you will need:
 | Push Button | Photon Pin |
 | :--- | :--- |
 | Any Leg | any I/O pin |
-| Other Leg on same side | GND |
+| Adjacent Leg on same side | GND |
 
 Here are the steps to connect the push button to your Photon using the breadboard:
 
 1. Place the push button along the middle divider of the breadboard, so one pair of legs will align with **pin holes in column D** on the left half of the breadboard, while the other pair of legs \(on the opposite side\) will align with **pin holes in column G** on the right half of the breadboard. If necessary, you can gently bend the metal legs to align them better with the pin holes.
 2. Firmly press the button down to "snap" its base into place, so it's flat against the breadboard.
-3. Plug one end of a **jumper wire** into the **same** terminal strip row as **one of the button legs** on the right half of the breadboard. Plug the other end of this same jumper wire into an I/O pin on the Photon circuit board.
-4. Plug one end of the **other jumper wire** into the **same** terminal strip row as the **other button leg** on the right half of the breadboard. Plug the other end of this same jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+3. Plug one end of a **jumper wire** into the **same** terminal strip row as **one of the button legs** on the right half of the breadboard. Plug the other end of this jumper wire into an I/O pin on the Photon circuit board.
+4. Plug one end of the **other jumper wire** into the **same** terminal strip row as the **other button leg** on the right half of the breadboard. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
 Here's a wiring diagram showing a possible way to connect a push button \(you can ignore the wiring for the LED and resistor\):
 
