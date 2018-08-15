@@ -1,6 +1,6 @@
 # 4. Smart Security Device
 
-In this fourth tutorial, you'll create a Smart Security device and program its apps.
+In this fourth tutorial, you'll create a "Smart Security" device and program its apps.
 
 ## Tutorial Goals
 
@@ -9,5 +9,23 @@ The goals of this fourth tutorial are to help you:
 * Gain further experience by creating another practice IoT device and programming its apps
 * Become better prepared to create your own IoT device and apps for your team project
 
-Step-by-step guide to creating a 2nd practice device:  a simple security system created by modifying the Smart Light device \(by adding motion sensor + speaker\) and modifying the Smart Light apps.
+## Smart Security System
+
+You'll create a prototype of a "Smart Security" device by modifying your "Smart Light" device \(which has an LED light and push button\) to add a motion sensor and a speaker:
+
+* The **LED light** will be turned on or off to indicate whether the security system is currently "armed" or in "standby" mode.
+* The **push button** will be used to switch the security system between "armed" and "standby" mode. \(The button will simulate a security system's keypad, which would be used to enter a numeric passcode. For this prototype device, you'll simply press the button to toggle the system between modes, as if you had correctly entered the passcode.\)
+* The **motion sensor** will detect whether something is moving within the surrounding area.
+* The **speaker** will be used to produce an alarm sound if motion is detected.
+
+You'll program a Photon device app to control the LED, push button, motion sensor, and speaker.
+
+You'll also program a web app that interacts with your Photon over the internet to perform these tasks:
+
+* Monitor the security system's current mode \("armed" or "standby"\)
+* Remotely toggle the security system between "armed" and "standby" mode
+* Receive an event notification if the security system detects motion
+* View a timeline of the security system's activity
+
+
 
