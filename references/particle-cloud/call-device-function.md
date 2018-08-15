@@ -141,7 +141,7 @@ The `particle.callFunction()` method requires your Photon device ID, the name of
 
 Your web app will need a way to call the JS function which contains the `particle.callFunction()` method that makes a function run on your Photon device.
 
-One common way to do this is to add a button in your web app HTML that can be clicked by the user. The button will have an [onclick event](https://www.w3schools.com/jsref/event_onclick.asp) that will call the JS function \(which will call the Photon function\).
+One common way to do this is to add a button in your web app HTML that can be clicked by the user. The button should have an [onclick event attribute](https://www.w3schools.com/tags/ev_onclick.asp) that will call the JS function \(which will in turn call your Photon function\).
 
 Add this to your web app HTML file **within** the `<body>` section where you want the button to appear:
 

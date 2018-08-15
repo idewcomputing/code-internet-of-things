@@ -28,7 +28,6 @@
   * [3.7 Web App HTML](tutorials/create-smart-light/3.7-web-app-html.md)
   * [3.8 Web App CSS](tutorials/create-smart-light/3.8-web-app-css.md)
   * [3.9 Web App JS](tutorials/create-smart-light/3.9-web-app-js.md)
-  * [3.10 Finish Web App](tutorials/create-smart-light/3.10-finish-web-app.md)
 * [4. Smart Security Device](tutorials/create-security-system/README.md)
   * [4.1 Connect Motion Sensor](tutorials/create-security-system/4.1-connect-motion-sensor.md)
   * [4.2 Connect Speaker](tutorials/create-security-system/4.2-connect-speaker.md)
