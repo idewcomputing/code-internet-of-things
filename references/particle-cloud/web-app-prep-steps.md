@@ -24,7 +24,7 @@ The [jQuery JS library](https://api.jquery.com/) contains methods that make it e
 **JQUERY = OPTIONAL:**  Loading jQuery is optional. However, it will be much easier to program your web app JS if you can incorporate jQuery statements into your code.
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="success" %}
 **IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file must be listed **before** the `<script>` tag that loads your web app JS file \(`code.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
 {% endhint %}
 
