@@ -11,9 +11,11 @@ The goals of this fourth tutorial are to help you:
 
 ## Smart Security System
 
+For decades, security systems have been used to monitor homes and businesses for break-ins and other emergencies \(fire, flood, etc.\). These systems use some combination of: motion sensors, door/window sensors, glass break sensors, smoke detectors, flood sensors, video cameras, etc. Today, many security systems are being connected to the internet to offer advanced features.
+
 You'll create a prototype of a "Smart Security" device by modifying your "Smart Light" device \(which has an LED light and push button\) to add a motion sensor and a speaker:
 
-* The **LED light** will be turned on or off to indicate whether the security system is currently "armed" or "disarmed."
+* The **LED light** will be used to indicate whether the security system is currently "armed" \(LED is on\) or "disarmed" \(LED is off\).
 * The **push button** will be used to switch the security system between "armed" and "disarmed" mode. \(The button will simulate a security system's keypad, which is used to enter a numeric passcode. For this prototype device, you'll simply press the button to toggle the system between modes, as if you had correctly entered the passcode.\)
 * The **motion sensor** will detect whether something is moving within the surrounding area.
 * The **speaker** will be used to produce an alarm sound if motion is detected.
