@@ -103,7 +103,7 @@ The `tone()` method requires three parameters inside its parentheses \(in this o
 3. **The duration for the tone**, which can be an integer number \(whole number\) or a variable that stores an integer. The value represents the number of milliseconds that the tone will be played \(1000 ms = 1 second\). In this example, the duration will be `250` ms \(0.25 seconds\).
 
 {% hint style="info" %}
-**VOLUME:**  There **isn't** a way to change the volume of a tone. However, you will notice that certain frequencies \(in the range of 2000-3000Hz\) will naturally seem louder to your ears.
+**VOLUME:**  There **isn't** a way to change the volume of a tone. However, you will notice that certain mid-range frequencies will naturally seem louder to your ears.
 {% endhint %}
 
 
