@@ -133,5 +133,3 @@ The condition listed inside the parentheses of the [if statement](http://www.wir
 
 
 
-
-

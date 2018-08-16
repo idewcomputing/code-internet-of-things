@@ -40,7 +40,100 @@ Keep in mind that your connection can look different than this example diagram:
 
 ## How to Code Motion Sensor
 
-explain
+The basic steps to use a motion sensor in your app code are:
+
+1. Declare a global variable to store the I/O pin number for the motion sensor.
+2. Set the pin mode for the motion sensor pin in the `setup()` function.
+3. Use a `digitalRead()` statement to check whether the sensor detects any motion, and add code statements that should be performed if motion is detected \(or not detected\).
+
+### Global Variable {#global-variable}
+
+You should declare a global variable to store the I/O pin number that the motion sensor's data wire is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the motion sensor to a different pin number\).
+
+Add this code statement \(modify if necessary\) **before** the `setup()` function:
+
+```cpp
+int motion = D0;
+```
+
+This line of code does 3 things \(in order\):
+
+1. **It declares a data type for the variable's value.** In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
+2. **It declares the variable's name.** In this example, the variable will be called `motion`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
+3. **It assigns a value to the variable.** In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your button is connected to.
+
+#### MULTIPLE SENSORS {#multiple-led-lights}
+
+If you have **multiple** motion sensors connected to your Photon, then be sure to give each sensor a unique variable name by adding an adjective or number to the variable names. For example:
+
+```cpp
+int motion1 = D0;
+int motion2 = D1;
+```
+
+### Set Pin Mode {#set-pin-mode}
+
+You need to set the pin mode for the motion sensor to be used as an input.
+
+Add this code statement \(modify if necessary\) **within** the `setup()` function:
+
+```cpp
+pinMode(motion, INPUT_PULLUP);
+```
+
+The `pinMode()` method requires two parameters inside its parentheses \(in this order\):
+
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `motion` is listed. If necessary, change this to match the variable name for your button.
+2. **The mode value**, which will always be `INPUT_PULLUP` for a motion sensor.
+
+#### MULTIPLE SENSORS {#multiple-led-lights-1}
+
+If you have **multiple** motion sensors connected to your Photon, then be sure to set the pin mode for each sensor's pin variable. For example:
+
+```cpp
+pinMode(motion1, INPUT_PULLUP);
+pinMode(motion2, INPUT_PULLUP);
+```
+
+### Check If Motion Detected
+
+You can use the `digitalRead()` method to check whether the sensor detects any motion.
+
+Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
+
+```cpp
+int motionState = digitalRead(motion);
+
+if(motionState == LOW) {
+​    // add code to do something if motion detected
+​
+}
+```
+
+In the first code statement, a local variable named `motionState` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `digitalRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the button pin number.
+
+The `digitalRead()` method requires one parameter insides its parentheses: 
+
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `motion` is listed. If necessary, change this to match the variable name for your button's pin number.
+
+The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
+
+* `HIGH` indicates that motion is **NOT** detected.
+* `LOW` indicates that motion is detected.
+
+The condition listed inside the parentheses of the [if statement](http://www.wiring.org.co/reference/if_.html) checks whether the value of `motionState` is [equivalent](http://www.wiring.org.co/reference/equality.html) to `LOW`:
+
+* If this condition is **true**, the code within the curly braces of the `if` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want. 
+* If this condition is **false** \(because the `motionState` is `HIGH`\), the code within the curly braces will **NOT** be performed. Optionally, you can add an [else statement](http://www.wiring.org.co/reference/else.html) to perform a different set of code statements when motion is **not** detected.
+
+If motion is detected, here are some possible actions that your Photon could perform:
+
+* turn on a light
+* make a sound with a speaker \(a tone with a frequency of 2000Hz works well\)
+* send an event notification to your web app
+* etc.
+
+
 
 
 
