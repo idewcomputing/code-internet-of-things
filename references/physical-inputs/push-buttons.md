@@ -89,7 +89,7 @@ pinMode(button, INPUT_PULLUP);
 The `pinMode()` method requires two parameters inside its parentheses \(in this order\):
 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, a variable named `button` is listed. If necessary, change this to match the variable name for your button.
-2. **The mode value**, which will always be `INPUT_PULLUP` for a push button because your app will need to read signals from the button to detect whether it is currently pressed.
+2. **The mode value**, which will always be `INPUT_PULLUP` for a push button.
 
 #### MULTIPLE BUTTONS {#multiple-led-lights-1}
 
