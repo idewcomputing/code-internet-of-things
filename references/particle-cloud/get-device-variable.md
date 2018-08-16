@@ -87,6 +87,32 @@ For example, you could add code to:
 * Change the style of your web app based on the value \(by using jQuery to modify the CSS\)
 * Save the value in your web app \(by assigning the value to a JS global variable\)
 
+### Getting Multiple Variables
+
+If you want to get the values of **multiple** cloud variables at the same time, you can include **separate** calls to the `particle.getVariable()` method within the same custom function:
+
+```javascript
+function webFunction() {
+    // get 1st variable
+    particle.getVariable({ deviceId: myDevice, name: "cloudVar1", auth: myToken }).then(function(data) {
+        // add code to do something with value returned as: data.body.result
+        
+        
+    }, function(err) {
+        console.log("An error occurred:", err);
+    });
+
+    // get 2nd variable
+    particle.getVariable({ deviceId: myDevice, name: "cloudVar2", auth: myToken }).then(function(data) {
+        // add code to do something with value returned as: data.body.result
+        
+        
+    }, function(err) {
+        console.log("An error occurred:", err);
+    });
+}
+```
+
 ### Set Interval to Get Variable
 
 If your web app needs to continuously monitor the value of a cloud variable, you can use the `window.setInterval()` method to automatically call \(perform\) a function at a set time interval \(such as every 0.5 seconds, etc.\).
