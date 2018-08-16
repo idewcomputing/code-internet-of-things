@@ -50,7 +50,7 @@ Add this code \(**be sure to modify**\) in your web app JS:
 ```javascript
 function webFunction() {
     particle.getVariable({ deviceId: myDevice, name: "cloudVar", auth: myToken }).then(function(data) {
-        // add code to do something with value stored as: data.body.result
+        // add code to do something with value returned as: data.body.result
         
         
     }, function(err) {
@@ -64,10 +64,10 @@ function webFunction() {
 
 1. Change `webFunction()` to the name you want to use for your custom function
 2. Change `"cloudVar"` to the name of your cloud variable whose value you want
-3. Add code inside the `particle.getVariable()` method to do something with the variable value stored as: `data.body.result`
+3. Add code inside the `particle.getVariable()` method to do something with the variable value returned as: `data.body.result`
 {% endhint %}
 
-This code adds a custom function named `webFunction()` to your web app JS.  This custom function contains the `particle.getVariable()` method, which will contain code that you'll add to do something with the variable value returned by Particle Cloud.
+This code adds a custom function named `webFunction()` to your web app JS.  This custom function contains a call to the `particle.getVariable()` method, which will also contain code you'll add to perform action\(s\) based on the variable value returned by Particle Cloud.
 
 Be sure to change `webFunction()` to the actual name that you want to use for this JS function.  For example, if the function is supposed to get the value of a temperature variable from your Photon device, you might name the function something like: `getTemperature()`
 
