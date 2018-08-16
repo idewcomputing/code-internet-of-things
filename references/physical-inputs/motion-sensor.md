@@ -107,14 +107,15 @@ int motionState = digitalRead(motion);
 if(motionState == LOW) {
 ​    // add code to do something if motion detected
 ​
+    delay(2000); // wait 2 seconds before checking sensor again
 }
 ```
 
-In the first code statement, a local variable named `motionState` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `digitalRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the button pin number.
+In the first code statement, a local variable named `motionState` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `digitalRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the motion sensor pin number.
 
 The `digitalRead()` method requires one parameter insides its parentheses: 
 
-1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `motion` is listed. If necessary, change this to match the variable name for your button's pin number.
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `motion` is listed. If necessary, change this to match the variable name for your motion sensor's pin number.
 
 The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
 
@@ -126,12 +127,9 @@ The condition listed inside the parentheses of the [if statement](http://www.wir
 * If this condition is **true**, the code within the curly braces of the `if` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want. 
 * If this condition is **false** \(because the `motionState` is `HIGH`\), the code within the curly braces will **NOT** be performed. Optionally, you can add an [else statement](http://www.wiring.org.co/reference/else.html) to perform a different set of code statements when motion is **not** detected.
 
-If motion is detected, here are some possible actions that your Photon could perform:
+**IMPORTANT:**  You will notice that a `delay()` of 2 seconds is performed if motion is detected. This delay is needed to allow the motion sensor to capture a new "snapshot" of the environment before checking again for any possible motion.
 
-* turn on a light
-* make a sound with a speaker \(a tone with a frequency of 2000Hz works well\)
-* send an event notification to your web app
-* etc.
+
 
 
 
