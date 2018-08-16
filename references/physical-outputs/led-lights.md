@@ -83,7 +83,7 @@ This line of code does 3 things \(in order\):
 
 1. **It declares a data type for the variable's value.**  In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
 2. **It declares the variable's name.** In this example, the variable will be called `LED`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
-3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your LED is connected to.
+3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin that your LED is connected to.
 
 #### MULTIPLE LED LIGHTS
 
@@ -96,7 +96,7 @@ int greenLED = D1;
 
 ### Set Pin Mode
 
-You need to set the pin mode for the LED to be an output.
+You need to set the pin mode for the LED to be used as an output.
 
 Add this code statement \(modify if necessary\) **within** the `setup()` function:
 
@@ -120,7 +120,7 @@ pinMode(greenLED, OUTPUT);
 
 ### Turn LED On or Off
 
-You can use the `digitalWrite()` method to turn an LED on or off.
+The `digitalWrite()` method is used to turn an LED on or off.
 
 Add this code statement \(modify if necessary\) to your app within the `setup()` function, `loop()` function, or a custom function:
 

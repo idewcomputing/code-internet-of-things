@@ -102,7 +102,7 @@ pinMode(button2, INPUT_PULLUP);
 
 ### Check If Button Pressed
 
-You can use the `digitalRead()` method to check whether a button is currently pressed.
+The `digitalRead()` method is used to check whether a button is currently pressed.
 
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 

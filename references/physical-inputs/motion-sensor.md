@@ -62,15 +62,6 @@ This line of code does 3 things \(in order\):
 2. **It declares the variable's name.** In this example, the variable will be called `motion`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.** In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your button is connected to.
 
-#### MULTIPLE SENSORS {#multiple-led-lights}
-
-If you have **multiple** motion sensors connected to your Photon, then be sure to give each sensor a unique variable name by adding an adjective or number to the variable names. For example:
-
-```cpp
-int motion1 = D0;
-int motion2 = D1;
-```
-
 ### Set Pin Mode {#set-pin-mode}
 
 You need to set the pin mode for the motion sensor to be used as an input.
@@ -86,18 +77,9 @@ The `pinMode()` method requires two parameters inside its parentheses \(in this 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `motion` is listed. If necessary, change this to match the variable name for your button.
 2. **The mode value**, which will always be `INPUT_PULLUP` for a motion sensor.
 
-#### MULTIPLE SENSORS {#multiple-led-lights-1}
-
-If you have **multiple** motion sensors connected to your Photon, then be sure to set the pin mode for each sensor's pin variable. For example:
-
-```cpp
-pinMode(motion1, INPUT_PULLUP);
-pinMode(motion2, INPUT_PULLUP);
-```
-
 ### Check If Motion Detected
 
-You can use the `digitalRead()` method to check whether the sensor detects any motion.
+The `digitalRead()` method is used to check whether the sensor currently detects any motion.
 
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 
