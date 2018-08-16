@@ -108,7 +108,7 @@ The `tone()` method requires three parameters inside its parentheses \(in this o
 
 ### Continuous Tone
 
-If you want to produce a continuous tone \(that keeps playing\), you can either use a **negative** value for the duration – or you can leave out the duration parameter entirely:
+If you want to produce a continuous tone that keeps playing, you can either use a **negative** value for the duration – or you can leave out the duration parameter entirely:
 
 ```cpp
 tone(speaker, 2000); // continuous tone of 2000 hertz
