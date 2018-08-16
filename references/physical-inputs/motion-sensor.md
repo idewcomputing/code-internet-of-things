@@ -6,7 +6,7 @@ The motion sensor included in your Photon kit uses passive infrared \(PIR\) ligh
 
 ## How to Connect Motion Sensor
 
-The motion sensor has a 3-wire JST connector with 3 pins for plugging into a breadboard. \(If the end of your wire connector doesn't have 3 pins, attach the [JST right angle connector](https://www.sparkfun.com/products/9750) included in your kit.\)
+The motion sensor has a 3-wire JST connector with 3 pins for plugging into a breadboard. \(If the end of your connector doesn't have 3 metal pins, attach the [JST right angle connector](https://www.sparkfun.com/products/9750) included in your kit.\)
 
 To connect a motion sensor to your Photon using the breadboard, you will need:
 
