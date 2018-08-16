@@ -54,12 +54,12 @@ Here's a wiring diagram showing a possible way to connect an LED light:
 
 ![](../../.gitbook/assets/experiment-1.jpg)
 
-Keep in mind that your connection can look different than this example diagram:
+Keep in mind that your connection could look different than this example diagram:
 
-* Your LED legs could be inserted into different row numbers on the breadboard. \(The example connects the positive leg to row 20 and the negative leg to row 21\).
-* Your LED legs could be inserted into a different column on the breadboard. \(The example connects the LED legs into column I of the terminal strip rows\).
-* The positive leg of your LED could connect to a different I/O pin. \(The example connects to the D0 pin on the Photon circuit board\).
-* Your negative power rail on your breadboard could connect to a different GND pin. \(There are three available GND pins on the Photon circuit board.\)
+* Your LED legs could be inserted into **different row numbers** on the breadboard. \(The example connects the positive leg to row 20 and the negative leg to row 21\).
+* Your LED legs could be inserted into a **different column** on the breadboard. \(The example connects the LED legs into column I of the terminal strip rows\).
+* The positive leg of your LED could connect to a **different I/O pin**. \(The example connects to the D0 pin on the Photon circuit board\).
+* The negative power rail on your breadboard could connect to a **different GND pin**. \(There are three available GND pins on the Photon circuit board.\)
 
 ## How to Code LED
 
