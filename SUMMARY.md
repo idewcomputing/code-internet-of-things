@@ -31,7 +31,7 @@
 * [4. Smart Security Device](tutorials/create-security-system/README.md)
   * [4.1 Connect Motion Sensor](tutorials/create-security-system/4.1-connect-motion-sensor.md)
   * [4.2 Connect Speaker](tutorials/create-security-system/4.2-connect-speaker.md)
-  * [4.3 Copy Smart Light App](tutorials/create-security-system/4.3-copy-smart-light-app.md)
+  * [4.3 LED and Button Code](tutorials/create-security-system/4.3-led-and-button-code.md)
   * [4.4 Motion Sensor Code](tutorials/create-security-system/4.4-motion-sensor-code.md)
   * [4.5 Speaker Code](tutorials/create-security-system/4.5-speaker-code.md)
   * [4.6 Particle Cloud Code](tutorials/create-security-system/4.6-particle-cloud-code.md)
