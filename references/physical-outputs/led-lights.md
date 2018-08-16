@@ -12,7 +12,7 @@ An LED light is a [polarized](https://learn.sparkfun.com/tutorials/polarity) par
 
 Each LED in your Photon kit has a positive leg and a negative leg. These can be identified visually by length:  the negative leg has been made slightly shorter.
 
-![LED with Polarized Legs](../../.gitbook/assets/led-polarity.png)
+![](../../.gitbook/assets/led-polarity.png)
 
 You will use a breadboard to help connect the LED to your Photon circuit board. The negative leg will be connected to GND \(-\) through a resistor. The positive leg will be connected to an I/O pin, which will serve as the voltage source \(+\).
 
