@@ -99,12 +99,26 @@ tone(speaker, 2000, 250);
 The `tone()` method requires three parameters inside its parentheses \(in this order\):
 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, a variable named `speaker` is listed. If necessary, modify this to match the variable name for your speaker.
-2. **The frequency for the tone**, which can be an integer value \(whole number\) or a variable that stores an integer. The value can be between 20-20000 hertz. In this example, the frequency will be `2000` hertz. Modify this value to the frequency you want for your sound.
+2. **The frequency for the tone**, which can be an integer value \(whole number\) or a variable that stores an integer. The value can be between 20-20000 hertz. Lower numbers will have a lower pitch, while higher numbers will have a higher pitch. In this example, the frequency will be `2000` hertz. Modify this value to the frequency you want for your sound.
 3. **The duration for the tone**, which can be an integer number \(whole number\) or a variable that stores an integer. The value represents the number of milliseconds that the tone will be played \(1000 ms = 1 second\). In this example, the duration will be `250` ms \(0.25 seconds\).
 
 {% hint style="info" %}
-**VOLUME:**  There **isn't** a way to change the volume of a tone. However, you will notice that certain mid-range frequencies will naturally seem louder to your ears.
+**VOLUME:**  There **isn't** a way to change the volume of a tone produced by your Photon. However, you will notice that certain frequencies will naturally seem louder to your ears.
 {% endhint %}
+
+### Continuous Tone
+
+If you want to produce a continuous tone \(that keeps playing\), you can either use a **negative** value for the duration – or you can leave out the duration parameter entirely:
+
+```cpp
+tone(speaker, 2000); // continuous tone of 2000 hertz
+```
+
+To turn off a continuous tone, use the `noTone()` method when you're ready to stop the sound:
+
+```cpp
+noTone(speaker);
+```
 
 
 
