@@ -13,6 +13,8 @@ The goals of this fourth tutorial are to help you:
 
 For decades, security systems have been used to monitor homes and businesses for emergencies \(burglary, fire, flood, etc.\). These systems use some combination of: motion sensors, door/window sensors, glass break sensors, video cameras, smoke detectors, flood sensors, etc. Today, many security systems are being connected to the internet to offer advanced features.
 
+![](../../.gitbook/assets/smart-security-system.jpg)
+
 You'll create a prototype of a "Smart Security" device by modifying your "Smart Light" device \(which has an LED light and push button\) to add a motion sensor and a speaker:
 
 * The **LED light** will be used to indicate whether the security system is currently "armed" \(LED is on\) or "disarmed" \(LED is off\).
