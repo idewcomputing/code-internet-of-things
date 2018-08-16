@@ -18,6 +18,10 @@ Finally, this guidebook also contains **links to external resources**, such as a
 Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowledge.md) that will help ensure students are successful with the IoT code tutorials and IoT project.
 {% endhint %}
 
+{% hint style="success" %}
+**HOW TO COPY CODE:**  When using the coding tutorials and references, students can copy a code block simply by clicking the **copy icon** displayed in the upper right of the code block.
+{% endhint %}
+
 ## Your IoT Electronics Kit
 
 This guidebook is tailored for an IoT electronics kit called the [SparkFun Inventor's Kit for Photon](https://www.sparkfun.com/products/13320), which will simply be referred to as the Photon kit.
