@@ -87,9 +87,24 @@ For example, you could add code to:
 * Change the style of your web app based on the value \(by using jQuery to modify the CSS\)
 * Save the value in your web app \(by assigning the value to a JS global variable\)
 
+### Set Interval to Get Variable
+
+If your web app needs to continuously monitor the value of a cloud variable, you can use the `window.setInterval()` method to automatically call \(perform\) a function at a set time interval \(such as every 0.5 seconds, etc.\).
+
+Add this code statement \(**be sure to modify**\) near the top of your web app JS:
+
+```javascript
+window.setInterval(webFunction, 2000);
+```
+
+The `window.setInterval()` method requires two parameters inside its parentheses \(in this order\):
+
+1. **The name of the function to be called**, which will be the name of the custom function in your JS  that contains the `particle.getVariable()` method for the variable you need to continuously monitor. The custom function's name should be listed **without** a set of parentheses. Change `webFunction` to the name of your custom function.
+2. **The time interval between calls**, which will be the amount of time between each call to the function. The time interval is specified in milliseconds \(1000 ms = 1 second\). In this case, the interval was set to `2000` ms \(2 seconds\). Change this value to an appropriate time interval for your web app.
+
 ### Getting Multiple Variables
 
-If you want to get the values of **multiple** cloud variables at the same time, you can include **separate** calls to the `particle.getVariable()` method within the same custom function:
+If you want to get the values of **multiple** cloud variables at the **same time**, you can include separate calls to the `particle.getVariable()` method within the same custom function:
 
 ```javascript
 function webFunction() {
@@ -113,18 +128,28 @@ function webFunction() {
 }
 ```
 
-### Set Interval to Get Variable
-
-If your web app needs to continuously monitor the value of a cloud variable, you can use the `window.setInterval()` method to automatically call \(perform\) a function at a set time interval \(such as every 0.5 seconds, etc.\).
-
-Add this code statement \(**be sure to modify**\) near the top of your web app JS:
+If your web app needs to get different cloud variables at **different times**, then create separate custom functions to get each cloud variable individually:
 
 ```javascript
-window.setInterval(webFunction, 2000);
+function webFunction1() {
+    particle.getVariable({ deviceId: myDevice, name: "cloudVar1", auth: myToken }).then(function(data) {
+        // add code to do something with value returned as: data.body.result
+        
+        
+    }, function(err) {
+        console.log("An error occurred:", err);
+    });
+}
+
+function webFunction2() {
+    particle.getVariable({ deviceId: myDevice, name: "cloudVar2", auth: myToken }).then(function(data) {
+        // add code to do something with value returned as: data.body.result
+        
+        
+    }, function(err) {
+        console.log("An error occurred:", err);
+    });
+}
+
 ```
-
-The `window.setInterval()` method requires two parameters inside its parentheses \(in this order\):
-
-1. **The name of the function to be called**, which will be the name of the custom function in your JS  that contains the `particle.getVariable()` method for the variable you need to continuously monitor. The custom function's name should be listed **without** a set of parentheses. Change `webFunction` to the name of your custom function.
-2. **The time interval between calls**, which will be the amount of time between each call to the function. The time interval is specified in milliseconds \(1000 ms = 1 second\). In this case, the interval was set to `2000` ms \(2 seconds\). Change this value to an appropriate time interval for your web app.
 
