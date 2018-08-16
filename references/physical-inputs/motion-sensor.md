@@ -1,6 +1,6 @@
 # Motion Sensor
 
-The motion sensor included in your Photon kit uses passive infrared \(PIR\) light to detect movement in the surrounding area up to about 10 feet away.
+The motion sensor included in your Photon kit uses passive infrared \(PIR\) light to detect movement in the surrounding environment up to about 10 feet away.
 
 ![Motion Sensor](../../.gitbook/assets/motion-sensor.jpg)
 
