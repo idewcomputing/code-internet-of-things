@@ -22,7 +22,7 @@ You'll create a prototype of a "Smart Security" device by modifying your "Smart 
 * The **motion sensor** will detect whether something is moving within the surrounding area.
 * The **speaker** will be used to produce an alarm sound if motion is detected.
 
-You'll program a Photon device app to control the LED, push button, motion sensor, and speaker.
+You'll use your "Smart Light" device app as starter code for your "Smart Security" device app. You'll modify the code controlling the LED and button before adding new code to control the motion sensor and speaker.
 
 You'll also program a web app that interacts with your Photon over the internet to perform these tasks:
 
