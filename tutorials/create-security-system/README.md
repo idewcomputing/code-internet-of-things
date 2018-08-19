@@ -11,7 +11,7 @@ The goals of this fourth tutorial are to help you:
 
 ## Smart Security System
 
-For decades, security systems have been used to monitor homes and businesses for emergencies \(burglary, fire, flood, etc.\). These systems use some combination of: motion sensors, door/window sensors, glass break sensors, video cameras, smoke detectors, flood sensors, etc. Today, many security systems are being connected to the internet to offer advanced features.
+For decades, security systems have been used to monitor homes and businesses for emergencies \(burglary, fire, flood, etc.\). These systems use some combination of: motion sensors, door/window sensors, glass break sensors, video cameras, smoke detectors, flood sensors, etc. Today, many security systems are being connected to the internet to offer additional features.
 
 ![](../../.gitbook/assets/smart-security-system.jpg)
 
