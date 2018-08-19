@@ -4,7 +4,7 @@ You can create a web app that interacts with your Photon device through Particle
 
 Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `code.js`.
 
-This section contains starter code that you can use for your HTML, CSS, and JS files.
+This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to modify and add to the starter code.
 
 ## HTML
 
@@ -59,7 +59,9 @@ The [jQuery JS library](https://api.jquery.com/) contains methods that make it e
 
 In the `<body>` section, lines 11-14 are where you will add HTML for your web app.  \(You can use more lines, obviously.\)  This is where you might display text, images, links, buttons, etc.
 
-Your web app should consist of **single HTML page**. If you want to create different screens for your web app, then create a separate `<div>` section for each screen, and give each `<div>` a unique [id name](https://www.w3schools.com/html/html_id.asp) along with a [class name](https://www.w3schools.com/html/html_classes.asp) shared by all the screen `<div>` sections.
+#### HOW TO CREATE MULTIPLE SCREENS
+
+Your web app should consist of **single HTML page**. If you want different screens for your web app, then create a separate `<div>` section for each screen, and give each `<div>` a unique [id name](https://www.w3schools.com/html/html_id.asp) along with a [class name](https://www.w3schools.com/html/html_classes.asp) shared by all the screen `<div>` sections.
 
 This will allow your web app JS to use [jQuery code to show one screen while hiding the other screens](https://www.w3schools.com/jquery/jquery_hide_show.asp). First, you use jQuery to `hide()` all the screens \(by selecting the class name\), and then use jQuery to `show()` one specific screen \(by selecting its unique id name\). To switch to a different screen, just `hide()` all the screens again, and then `show()` the new screen.
 
