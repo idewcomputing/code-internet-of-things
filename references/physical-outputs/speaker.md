@@ -1,6 +1,6 @@
 # Speaker
 
-The speaker included in the Photon kit can be used to produce tones or play simple music \(note by note\). The speaker can produce tones ranging in frequency from 20Hz \(very low pitch\) to 20KHz \(very high pitch\), which covers the full range of sounds that humans can hear.
+The small speaker included in the Photon kit can produce tones or play simple music \(note by note\). The speaker can produce tones ranging in frequency from 20Hz \(very low pitch\) to 20KHz \(very high pitch\), covering the full range of sounds that humans can hear.
 
 ![Speaker](../../.gitbook/assets/speaker.jpg)
 
