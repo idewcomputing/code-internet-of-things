@@ -4,7 +4,7 @@ You can create a web app that interacts with your Photon device through Particle
 
 Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `code.js`.
 
-This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to modify and add to the starter code.
+This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to add to the starter code \(and modify certain parts\).
 
 ## HTML
 
@@ -101,6 +101,10 @@ var myToken = "0000"; // Photon access token
 Line 1 of the JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
 
 Lines 2-3 create global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
+
+{% hint style="danger" %}
+**IMPORTANT:**  You must modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
+{% endhint %}
 
 Then you'll need to add JS for your web app. Since your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
