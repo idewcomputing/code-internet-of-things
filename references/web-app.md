@@ -2,15 +2,9 @@
 
 You can create a web app that interacts with your Photon device through Particle Cloud.
 
-Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `code.js`.  
+Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `code.js`.
 
-Basic overview/template for web app that interacts with device app:
-
-1. Load Particle API JS using script tag in HTML file
-2. Create global variables in JS file for Photon device ID and access token
-3. Create Particle object in JS file
-4. Add code in JS file to read device variable, call device function, and/or listen for events
-5. Use JS or jQuery to modify HTML elements using class and id selectors
+This section contains starter code that you can use for your HTML, CSS, and JS files.
 
 ## HTML
 
@@ -68,6 +62,49 @@ In the `<body>` section, lines 11-14 are where you will add HTML for your web ap
 Your web app should consist of **single HTML page**. If you want to create different screens for your web app, then create a separate `<div>` section for each screen, and give each `<div>` a unique [id name](https://www.w3schools.com/html/html_id.asp) along with a [class name](https://www.w3schools.com/html/html_classes.asp) shared by all the screen `<div>` sections.
 
 This will allow your web app JS to use [jQuery code to show one screen while hiding the other screens](https://www.w3schools.com/jquery/jquery_hide_show.asp). First, you use jQuery to `hide()` all the screens \(by selecting the class name\), and then use jQuery to `show()` one specific screen \(by selecting its unique id name\). To switch to a different screen, just `hide()` all the screens again, and then `show()` the new screen.
+
+## CSS
+
+You can use this starter code for your CSS file named `style.css`:
+
+```css
+/* Add CSS for your web app */
+body {
+    font-family:  Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+```
+
+This CSS styles the `<body>` section of your web app. However, you can modify this CSS if desired.
+
+You'll need to add CSS to style other HTML elements in your web app, depending on the appearance that you want for your web app.
+
+## JS
+
+You can use this starter code for your JS file named `code.js`:
+
+```javascript
+var particle = new Particle();
+var myDevice = "0000"; // Photon device ID
+var myToken = "0000"; // Photon access token
+
+// Add JS for your web app
+
+
+```
+
+Line 1 of the JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
+
+Lines 2-3 create global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
+
+Then you'll need to add JS for your web app. Since your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
+
+Review the reference section on [Particle Cloud](particle-cloud/) for more information \(and code examples\) for how to make your web app JS interact with your Photon device app.
+
+If you want to learn more about using jQuery, consult the [W3Schools jQuery Tutorial and Reference](https://www.w3schools.com/jquery/default.asp).
 
 
 
