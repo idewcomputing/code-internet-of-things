@@ -42,7 +42,7 @@
 ## References
 
 * [Particle Build](references/particle-build.md)
-* [Device App](references/device-app.md)
+* [Photon Device App](references/device-app.md)
 * [Web App](references/web-app.md)
 * [Particle Cloud](references/particle-cloud/README.md)
   * [Web App Prep Steps](references/particle-cloud/web-app-prep-steps.md)

@@ -1,4 +1,4 @@
-# Device App
+# Photon Device App
 
 All the apps that run on your Photon device will be coded using Particle's version of the open-source [Wiring](http://www.wiring.org.co/reference/) programming language framework for microcontrollers.
 
