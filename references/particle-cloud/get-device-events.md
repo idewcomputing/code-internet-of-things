@@ -78,7 +78,7 @@ particle.getEventStream({ deviceId: myDevice, name: "cloudEvent", auth: myToken 
 The `particle.getEventStream()` method requires your Photon device ID, the name of your cloud event, and your Photon access token:
 
 1. `myDevice` is a global variable in your web app JS that should store your Photon device ID
-2. `"cloudEvent"` is the name of your cloud event, which must be listed inside double quotation marks. Be sure to change `"cloudEvent"` to the actual name of your cloud event.
+2. `"cloudEvent"` is the name of your cloud event that you want to receive notifications from. The name must be listed inside double quotation marks. Be sure to change `"cloudEvent"` to the actual name of your cloud event.
 3. `myToken` is a global variable in your web app JS that should store your Photon access token
 
 If an event notification includes any data, this text data gets temporarily stored in a local variable called: `feed.data`
