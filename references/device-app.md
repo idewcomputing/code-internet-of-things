@@ -18,7 +18,7 @@ void setup() {​
 }
 ```
 
-If you want an app template that provides more guidance, you can use replace the default app template with the code below, which has comments to explain each major section of your app:
+If you want an app template that provides more guidance, you can replace the default app template with the code below, which has some comments to explain each major section of your app:
 
 ```cpp
 /*
@@ -47,9 +47,9 @@ void loop() {
 
 Every Photon device app must have one \(and only one\) `setup()` function.  You can add lines of code between this function's opening and closing curly braces.
 
-The `setup()` function will run only **one** time when your app first starts \(which is when your Photon is first powered on – or is restarted using its Reset button\).
+The `setup()` function will run **one time** when your app first starts \(which is when your Photon is first powered on – or is restarted using its Reset button\).
 
-The code added within the `setup()` function typically sets pin modes for the device's inputs and outputs, initializes settings for certain inputs and outputs, or performs other actions that need to occur at the start of the program.
+The code added within the `setup()` function typically sets pin modes for the device's inputs and outputs, initializes settings for certain inputs and outputs, or performs other "setup" actions that need to occur at the start of the program.
 
 Even if you didn't add any code within the `setup()` function, your app must still have this function.
 
@@ -59,7 +59,7 @@ Every Photon device app must have one \(and only one\) `loop()` function.  You c
 
 After the `setup()` function is done running, the `loop()` function will start to run. When all the code within the `loop()` function has been performed, the `loop()` function will automatically run itself again. It keeps running in an **endless loop** \(until the device is restarted or powered off\).
 
-The code added within the `loop()` function typically performs the main tasks of your program.
+The code added within the `loop()` function performs the main tasks of your program.
 
 Even if you didn't add any code within the `loop()` function, your app must still have this function.
 
