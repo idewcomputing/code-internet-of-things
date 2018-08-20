@@ -4,15 +4,9 @@ All the apps that run on your Photon device will be coded using Particle's versi
 
 The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a modified version of the Wiring language with a few minor differences, as well as some additional methods \(functions\) customized for the Photon hardware.
 
-## Particle Build
-
-[Particle Build](https://login.particle.io/build) is an online code editor \(web IDE\) provided by Particle.  Particle Build is part of the Particle Cloud platform. You will use Particle Build to code and store all your Photon device apps.
-
-The Photon device itself can only store and run **one** app at a time. However, you can create and save multiple apps in Particle Build. When you need to update the specific app stored on your Photon device, you'll do this in Particle Build – and your Photon will download the new app over Wi-Fi.
-
 ## Photon App Template
 
-When you create a new device app in Particle Build, a basic app template is provided that consists of an empty `setup()` function and an empty `loop()` function:
+When you create a new device app in [Particle Build](particle-build.md), a basic app template is provided that consists of an empty `setup()` function and an empty `loop()` function:
 
 ```cpp
 void setup() {​

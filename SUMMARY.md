@@ -41,6 +41,7 @@
 
 ## References
 
+* [Particle Build](references/particle-build.md)
 * [Device App](references/device-app.md)
 * [Web App](references/web-app.md)
 * [Particle Cloud](references/particle-cloud/README.md)
@@ -63,7 +64,6 @@
   * [Speaker](references/physical-outputs/speaker.md)
   * [Servo Motor](references/physical-outputs/servo-motor.md)
   * [Micro OLED Display](references/physical-outputs/micro-oled-display.md)
-* [Particle Build](references/particle-build.md)
 
 ## Links
 
