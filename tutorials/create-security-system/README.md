@@ -1,6 +1,6 @@
 # 4. Smart Security Device
 
-In this fourth tutorial, you'll create a "Smart Security" device and program its apps.
+In this fourth tutorial, you'll modify your "Smart Light" device into a "Smart Security" device and program new apps for the device.
 
 ## Tutorial Goals
 
