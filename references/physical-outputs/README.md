@@ -1,9 +1,9 @@
 # Physical Outputs
 
-Wiring & coding references for each physical output in Photon kit:
+Here are references for how to connect and code each physical output in your SparkFun Photon kit:
 
-* LED Light
-* Speaker
-* Servo Motor
-* Micro OLED Display
+* [LED Lights](led-lights.md)
+* [Speaker](speaker.md)
+* [Servo Motor](servo-motor.md)
+* [Micro OLED Display](micro-oled-display.md)
 
