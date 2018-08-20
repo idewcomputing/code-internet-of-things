@@ -125,7 +125,7 @@ Custom functions are usually listed after the `loop()` function \(to make it eas
 
 ## Resources
 
-* [Programming Reference for Wiring Framework ](http://www.wiring.org.co/reference/)
+* [Wiring Programming Reference](http://www.wiring.org.co/reference/)
+* [Particle Firmware Reference](https://docs.particle.io/reference/firmware/photon/)
 * [Particle Guide to Particle Build Web IDE](https://docs.particle.io/guide/getting-started/build/photon/#web-ide)
-* [SparkFun Overview of Particle Build](https://learn.sparkfun.com/tutorials/photon-development-guide/particle-build-online)
 
