@@ -24,7 +24,6 @@ You can use this starter code for your HTML file named `index.html`:
         
         
         
-        
         <!-- Load JavaScript files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.2.3/particle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -41,11 +40,11 @@ This HTML does three main things:
 
 #### LOAD CSS STYLESHEET
 
-In the `<head>` section, line 7 has a `<link>` tag to load a CSS stylesheet file named `style.css` that you'll use to modify the appearance of certain HTML elements in your web app.
+In the `<head>` section, there is a `<link>` tag to load a CSS stylesheet file named `style.css` that you'll use to modify the appearance of certain HTML elements in your web app.
 
 #### LOAD JAVASCRIPT FILES
 
-At the bottom of the `<body>` section, lines 16-18 contain `<script>` tags to load three JavaScript files into your web app:
+At the bottom of the `<body>` section, there are `<script>` tags to load several JavaScript files into your web app:
 
 1. Particle API JS library:  `particle.min.js`
 2. jQuery JS library:  `jquery.min.js`
@@ -57,7 +56,7 @@ The [jQuery JS library](https://api.jquery.com/) contains methods that make it e
 
 #### BLANK LINES FOR YOUR HTML
 
-In the `<body>` section, lines 11-14 are where you will add HTML for your web app.  \(You can use more lines, obviously.\)  This is where you might display text, images, links, buttons, etc.
+In the `<body>` section, there are several blank lines are where you will add HTML for your web app.  \(You can use more lines, obviously.\)  This is where you might display text, images, links, buttons, etc.
 
 #### HOW TO CREATE MULTIPLE SCREENS
 
@@ -70,7 +69,7 @@ This will allow your web app JS to use [jQuery code to show one screen while hid
 You can use this starter code for your CSS file named `style.css`:
 
 ```css
-/* Add CSS for your web app */
+/* Add or modify CSS for your web app */
 body {
     font-family:  Helvetica, Arial, sans-serif;
     font-size: 1em;
@@ -82,7 +81,7 @@ body {
 
 This CSS styles the `<body>` section of your web app. However, you can modify this CSS if desired.
 
-You'll need to add CSS to style other HTML elements in your web app, depending on the appearance that you want for your web app.
+You'll probably want to add CSS to style other HTML elements in your web app, in order to produce the desired layout and appearance for your app's user interface.
 
 ## JS
 
@@ -98,15 +97,15 @@ var myToken = "0000"; // Photon access token
 
 ```
 
-Line 1 of the JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
+This JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
 
-Lines 2-3 create global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
+Th JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
 
 {% hint style="danger" %}
 **IMPORTANT:**  You must modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
 {% endhint %}
 
-Then you'll need to add JS for your web app. Since your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
+Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your custom JS code.
 
 Review the reference section on [Particle Cloud](particle-cloud/) for more information \(and code examples\) for how to make your web app JS interact with your Photon device app.
 
