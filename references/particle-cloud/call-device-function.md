@@ -150,7 +150,7 @@ Add this to your web app HTML file **within** the `<body>` section where you wan
 ```
 
 * Change `webFunction()` to the name of the JS function to be called when the button is clicked. This should be a JS function that contains a `particle.callFunction()` method.
-* Change `Button Label` to whatever text you want displayed in the button as its label.
+* Change `Button Label` to whatever text you want displayed in the button as its label. Be sure to use a label that will make sense to the user.
 
-
+**NOTE:** You could use a different HTML element other than a button. Just be sure it will be clear to the user that the element is "clickable" \(and it's clear what will happen when it is clicked\).
 
