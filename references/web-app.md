@@ -105,11 +105,20 @@ Th JS also declares global variables to store your Photon device ID and access t
 **IMPORTANT:**  You must modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
 {% endhint %}
 
-Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your custom JS code.
+Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
-Review the reference section on [Particle Cloud](particle-cloud/) for more information \(and code examples\) for how to make your web app JS interact with your Photon device app.
+Review the reference section on [Particle Cloud](particle-cloud/) for explanations \(and code examples\) of how to make your web app JS interact with your Photon device app.
 
-If you want to learn more about using jQuery, consult the [W3Schools jQuery Tutorial and Reference](https://www.w3schools.com/jquery/default.asp).
+## Resources
+
+If you want to learn more about web development or need a quick reference, consult these tutorials and references from [W3Schools](https://www.w3schools.com/):
+
+* [HTML](https://www.w3schools.com/html/default.asp)
+* [CSS](https://www.w3schools.com/css/default.asp)
+* [JavaScript](https://www.w3schools.com/js/default.asp)
+* [jQuery](https://www.w3schools.com/jquery/default.asp)
+
+
 
 
 
