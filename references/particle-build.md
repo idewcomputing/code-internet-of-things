@@ -1,8 +1,18 @@
 # Particle Build
 
+## What's Particle Build?
+
 ​[Particle Build](https://login.particle.io/build) is an online code editor \(web IDE\) provided by Particle. Particle Build is part of the Particle Cloud platform. You will use Particle Build to code and store all your Photon device apps.
 
 The Photon device itself can only store and run **one** app at a time. However, you can create and save multiple apps in Particle Build. When you need to update the specific app stored on your Photon device, you'll do this in Particle Build – and your Photon will download the new app over Wi-Fi.
+
+Your team will need a Particle account to log in to Particle Build. However, your teacher will most likely provide your team with an **existing** Particle account login \(email & password\) that's already associated with your specific Photon device. Every Photon has a unique device ID it uses to communicate with Particle Cloud, and each device ID can only be associated with one Particle account.
+
+One person on your team should log in to Particle Build using your team's Particle account login.
+
+Once you're logged in, you'll see the Particle Build code editor, which defaults to the "Code" menu and shows a blank app template.
+
+![Particle Build User Interface](../.gitbook/assets/particle-build-ui.png)
 
 The user interface for Particle Build is divided into 4 sections:
 
@@ -11,7 +21,7 @@ The user interface for Particle Build is divided into 4 sections:
 * On the right side is the code editor panel showing the code for your current app.
 * On the bottom of the code editor panel is a horizontal status bar that displays messages.
 
-### Navigation Bar {#navigation-bar}
+## Navigation Bar
 
 If you hover your mouse pointer over an icon in the navigation bar, the icon's name will be displayed. Here is a summary of the navigation icons from top to bottom:
 
@@ -28,5 +38,10 @@ If you hover your mouse pointer over an icon in the navigation bar, the icon's n
 | ​![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LEGLBX3AeXb13IcoB4Q%2F-LJKU-305XqNVnF_dEZR%2F-LJKVeI_JNwvES3gcsyk%2Fpb-console-icon.png?alt=media&token=93eb237e-c5ec-4dba-80c4-e69f4fba8b23) | **Console** | Opens new tab with Console showing your device's events in Particle Cloud |
 | ​![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LEGLBX3AeXb13IcoB4Q%2F-LJKU-305XqNVnF_dEZR%2F-LJKVjdTz4eSKH5K5gtK%2Fpb-settings-icon.png?alt=media&token=627c9785-78b2-49a9-a140-f4d0a1a0783e) | **Settings** | Provides options to: log out, change password, or get your access token. |
 
-###   {#toggle-menu-panel}
+## Toggle Menu Panel
+
+The middle menu panel can be toggled between "show" and "hide" by clicking the same navigation icon repeatedly.
+
+In general, you'll probably want to keep the menu panel shown – but if you want extra space for your code editor panel, you can temporarily hide the menu panel.  
+
 
