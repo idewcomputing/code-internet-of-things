@@ -119,7 +119,10 @@ Custom functions are usually listed after the `loop()` function \(to make it eas
 
 ## Resources
 
+If you want to learn more about programming your Photon device, consult these references:
+
 * [Wiring Programming Reference](http://www.wiring.org.co/reference/)
 * [Particle Firmware Reference](https://docs.particle.io/reference/firmware/photon/)
-* [Particle Guide to Particle Build Web IDE](https://docs.particle.io/guide/getting-started/build/photon/#web-ide)
+
+
 
