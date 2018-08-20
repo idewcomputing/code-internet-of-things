@@ -63,6 +63,7 @@
   * [Speaker](references/physical-outputs/speaker.md)
   * [Servo Motor](references/physical-outputs/servo-motor.md)
   * [Micro OLED Display](references/physical-outputs/micro-oled-display.md)
+* [Particle Build](references/particle-build.md)
 
 ## Links
 
