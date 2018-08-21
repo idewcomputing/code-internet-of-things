@@ -4,8 +4,6 @@ The small speaker included in the Photon kit can produce tones or play simple mu
 
 ![Speaker](../../.gitbook/assets/speaker.jpg)
 
-In addition, there is a "positive" symbol \( ⊕ \) on the side of the speaker to identify the side closest to the positive leg. This can be used to verify the polarity after plugging the speaker into a breadboard.
-
 ## How to Connect Speaker
 
 A speaker is a [polarized](https://learn.sparkfun.com/tutorials/polarity) part, meaning there is one way to correctly connect its positive and negative terminals. If a polarized part is connected incorrectly \(by switching the positive and negative\), the part may not work or could become damaged.
@@ -13,6 +11,8 @@ A speaker is a [polarized](https://learn.sparkfun.com/tutorials/polarity) part, 
 The speaker in your Photon kit has a positive leg and a negative leg. These can be identified by labels on the bottom of the speaker:
 
 ![](../../.gitbook/assets/speaker-polarity.jpg)
+
+Also, there is a positive symbol \( ⊕ \) printed on the side of the speaker to identify which side has the positive leg. This allows you to verify the polarity while the speaker is plugged into a breadboard.
 
 ### Requires PWM Pin
 
