@@ -89,7 +89,7 @@ You'll typically want to add CSS to style other HTML elements in your web app, i
 
 ## JS
 
-You can use this starter code for your JS file named `code.js`:
+You can use this starter code for your JS file named `code.js` \(be sure to modify\):
 
 ```javascript
 var particle = new Particle();
@@ -101,13 +101,13 @@ var myToken = "0000"; // Photon access token
 
 ```
 
+{% hint style="danger" %}
+**IMPORTANT:**  You **must** modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
+{% endhint %}
+
 This JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
 
 This JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
-
-{% hint style="danger" %}
-**IMPORTANT:**  You must modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
-{% endhint %}
 
 Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
