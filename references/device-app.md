@@ -43,6 +43,10 @@ void loop() {
 
 ```
 
+{% hint style="success" %}
+**COPY CODE:** When using this IoT code guidebook, you can copy a code block simply by clicking the **copy icon** displayed in the upper right of the code block.
+{% endhint %}
+
 ### Setup Function
 
 Every Photon device app must have one \(and only one\) `setup()` function.  You can add lines of code between this function's opening and closing curly braces.
