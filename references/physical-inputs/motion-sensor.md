@@ -109,7 +109,7 @@ The condition listed inside the parentheses of the [if statement](http://www.wir
 * If this condition is **true**, the code within the curly braces of the `if` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want. 
 * If this condition is **false** \(because the `motionState` is `HIGH`\), the code within the curly braces will **NOT** be performed. Optionally, you can add an [else statement](http://www.wiring.org.co/reference/else.html) to perform a different set of code statements when motion is **not** detected.
 
-**IMPORTANT:**  You will notice that a `delay()` of 2 seconds is included if motion is detected. This delay is needed to allow the motion sensor to capture a new "snapshot" of the environment before checking the sensor again.
+**IMPORTANT:**  You will notice that a `delay()` of 2 seconds is included when motion is detected. This delay is needed to allow the motion sensor to capture a new "snapshot" of the environment before checking the sensor again.
 
 
 
