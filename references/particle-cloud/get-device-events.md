@@ -19,7 +19,9 @@ By default, Particle Cloud will clear each cloud event after 60 seconds. This is
 
 Your Photon device app will use the `Particle.publish()` method to send an event notification through Particle Cloud to your web app. The event notification can be sent with or without data.
 
-Particle Cloud will allow your Photon device to send about 1 event notification per second. If your device sends event notifications more frequently than this, Particle Cloud will intentionally slow down your event stream, which can cause issues with your web app. To avoid this, you'll include a `delay()` of 1 second after each `Particle.publish()` statement.
+Particle Cloud will allow your Photon device to send about 1 event notification per second. If your device sends event notifications more frequently than this, Particle Cloud will intentionally slow down your event stream \(with a 4-second delay\), which can cause issues with your web app performance.
+
+To prevent this, include a `delay()` of at least 1 second after a `Particle.publish()` statement \(because a 1-second delay added by you is better than a 4-second delay added by Particle Cloud\).
 
 ### Send Event Without Data
 
