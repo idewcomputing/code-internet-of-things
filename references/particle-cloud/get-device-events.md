@@ -13,7 +13,7 @@ A "cloud event" will be created that sends the event notification to your web ap
 
 Your web app will use the `particle.getEventStream()` method to start listening for event notifications streamed through Particle Cloud.
 
-By default, Particle Cloud will clear each cloud event after 60 seconds. This is to prevent your web app from receiving duplicate notifications or outdated notifications.
+By default, Particle Cloud will clear each cloud event after 60 seconds. This is to prevent your web app from receiving outdated notifications.
 
 ## Photon Device App
 
