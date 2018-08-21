@@ -38,7 +38,7 @@ If you hover your mouse pointer over an icon in the navigation bar, the icon's n
 | ​![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LEGLBX3AeXb13IcoB4Q%2F-LJKU-305XqNVnF_dEZR%2F-LJKVeI_JNwvES3gcsyk%2Fpb-console-icon.png?alt=media&token=93eb237e-c5ec-4dba-80c4-e69f4fba8b23) | **Console** | Opens new tab with Console showing your device's events in Particle Cloud |
 | ​![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LEGLBX3AeXb13IcoB4Q%2F-LJKU-305XqNVnF_dEZR%2F-LJKVjdTz4eSKH5K5gtK%2Fpb-settings-icon.png?alt=media&token=627c9785-78b2-49a9-a140-f4d0a1a0783e) | **Settings** | Provides options to: log out, change password, or get your access token. |
 
-## Toggle Menu Panel
+## Toggle the Menu Panel
 
 The middle menu panel can be toggled between "show" and "hide" by clicking the same navigation icon repeatedly.
 
