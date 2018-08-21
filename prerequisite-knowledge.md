@@ -2,7 +2,7 @@
 
 ## Electric Circuits
 
-Having a basic conceptual understanding of electric circuits is **very helpful**, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\) – however, it is NOT required:
+Having a basic conceptual understanding of electric circuits is **very helpful**, so students can better understand how to correctly connect the parts in their IoT electronics kit \(and how to troubleshoot connection issues\) – however, it is **NOT** required:
 
 * Atoms and Electrons
 * Static Electricity vs. Current Electricity
@@ -17,11 +17,11 @@ The IoT tutorials will provide a limited explanation of circuits, which should b
 
 ## Physical Computing
 
-Previous experience building and programming devices using an Arduino electronics kit – such as a robotics kit, etc. – is **very helpful**. However, it is NOT required. The IoT tutorials will assume that students have **no** prior experience in building or programming physical computing devices.
+Previous experience building and programming devices using an Arduino electronics kit – such as a robotics kit, etc. – is **very helpful**. However, it is **NOT** required. The IoT tutorials will assume that students have **no** prior experience in building or programming physical computing devices.
 
 ### Arduino
 
-Previous experience and familiarity with the following Arduino development concepts is **very helpful** before programming IoT device apps – however, it is NOT required:
+Previous experience and familiarity with the following Arduino development concepts is **very helpful** before programming IoT device apps – however, it is **NOT** required:
 
 * Variables – declaring data type \(`int`, `float`, `boolean`, `String`, etc.\) and name \(unique identifier\), assigning and changing values, converting data type, global vs. local scope
 * Program Functions – `setup()` function, `loop()` function, creating custom functions, calling a custom function, passing arguments into a function, returning value from a function
@@ -34,7 +34,7 @@ Previous experience and familiarity with the following Arduino development conce
 
 ## Web Development
 
-Previous experience and familiarity with these web development concepts is **highly recommended** before programming IoT web apps – however, mastery is NOT required:
+Previous experience and familiarity with these web development concepts is **highly recommended** before programming IoT web apps – however, mastery is **NOT** required:
 
 ### HTML
 
