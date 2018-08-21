@@ -85,7 +85,7 @@ body {
 
 This CSS styles the `<body>` section of your web app. However, you can modify this CSS if desired.
 
-You'll probably want to add CSS to style other HTML elements in your web app, in order to produce the desired layout and appearance for your app's user interface.
+You'll typically want to add CSS to style other HTML elements in your web app, in order to produce the desired layout and appearance for your app's user interface.
 
 ## JS
 
@@ -103,7 +103,7 @@ var myToken = "0000"; // Photon access token
 
 This JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
 
-Th JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
+This JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
 
 {% hint style="danger" %}
 **IMPORTANT:**  You must modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
@@ -111,7 +111,7 @@ Th JS also declares global variables to store your Photon device ID and access t
 
 Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
-Review the reference section on [Particle Cloud](particle-cloud/) for explanations \(and code examples\) of how to make your web app JS interact with your Photon device app.
+Review the reference section on [Particle Cloud](particle-cloud/) to learn how to make your web app JS interact with your Photon device app.
 
 ## Resources
 
