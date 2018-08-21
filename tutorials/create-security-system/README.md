@@ -15,14 +15,14 @@ For decades, security systems have been used to monitor homes and businesses for
 
 ![](../../.gitbook/assets/smart-security-system.jpg)
 
-You'll create a prototype of a "Smart Security" device by modifying your "Smart Light" device \(which has an LED light and push button\) to add a motion sensor and a speaker:
+You'll create a prototype of a Smart Security device by modifying your Smart Light device \(which has an LED light and push button\) to add a motion sensor and a speaker:
 
 * The **LED light** will be used to indicate whether the security system is currently "armed" \(LED is on\) or "disarmed" \(LED is off\).
 * The **push button** will be used to switch the security system between "armed" and "disarmed" mode. \(The button will simulate a security system's keypad, which is used to enter a numeric passcode. For this prototype device, you'll simply press the button to toggle the system between modes, as if you had correctly entered a passcode.\)
 * The **motion sensor** will detect whether something is moving within the surrounding area.
 * The **speaker** will be used to produce an alarm sound if motion is detected.
 
-You'll use your "Smart Light" device app as starter code for your "Smart Security" device app. You'll modify the code controlling the LED and button before adding new code to control the motion sensor and speaker.
+You'll use a copy of your Smart Light device app as starter code for your Smart Security device app. You'll modify the existing code controlling the LED and button before adding new code to control the motion sensor and speaker.
 
 You'll also program a web app that interacts with your Photon over the internet to perform these tasks:
 
