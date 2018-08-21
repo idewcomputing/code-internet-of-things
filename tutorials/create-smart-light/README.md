@@ -27,5 +27,5 @@ The smart light interacts with a mobile app that allows you to control an indivi
 * Sync the light\(s\) to music, movies, or games
 * Control the light\(s\) using a voice assistant \(such as: Alexa, Siri, etc.\)
 
-For this tutorial, you'll create a prototype of a smart light device using one LED. Your device will include a button to manually turn the light on or off. You'll program a Photon device app to control the LED using the button. You'll also program a web app that interacts with your Photon device over the internet to monitor the light's status and to allow you to remotely turn the light on or off.
+For this tutorial, you'll create a prototype of a Smart Light device using one LED. Your device will include a button to manually turn the light on or off. You'll program a Photon device app to control the LED using the button. You'll also program a web app that interacts with your Photon device over the internet to monitor the light's status and to allow you to remotely turn the light on or off.
 
