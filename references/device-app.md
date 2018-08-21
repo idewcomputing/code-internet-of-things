@@ -4,6 +4,14 @@ All the apps that run on your Photon device will be coded using Particle's versi
 
 The [Particle firmware](https://docs.particle.io/reference/firmware/photon/) on your Photon runs a modified version of the Wiring language with a few minor differences, as well as some additional methods \(functions\) customized for the Photon hardware.
 
+{% hint style="info" %}
+**WIRING VS. ARDUINO:** [Arduino](https://www.arduino.cc/reference/en/) is another programming language framework for microcontrollers. It turns out that Arduino is based on Wiring, so the two languages are nearly identical \(though there are some differences\). In most cases, a program originally written in Arduino will work on your Photon with only minor revisions. So once you've learned how to program in one of these languages, you've basically learned both.
+{% endhint %}
+
+{% hint style="info" %}
+**WIRING VS. C++:** Wiring \(like Arduino\) is a programming framework written in C++, so you can also directly incorporate C++ code within your device app.
+{% endhint %}
+
 ## Photon App Template
 
 When you create a new device app in [Particle Build](particle-build.md), a basic app template is provided that consists of an empty `setup()` function and an empty `loop()` function:
