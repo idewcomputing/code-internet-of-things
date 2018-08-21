@@ -38,7 +38,7 @@ In this case, the `Particle.publish()` method has just one parameter inside its 
 
 ### Send Event With Data
 
-Alternatively, an event notification can be sent along with additional data in the form of text. It acts like an alert that contains additional information.
+Alternatively, an event notification can be sent with additional data in the form of a text string.
 
 Add this code \(**be sure to modify**\) in your Photon app wherever an event notification should be sent \(typically somewhere in the `loop()` function or a custom function\):
 
