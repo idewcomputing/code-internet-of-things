@@ -101,8 +101,8 @@ The `digitalRead()` method requires one parameter insides its parentheses:
 
 The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
 
-* `HIGH` indicates that motion is **NOT** detected.
-* `LOW` indicates that motion is detected.
+* `HIGH` indicates that motion is **NOT** currently detected.
+* `LOW` indicates that motion is currently detected.
 
 The condition listed inside the parentheses of the [if statement](http://www.wiring.org.co/reference/if_.html) checks whether the value of `motionState` is [equivalent](http://www.wiring.org.co/reference/equality.html) to `LOW`:
 
