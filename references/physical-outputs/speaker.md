@@ -16,7 +16,7 @@ The speaker in your Photon kit has a positive leg and a negative leg. These can 
 
 The positive leg of the speaker must be connected to an I/O pin capable of [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation) \(PWM\), which is a process used to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\).
 
-These I/O pins on your Photon circuit board are capable of PWM:  D0, D1, D2, D3, A4, A5.
+These I/O pins on your Photon circuit board are capable of PWM:  A4, A5, D0, D1, D2, D3.
 
 ### Connect to Breadboard
 
