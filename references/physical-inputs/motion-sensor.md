@@ -24,7 +24,7 @@ Here are the steps to connect the motion sensor to your Photon using the breadbo
 1. Insert the 3 pins of the motion sensor connector into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
 2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **sensor's black wire**. Plug the other end of this jumper wire into an I/O pin on the Photon circuit board.
 3. Plug one end of a **second jumper wire** into the **same** terminal strip row as the **sensor's white wire**. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
-4. Plug one end of a **third jumper wire** into the **same** terminal strip row as the **sensor's red wire**. Plug the other end of this jumper wire into either the VIN pin or V-USB pin on the Photon circuit board. If your Photon is being powered through the barrel jack, use the VIN pin. Otherwise, if your Photon is being powered through the Micro-USB port, use the V-USB pin.
+4. Plug one end of a **third jumper wire** into the **same** terminal strip row as the **sensor's red wire**. Plug the other end of this jumper wire into either the VIN pin or V-USB pin on the Photon circuit board \(or to a **positive** power rail on the breadboard that is connected to VIN or V-USB\). If your Photon is being powered through the barrel jack, connect to the VIN pin. Otherwise, if your Photon is being powered through the Micro-USB port, connect to the V-USB pin.
 
 Here's a wiring diagram showing a possible way to connect a motion sensor:
 
@@ -36,7 +36,7 @@ Keep in mind that your connection can look different than this example diagram:
 * Your motion sensor pins could be inserted into a **different column** of the breadboard. \(The example connects the sensor pins into column A of the terminal strip rows\).
 * Your sensor's black wire could connect \(through a jumper wire\) to a **different I/O pin**. \(The example connects to the D0 pin on the Photon circuit board\).
 * Your sensor's white wire could connect \(through a jumper wire\) to **either a negative power rail or a different GND pin**. \(There are three available GND pins on the Photon circuit board.\)
-* Your sensor's red wire could connect \(through a jumper wire\) to **either the VIN pin or V-USB pin**. \(The example connects to the V-USB pin on the Photon circuit board\).
+* Your sensor's red wire could connect \(through a jumper wire\) to **either the VIN pin or V-USB pin \(or to a positive power rail that's connected to one of these pins\).** \(The example connects directly to the V-USB pin on the Photon circuit board\).
 
 ## How to Code Motion Sensor
 
