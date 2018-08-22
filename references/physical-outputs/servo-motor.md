@@ -51,11 +51,87 @@ Keep in mind that your connection can look different than this example diagram:
 
 ### Connect Horn to Motor
 
-Be sure to attach one of the horns to your servo motor. Otherwise, it won't provide much use to your device.
+Be sure to attach one of the horns to your servo motor. Otherwise, rotating the motor won't provide much use to your device.
 
-Later, once you test out your code to rotate the servo motor, you may need to remove and re-position the horn, so it's lined up where you want it to be. The easiest way to do this is to rotate the servo motor to 0° and then re-position the horn to be pointed correctly for this particular angle.
+Later, once you test out your code to rotate the servo motor, you may need to remove and re-position the horn, so it's lined up where you want it to be. The easiest way to do this is to rotate the servo motor to 0° and then remove & re-position the horn to be pointed correctly for this particular angle.
 
 ## How to Code Servo Motor
 
-explain
+The basic steps to control a servo motor in your app code are:
+
+1. Declare a global variable to store the I/O pin number for the servo motor.
+2. Declare a `Servo` object variable called `servo`.
+3. Use a sequence of `servo.attach()`, `servo.write()`, and `servo.detach()` statements to rotate the motor to a specific angle.
+
+### Library {#library}
+
+The servo motor requires a code library that defines a class called `Servo` which has built-in methods \(functions\) for controlling the motor. However, this library is **already** included in the Particle firmware on your Photon device, so you do **not** need an `#include` statement to add the library to your app.
+
+### Global Variables
+
+You should declare a global variable to store the I/O pin number that the servo motor is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the speaker to a different pin number\).
+
+You will also need to create an object using the `Servo` class included in the Particle firmware, and assign this object to a global variable.
+
+Add this code \(modify if necessary\) **before** the `setup()` function:
+
+```cpp
+int motor = D0;
+Servo servo;
+```
+
+The first line of code does 3 things \(in order\):
+
+1. **It declares a data type for the variable's value.**  In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
+2. **It declares the variable's name.** In this example, the variable will be called `motor`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
+3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin that your servo motor is connected to.
+
+The second line of code creates a new object using the `Servo` class, and assigns the object to a global variable named `servo`.
+
+**NOTE:** The `Servo` class name starts with an uppercase letter "S", while the `servo` object variable name starts with a lowercase letter "s".
+
+{% hint style="info" %}
+**NO PIN MODE:**  Because you are controlling the servo motor using an object, you do **not** have to set a pin mode for the servo motor within the `setup()` function.
+{% endhint %}
+
+### Rotate Servo Motor {#rotate-servo-motor-to-specific-angle}
+
+The servo motor can rotate back or forth to any position between 0° and ~180° and hold its position.
+
+Rotating the servo motor to a specific angle requires a sequence of four steps:
+
+1. Turn on the motor using the `servo.attach()` method.
+2. Rotate the motor to a specific angle using the `servo.write()` method.
+3. Allow time for the motor to finish rotating by using the `delay()` method.
+4. Turn off the motor using the `servo.detach()` method.
+
+You'll add a custom function named `rotateServo()` that will contain all this code. The function will accept the desired angle of rotation as a parameter when the function is called.
+
+Add this `rotateServo()` custom function **after** the `loop()` function:
+
+```cpp
+void rotateServo(int angle) {
+    ​servo.attach(motor);
+    servo.write(angle);
+    delay(500);
+    servo.detach();
+}
+```
+
+The `rotateServo()` function can be called within the `setup()` function, `loop()` function, or another custom function.
+
+The `rotateServo()` function requires a parameter representing the specific angle for the rotation. The parameter value must be an integer \(whole number\) and will be stored in a local variable named `angle`.
+
+Here's what the code inside the `rotateServo()` function does:
+
+1. The `servo.attach()` method turns on the motor. This method requires the servo motor I/O pin number. In this case, the global variable named `motor` stores this value.
+2. The `servo.write()` method rotates the motor. This method requires an integer value from 0-180 representing the angle for the rotation. In this case, the parameter variable named `angle` stores this value.
+3. A `delay()` of `500` ms \(0.5 seconds\) is included to give the motor enough time to physically rotate before turning the motor off again.
+4. The `servo.detach()` method turns off the motor. Otherwise, if the motor isn't turned off, the motor will be "jittery" as it tries to hold its position. After you turn off the motor, you may notice that it "debounces" \(rotates backward slightly\). This is normal.
+
+{% hint style="warning" %}
+**APPROX. 180°:**  In reality, this servo motor can only physically rotate to about 160°, even if it is told to rotate to 180°. Just keep this in mind as you design and build your device.
+{% endhint %}
+
+**REMINDER:** Once you've got your servo motor working, you may need to remove and re-position its horn, so the horn is lined up where you want it to be for your device. The easiest way to do this is to rotate the servo motor to 0° and then remove and re-position the horn how you want it to be pointed when it is at this angle.
 
