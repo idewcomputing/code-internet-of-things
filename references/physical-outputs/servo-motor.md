@@ -6,9 +6,11 @@ The servo motor included in your Photon kit can rotate back or forth to any posi
 
 The servo motor comes with 4 different plastic mounts called "horns" that can be attached to the motor axis \(the white part sticking out of the top of the motor – this is what actually rotates\). There is a single-arm horn, a double-arm horn, a four-point horn, and a circular horn. Each horn slips onto the motor axis \(the horn and axis have matching "teeth"\). Each horn has holes, which can allow you to attach something to the horn using the included screws.
 
-![](../../.gitbook/assets/servo-type-compare.png)
+#### NO CONTINUOUS ROTATION
 
-This servo motor is designed to rotate to a specific angle and hold its position. It does **NOT** rotate continuously, like a motor used in a fan or an engine. If your IoT device requires a motor that can rotate continuously, then you need a [gear motor](https://www.sparkfun.com/products/11696) or a [continuous rotation servo motor](https://www.sparkfun.com/products/9347).
+This servo motor can rotate to a specific angle \(up to ~180°\) and hold its position. It does **NOT** rotate continuously, like a motor used in a fan or an engine. If your IoT device requires a motor that can rotate continuously, then you need a [gear motor](https://www.sparkfun.com/products/11696) or a [continuous rotation servo motor](https://www.sparkfun.com/products/9347).
+
+![Your Photon kit has a regular servo motor](../../.gitbook/assets/servo-type-compare.png)
 
 ## How to Connect Servo Motor
 
@@ -22,16 +24,16 @@ These I/O pins on your Photon circuit board are capable of PWM output: A4, A5, D
 
 ### Connect to Photon
 
-To connect a motion sensor to your Photon using the breadboard, you will need:
+To connect a servo motor to your Photon using the breadboard, you will need:
 
 * Servo Motor \(with 3-wire connector\)
 * 3 jumper wires \(use different colors to help identify them; it may help to match the motor wires\)
 
 | Servo Motor | Photon Pin |
 | :--- | :--- |
-| White - Data | any I/O pin capable of PWM output |
-| Red - Power \(4.8-6V\) | 5V through VIN or V-USB |
-| Black - Ground | GND |
+| White – Data | any I/O pin capable of PWM output |
+| Red – Power \(4.8-6V\) | 5V through VIN or V-USB |
+| Black – Ground | GND |
 
 Here are the steps to connect the servo motor to your Photon using the breadboard:
 
@@ -46,14 +48,14 @@ Here's a wiring diagram showing a possible way to connect a servo motor \(ignore
 Keep in mind that your connection can look different than this example diagram:
 
 * Your servo motor's white wire could connect to a **different I/O pin capable of PWM output**. \(The example connects to the D0 pin on the Photon circuit board\).
-* Your servo motor's red wire could connect \(through a jumper wire\) to **either the VIN pin or V-USB pin \(or to a positive power rail that's connected to one of these pins\).** \(The example connects directly to the V-USB pin on the Photon circuit board\).
+* Your servo motor's red wire could connect \(through a jumper wire\) to **either the VIN pin or V-USB pin** – **or to a positive power rail that's connected to one of these pins.** \(The example connects directly to the V-USB pin on the Photon circuit board\).
 * Your servo motor's black wire could connect \(through a jumper wire\) to **either a negative power rail or a different GND pin**. \(There are three available GND pins on the Photon circuit board.\)
 
 ### Connect Horn to Motor
 
 Be sure to attach one of the horns to your servo motor. Otherwise, rotating the motor won't provide much use to your device.
 
-Later, once you test out your code to rotate the servo motor, you may need to remove and re-position the horn, so it's lined up where you want it to be. The easiest way to do this is to rotate the servo motor to 0° and then remove & re-position the horn to be pointed correctly for this particular angle.
+Later, once you test out your code to rotate the servo motor, you may need to remove and re-position the horn, so it's lined up where you want it to be as it rotates to specific angles. The best way to do this is to rotate the servo motor to 0° \(or another specific angle, such as 90°\) and then remove & re-position the horn to be pointed correctly for this particular angle.
 
 ## How to Code Servo Motor
 
@@ -69,7 +71,7 @@ The servo motor requires a code library that defines a class called `Servo` whic
 
 ### Global Variables
 
-You should declare a global variable to store the I/O pin number that the servo motor is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the speaker to a different pin number\).
+You should declare a global variable to store the I/O pin number that the servo motor is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the servo motor to a different pin number\).
 
 You will also need to create an object using the `Servo` class included in the Particle firmware, and assign this object to a global variable.
 
@@ -94,7 +96,7 @@ The **second line of code** creates a new object using the `Servo` class, and as
 **NO PIN MODE:**  Because you are controlling the servo motor using an object, you do **not** have to set a pin mode for the servo motor within the `setup()` function.
 {% endhint %}
 
-### Rotate Servo Motor {#rotate-servo-motor-to-specific-angle}
+### Function to Rotate Servo {#rotate-servo-motor-to-specific-angle}
 
 The servo motor can rotate back or forth to any position between 0° and ~180° and hold its position.
 
@@ -105,7 +107,7 @@ Rotating the servo motor to a specific angle requires a sequence of four steps:
 3. Allow time for the motor to finish rotating by using the `delay()` method.
 4. Turn off the motor using the `servo.detach()` method.
 
-You'll add a custom function named `rotateServo()` that will contain all this code. The function will accept the desired angle of rotation as a parameter when the function is called.
+You'll add a custom function named `rotateServo()` that will contain all these steps. The function will accept a parameter representing the desired angle of rotation.
 
 Add this `rotateServo()` custom function **after** the `loop()` function:
 
@@ -118,20 +120,48 @@ void rotateServo(int angle) {
 }
 ```
 
-The `rotateServo()` function can be called within the `setup()` function, `loop()` function, or another custom function.
-
-The `rotateServo()` function requires a parameter representing the specific angle for the rotation. The parameter value must be an integer \(whole number\) and will be stored in a local variable named `angle`.
+The `rotateServo()` function requires a parameter for the specific angle of rotation. The parameter value must be an integer \(whole number\) and will be stored in a local variable named `angle`.
 
 Here's what the code inside the `rotateServo()` function does:
 
-1. The `servo.attach()` method turns on the motor. This method requires the servo motor I/O pin number. In this case, the global variable named `motor` stores this value.
-2. The `servo.write()` method rotates the motor. This method requires an integer value from 0-180 representing the angle for the rotation. In this case, the parameter variable named `angle` stores this value.
+1. The `servo.attach()` method turns on the motor. This method requires the servo motor I/O pin number. In this case, the global variable named `motor` stores this value. If you used a different name for the global variable storing your servo motor pin number, then insert that name instead.
+2. The `servo.write()` method rotates the motor. This method requires an integer value from 0-180 representing the angle for the rotation. In this case, the parameter variable named `angle` stores the value that will be used.
 3. A `delay()` of `500` ms \(0.5 seconds\) is included to give the motor enough time to physically rotate before turning the motor off again.
 4. The `servo.detach()` method turns off the motor. Otherwise, if the motor isn't turned off, the motor will be "jittery" as it tries to hold its position. After you turn off the motor, you may notice that it "debounces" \(rotates backward slightly\). This is normal.
 
-{% hint style="warning" %}
+### Calling Servo Function
+
+The `rotateServo()` function can be called within the `setup()` function, `loop()` function, or another custom function.
+
+When calling the `rotateServo()` function, you must include the desired angle of rotation \(0-180\) within the parentheses after the function name.
+
+For example, to make the servo motor rotate to an angle of 90°, insert this code statement to call the `rotateServo()` function:
+
+```cpp
+rotateServo(90);
+```
+
+{% hint style="info" %}
 **APPROX. 180°:**  In reality, this servo motor can only physically rotate to about 160°, even if it is told to rotate to 180°. Just keep this in mind as you design and build your device.
 {% endhint %}
 
-**REMINDER:** Once you've got your servo motor working, you may need to remove and re-position its horn, so the horn is lined up where you want it to be for your device. The easiest way to do this is to rotate the servo motor to 0° and then remove and re-position the horn how you want it to be pointed when it is at this angle.
+{% hint style="success" %}
+**CHECK HORN POSITION:** Once you've got your servo motor working, you may need to remove and re-position its horn, so the horn is lined up where you want it to be as it rotates to specific angles. The best way to do this is to rotate the servo motor to 0° \(or another specific angle, such as 90°\) and then remove and re-position the horn to be pointed correctly for this particular angle.
+{% endhint %}
+
+{% hint style="success" %}
+**ROTATE SERVO IN SETUP:**  In order to ensure that your device functions correctly, you should include a code statement to rotate your servo motor to a specific starting angle \(such as 0°, 90°, 180°, etc.\) in the `setup()` function. Otherwise, the servo motor will start at whatever angle it was at when the device was last powered off.
+{% endhint %}
+
+### Read Servo Angle
+
+If necessary, the `servo.read()` method can be used to get the current angle of the servo motor. The method will return an integer value \(whole number\) between 0-180 representing the last angle used in the `servo.write()` method.
+
+Add this code statement wherever you need to read the current angle of the servo motor:
+
+```cpp
+int angle = servo.read();
+```
+
+This code statement creates a local variable named `angle` to store the integer value returned by `servo.read()`.
 
