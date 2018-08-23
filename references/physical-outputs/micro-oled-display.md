@@ -6,8 +6,6 @@ The Micro OLED display included in your Photon kit is a monochrome, blue-on-blac
 
 ## How to Connect Micro OLED
 
-
-
 To connect the Micro OLED display to your Photon using the breadboard, you will need:
 
 * Micro OLED display
@@ -34,7 +32,13 @@ Here are the steps to connect the Micro OLED to your Photon using the breadboard
 2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **first OLED pin \(CS\)**. Plug the other end of this jumper wire into the correct pin on the Photon circuit board.
 3. Repeat step 2 with the other jumper wires until each OLED pin is connected to its correct Photon pin. **NOTE:** The **fourth OLED pin \(SDO\)** will **not** be connected to anything.
 
+{% hint style="warning" %}
+**TWIN PINS:** Analog pins A2, A3, A4, and A5 are each represented by **two** pins on the Photon board. The duplicate pins are labeled as: SS/A2, SCK/A3, MISO/A4, MOSI/A5.
 
+However, the Micro OLED has to connect to **only one** A2 pin – **not** both. The same goes for connecting the Micro OLED to the A3 and A5 pins.
+
+The only limitation is that once you connect the Micro OLED, you will **not** be able to have a different part \(such as an LED, etc.\) connected to the other A2, A3, or A5 pins.
+{% endhint %}
 
 ## How to Code Micro OLED
 
