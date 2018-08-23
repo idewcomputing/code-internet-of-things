@@ -20,7 +20,7 @@ The servo motor has a built-in 3-wire connector. You'll plug 3 jumper wires into
 
 The white wire of the servo motor must be connected to an I/O pin capable of [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation) \(PWM\), which is a process used to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\).
 
-These I/O pins on your Photon circuit board are capable of PWM output: A4, A5, D0, D1, D2, D3.
+These Photon I/O pins are capable of PWM output:  A4, A5, D0, D1, D2, D3, RX, TX, WKP.
 
 ### Connect to Photon
 
