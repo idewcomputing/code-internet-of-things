@@ -12,7 +12,7 @@ This servo motor is designed to rotate to a specific angle and hold its position
 
 ## How to Connect Servo Motor
 
-The servo motor has a built-in 3-wire connector: just plug 3 jumper wires into the connector and then plug the other end of the jumper wires into a breadboard or directly to the Photon. To make it easier to remember which wire is which, use corresponding white, red, and black jumper wires to match the servo motor wires.
+The servo motor has a built-in 3-wire connector. You'll plug 3 jumper wires into the connector, and then plug the other end of each wire into the breadboard or directly into a pin on the Photon circuit board.
 
 ### Requires PWM Pin {#requires-pwm-pin}
 
@@ -60,7 +60,7 @@ Later, once you test out your code to rotate the servo motor, you may need to re
 The basic steps to control a servo motor in your app code are:
 
 1. Declare a global variable to store the I/O pin number for the servo motor.
-2. Declare a `Servo` object variable called `servo`.
+2. Create a `Servo` object assigned to a global variable called `servo`.
 3. Use a sequence of `servo.attach()`, `servo.write()`, and `servo.detach()` statements to rotate the motor to a specific angle.
 
 ### Library {#library}
@@ -80,13 +80,13 @@ int motor = D0;
 Servo servo;
 ```
 
-The first line of code does 3 things \(in order\):
+The **first line of code** does 3 things \(in order\):
 
 1. **It declares a data type for the variable's value.**  In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
 2. **It declares the variable's name.** In this example, the variable will be called `motor`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin that your servo motor is connected to.
 
-The second line of code creates a new object using the `Servo` class, and assigns the object to a global variable named `servo`.
+The **second line of code** creates a new object using the `Servo` class, and assigns the object to a global variable named `servo`. 
 
 **NOTE:** The `Servo` class name starts with an uppercase letter "S", while the `servo` object variable name starts with a lowercase letter "s".
 
