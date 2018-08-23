@@ -145,7 +145,7 @@ Alternatively, you can use the `analogWrite()` method to adjust the brightness o
 
 However, the LED light must be connected to an I/O pin capable of PWM output. PWM stands for [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation), which is a way to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\). 
 
-* These I/O pins are capable of PWM output:  D0, D1, D2, D3, A4, A5.
+These Photon I/O pins are capable of PWM output:  A4, A5, D0, D1, D2, D3, RX, TX, WKP.
 
 Add this code statement \(modify as necessary\) to your app within the `setup()` function, `loop()` function, or a custom function:
 
@@ -165,7 +165,7 @@ The `analogWrite()` and `digitalWrite()` methods are both capable of setting an 
 * Setting an LED to **minimum brightness** \("off"\) using `analogWrite(LED, 0)` produces the same result as using `digitalWrite(LED, LOW)` 
 * Setting an LED to **maximum brightness** using `analogWrite(LED, 255)` produces the same result as using `digitalWrite(LED, HIGH)`
 
-However, the `analogWrite()` method is the only way to set an LED to a brightness value in-between these two extremes:
+However, the `analogWrite()` method is the only way to set an LED to a brightness that's in-between these two extremes:
 
 * `analogWrite(LED, 64)` would set the LED to 25% brightness
 * `analogWrite(LED, 128)` would set the LED to 50% brightness
