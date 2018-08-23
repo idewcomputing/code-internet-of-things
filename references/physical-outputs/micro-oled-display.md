@@ -52,5 +52,70 @@ Keep in mind that your connection can look different than this example diagram:
 
 ## How to Code Micro OLED
 
+The basic steps to control the Micro OLED display in your app code are:
+
+1. Include the SparkFun Micro OLED library in your app.
+2. Define the I/O pin numbers for certain Micro OLED pins.
+3. Create a `MicroOLED` object assigned to a global variable called `oled`.
+4. Use the `oled.begin()` method to start the display in the `setup()` function.
+5. Use various `oled` methods to display text or simple graphics on the screen.
+
+### Include Library
+
+Your Photon app must include a code library that will allow you to control the Micro OLED display.
+
+![Libraries Icon](../../.gitbook/assets/pb-library-icon.png)
+
+1. In Particle Build, click on the Libraries icon to open the Libraries menu panel.
+2. Type `oled` into the search field. Select the result called: **SPARKFUNMICROOLED**
+3. Click the button to "Include in Project"
+4. Select the name of your Photon app, and then click the "Confirm" button
+
+Particle Build will **automatically** insert this `#include` statement at the beginning of your app code:
+
+```cpp
+// This #include statement was automatically added by the Particle IDE.
+#include <SparkFunMicroOLED.h>
+```
+
+### Define Pins & Create Object
+
+You need to define the I/O pin numbers for certain Micro OLED pins. This is similar to declaring global variables \(except defined values are not allowed to change\).
+
+You will also need to create an object using the `MicroOLED` class defined in the included library, and assign this object to a global variable.
+
+Add this code **before** the `setup()` function:
+
+```cpp
+#define PIN_OLED_RST D6
+#define PIN_OLED_DC  D5
+#define PIN_OLED_CS  A2
+MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
+```
+
+The **first three lines of code** define the I/O pin numbers for three specific OLED pins.
+
+The **fourth line of code** creates a new object using the `MicroOLED` class, and assigns the object to a global variable named `oled`. Several parameters are included when creating the object.
+
+### Start OLED in Setup
+
+The `oled.begin()` method is used to start the Micro OLED display, which should typically be done when your app first starts running.
+
+Add this code statement within the `setup()` function to start the OLED display:
+
+```cpp
+oled.begin();
+```
+
+### Display Text
+
+Displaying text on the Micro OLED screen requires a sequence of five steps:
+
+1. Clear the screen using the `oled.clear()` method.
+2. Set the cursor position using the `oled.setCursor()` method.
+3. Select the font size using the `oled.setFontType()` method.
+4. Print text \(or variable values\) using the `oled.print()` or `oled.println()` methods.
+5. Display the text using the `oled.display()` method.
+
 
 
