@@ -431,7 +431,7 @@ For example, to draw solid \(filled\) black circle:
 oled.circleFill(x, y, radius, BLACK, NORM);
 ```
 
-The black pixels will only be visible if drawn on top of a white shape or background. The black pixels will "erase" white pixels.
+The black pixels will only be visible if drawn on top of a white shape, so that the black pixels erase white pixels
 
 For example, this code draws a white filled circle with its center at \(32, 24\) and a radius of 20 pixels, and then draws a black filled circle that also has its center at \(32, 24\) but with a radius of 10 pixels:
 
@@ -441,6 +441,26 @@ oled.circleFill(32, 24, 10, BLACK, NORM);
 ```
 
 By drawing the black circle **after** the white circle, the black circle will erase part of the white circle.
+
+You can also create more complex patterns by drawing a series of white and black shapes:
+
+```cpp
+oled.circleFill(32, 24, 20);
+oled.circleFill(32, 24, 15, BLACK, NORM);
+oled.circleFill(32, 24, 10);
+oled.circleFill(32, 24, 5, BLACK, NORM);
+```
+
+This example code draws 4 filled circles that have the same center but each have a different radius:
+
+1. First, a white filled circle with a radius of 20 pixels is drawn.
+2. Then, a black filled circle with a radius of 15 pixels erases part of the white circle.
+3. Then, a new white filled circle with a radius of 10 pixels is added.
+4. Finally, a black filled circle with a radius of 5 pixels erases part of the second white circle.
+
+The overall pattern ends up looking like a "target" symbol:
+
+![Drawing with White and Black Pixels](../../.gitbook/assets/micro-oled-graphics.jpg)
 
 ### Display Text + Graphics
 
