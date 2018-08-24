@@ -97,7 +97,7 @@ MicroOLED oled(MODE_SPI, PIN_OLED_RST, PIN_OLED_DC, PIN_OLED_CS);
 
 The **first three lines of code** define the I/O pin numbers for three specific OLED pins.
 
-The **fourth line of code** creates a new object using the `MicroOLED` class, and assigns the object to a global variable named `oled`. Several parameters are included when creating the object.
+The **fourth line of code** creates a new object using the `MicroOLED` class, and assigns the object to a global variable named `oled`.
 
 ### Start OLED in Setup
 
@@ -109,15 +109,196 @@ Add this code statement within the `setup()` function to start the OLED display:
 oled.begin();
 ```
 
+The `oled.begin()` method will initialize the settings \(including pin modes\) for the Micro OLED and turn it on.
+
 ### Display Text
 
 Displaying text on the Micro OLED screen requires a sequence of five steps:
 
 1. Clear the screen using the `oled.clear()` method.
-2. Set the cursor position using the `oled.setCursor()` method.
-3. Select the font size using the `oled.setFontType()` method.
-4. Print text \(or variable values\) using the `oled.print()` or `oled.println()` methods.
-5. Display the text using the `oled.display()` method.
+2. Set the font type using the `oled.setFontType()` method.
+3. Set the cursor position using the `oled.setCursor()` method.
+4. Print text to the screen using the `oled.print()` and/or `oled.println()` methods.
+5. Display the printed text using the `oled.display()` method.
 
+For example:
 
+```cpp
+    oled.clear(PAGE);
+    oled.setFontType(0);
+    oled.setCursor(0,0);
+    oled.println("Hello");
+    oled.display();
+```
+
+Rather than listing all these code statements within the `loop()` function, you may want to create a custom function that contains all the code to display your text. Then you can call this custom function within the `loop()` function.
+
+#### 1. CLEAR SCREEN
+
+To clear the screen before displaying text or graphics:
+
+```cpp
+oled.clear(PAGE);
+```
+
+#### 2. SET FONT TYPE
+
+The SparkFun Micro OLED library includes 4 available font types \(numbered 0-3\), which differ in font size and in which characters can be displayed:
+
+| Font Type | Font Size | Characters Allowed | Used For |
+| :--- | :--- | :--- | :--- |
+| 0 | 5×7 pixels \(10 columns by 6 rows\) | any [ASCII character](https://www.w3schools.com/charsets/ref_html_ascii.asp) | General |
+| 1 | 8×16 pixels \(6 columns by 3 rows\) | any character on keyboard | General |
+| 2 | 10×16 pixels \(5 columns by 3 rows\) | only numbers and period | Numbers |
+| 3 | 12×48 pixels \(5 columns by 1 row\) | only numbers and colon | Numbers or Time |
+
+By default, the Micro OLED will be set to font type 0 by the `oled.begin()` method.
+
+You can use the `oled.setFontType()` method to set the font type by including the font type number within the parentheses:
+
+```cpp
+oled.setFontType(0);
+```
+
+You can use a mix of different font types by setting a new font type before printing a new line of text.
+
+For example:
+
+```cpp
+    oled.setFontType(0);
+    oled.println("Hello");
+    oled.setFontType(1);
+    oled.println("World");
+```
+
+#### 3. SET CURSOR POSITION
+
+The cursor position represents the starting position for printing text to the screen. The cursor can be set to any `(x, y)` position on the screen. The OLED screen is 64 pixels wide by 48 pixels tall. The upper-left corner of the screen is `(0,0)`.
+
+For example, to have your text start at the upper-left corner of the screen:
+
+```cpp
+oled.setCursor(0,0);
+```
+
+As you print text to the screen, the OLED display will automatically move the cursor position, so the next text printed to the screen will start at the next screen position.
+
+However, if desired, you can adjust the text layout by setting a new cursor position before printing a line of text, so the new text will start printing at a specific position on the screen.
+
+For example:
+
+```cpp
+    oled.setCursor(20,10);
+    oled.println("Hello");
+    oled.setCursor(20,30);
+    oled.println("World");
+```
+
+#### 4. PRINT TEXT
+
+The `oled.print()` and `oled.println()` methods can be used to print text \(or variable values\) to the screen. Text that is longer than the screen column width will automatically wrap to the next line.
+
+#### Print Text Within Quotation Marks
+
+To print text directly, include the text inside the method's parentheses by listing the text within double quotation marks:
+
+```cpp
+oled.println("Hello");
+```
+
+#### Print Value of Variable
+
+To print the value stored in a **variable**, include the variable name inside the method's parentheses.:
+
+```cpp
+oled.println(myName);
+```
+
+In this case, `myName` is a variable name \(presumably a person's name\). Change this to the name of your variable, which could store a text string or number.
+
+#### Print Decimal Value to Certain Number of Digits
+
+If a variable stores a **decimal** number \(data type is `float` or `double`\), you have the option of indicating how many digits **after** the decimal point to show when printing the variable's value:
+
+```cpp
+oled.println(roomTemp, 1);
+```
+
+In this case, `roomTemp` is a variable name that stores a decimal value \(presumably a temperature sensor measurement\). Its value will be displayed to `1` digit after the decimal point. So if the actual variable value were `70.1584275`, it would be printed on the screen as: `70.2` \(the last digit is automatically rounded up if necessary\).
+
+#### PRINT vs. PRINTLN
+
+There are two different print methods that can display text on the Micro OLED screen: 
+
+* `oled.print()` will print text to the screen, but the cursor will remain on the **same** line. The next text printed to the screen will start where the last text ended.
+* `oled.println()` will print text to the screen, and then move the cursor to the start of a **new** line. The next text printed to the screen will start on the new line.
+
+The `oled.print()` command is useful for combining text and variable values on the **same** line.
+
+For example, if you had a variable named `hour` that stored the hour of the current time and another variable named `minutes` that stored the minutes, you could combine these together on the screen:
+
+```cpp
+oled.print("Time ");
+oled.print(hour);
+oled.print(":");
+oled.println(minutes);
+```
+
+Notice that the last code statement used the `oled.println()` method to move the cursor to a new line for any text that might be printed after the time.
+
+#### Print Blank Line
+
+To add a blank line, just use the `oled.println()` method **without** anything inside its parentheses:
+
+```cpp
+oled.println();
+```
+
+#### 5. DISPLAY SCREEN
+
+Anything printed to the screen will **NOT** be shown until the OLED is instructed to display the screen:
+
+```cpp
+oled.display();
+```
+
+### Display Graphics
+
+Displaying simple graphics on the Micro OLED screen requires a sequence of three steps:
+
+1. Clear the screen using the `oled.clear()` method.
+2. Draw graphics \(dots, lines, rectangles, circles\) on the screen using various methods.
+3. Display the graphics using the `oled.display()` method.
+
+For example:
+
+```cpp
+    oled.clear(PAGE);
+    oled.circleFill(32, 24, 10);
+    oled.display();
+```
+
+Rather than listing all these code statements within the `loop()` function, you may want to create a custom function that contains all the code to display your graphics. Then you can call this custom function within the `loop()` function.
+
+The following drawing methods are available:
+
+* `oled.pixel()` can be used to draw a dot
+* `oled.line()`, `oled.lineH()`, and `oled.lineV()` can be used to draw a line
+* `oled.rect()` and `oled.rectFill()` can be used to draw a rectangle
+* `oled.circle()` and `oled.circleFill()` can be used to draw a circle
+
+### Display Text + Graphics
+
+You can also combine text and graphics on the OLED screen at the same time. For example:
+
+```cpp
+    oled.clear(PAGE);
+    oled.setFontType(0);
+    oled.setCursor(18,0);
+    oled.println("Hello");
+    oled.circleFill(32, 24, 10);
+    oled.setCursor(18,41);
+    oled.println("World");
+    oled.display();
+```
 
