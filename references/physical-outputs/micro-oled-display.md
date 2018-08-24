@@ -1,6 +1,6 @@
 # Micro OLED Display
 
-The Micro OLED display included in your Photon kit is a monochrome, blue-on-black screen that is 64 pixels in width and 48 pixels in height. It can be used to display text, simple graphics, or a combination.
+The Micro OLED display included in your Photon kit is a monochrome \(single-color\) screen that is 64 pixels in width and 48 pixels in height. It can be used to display text, simple graphics, or a combination.
 
 ![Micro OLED Display](../../.gitbook/assets/micro-oled.jpg)
 
@@ -135,7 +135,7 @@ Rather than listing all these code statements within the `loop()` function, you 
 
 #### 1. CLEAR SCREEN
 
-To clear the screen before displaying text or graphics:
+To clear the screen before adding text or graphics:
 
 ```cpp
 oled.clear(PAGE);
@@ -173,7 +173,7 @@ For example:
 
 #### 3. SET CURSOR POSITION
 
-The cursor position represents the starting position for printing text to the screen. The cursor can be set to any `(x, y)` position on the screen. The OLED screen is 64 pixels wide by 48 pixels tall. The upper-left corner of the screen is `(0,0)`.
+The cursor position represents the starting position for printing text to the screen. The cursor can be set to any `(x,y)` position on the screen. The OLED screen is 64 pixels wide by 48 pixels tall. The upper-left corner of the screen is `(0,0)`.
 
 For example, to have your text start at the upper-left corner of the screen:
 
@@ -256,7 +256,7 @@ oled.println();
 
 #### 5. DISPLAY SCREEN
 
-Anything printed to the screen will **NOT** be shown until the OLED is instructed to display the screen:
+Any text or graphics will **NOT** be shown until the OLED is instructed to display the screen:
 
 ```cpp
 oled.display();
@@ -286,6 +286,62 @@ The following drawing methods are available:
 * `oled.line()`, `oled.lineH()`, and `oled.lineV()` can be used to draw a line
 * `oled.rect()` and `oled.rectFill()` can be used to draw a rectangle
 * `oled.circle()` and `oled.circleFill()` can be used to draw a circle
+
+#### DRAW DOT
+
+The `oled.pixel()` method can be used to draw a dot at specific `(x, y)` position:
+
+```cpp
+oled.pixel(x, y);
+```
+
+#### DRAW LINE
+
+The `oled.line()` method can be used to draw a **straight line** from one point `(x1, y1)` to another point `(x2, y2)`:
+
+```cpp
+oled.line(x1, y1, x2, y2);
+```
+
+The `oled.lineH()` method can be used to draw a **horizontal line** that starts from a specific point \(representing the left end of the line\) and has a specified width:
+
+```cpp
+oled.lineH(x1, y1, width);
+```
+
+The `oled.lineV()` method can be used to draw a **vertical line** that starts from a specific position \(representing the top end of the line\) and has a specified height:
+
+```cpp
+oled.lineV(x1, y1, height);
+```
+
+#### DRAW RECTANGLE
+
+The `oled.rect()` method can be used to draw an **outline of a rectangle** that starts from a specific point \(representing the top-left corner of the rectangle\) and has a specified width and height:
+
+```cpp
+oled.rect(x, y, width, height);
+```
+
+The `oled.rectFill()` method can be used to draw a **solid \(filled\) rectangle** that starts from a specific point \(representing the top-left corner of the rectangle\) and has a specified width and height:
+
+```cpp
+oled.rectFill(x, y, width, height);
+```
+
+#### DRAW CIRCLE
+
+The `oled.circle()` method can be used to draw an **outline of a circle** that has its center at specific point and has a specified radius:
+
+```cpp
+oled.circle(x, y, radius);
+```
+
+The `oled.circleFill()` method can be used to draw a **solid \(filled\) circle** that has its center at specific point and has a specified radius:
+
+```cpp
+oled.circleFill(x, y, radius);
+```
 
 ### Display Text + Graphics
 
