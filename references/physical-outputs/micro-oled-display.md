@@ -409,7 +409,7 @@ oled.circleFill(32, 24, 20);
 
 #### DRAW WITH BLACK
 
-By default, all the drawing methods will draw using "white" pixels \(which will actually be light blue on your Micro OLED screen\). However, you can modify each method to draw using black pixels instead, which represents erasing.
+By default, all the drawing methods will draw using "white" pixels \(which are actually light blue on your Micro OLED screen\). However, you can modify each method to draw using black pixels instead, which represents erasing.
 
 Any of the drawing methods can be modified to draw using black pixels by adding `BLACK, NORM` as the last two parameters inside the method's parentheses.
 
@@ -431,7 +431,7 @@ For example, to draw solid \(filled\) black circle:
 oled.circleFill(x, y, radius, BLACK, NORM);
 ```
 
-The black pixels will only be visible if drawn on top of a white shape, so that the black pixels erase white pixels
+The black pixels will only be visible if drawn on top of a white shape, so the black pixels erase white pixels.
 
 For example, this code draws a white filled circle with its center at \(32, 24\) and a radius of 20 pixels, and then draws a black filled circle that also has its center at \(32, 24\) but with a radius of 10 pixels:
 
