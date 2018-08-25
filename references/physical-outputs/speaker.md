@@ -2,7 +2,7 @@
 
 The small speaker included in the Photon kit can produce tones or play simple music \(note by note\). The speaker can produce tones ranging in frequency from 20Hz \(very low pitch\) to 20KHz \(very high pitch\), covering the full range of sounds that humans can hear.
 
-![Speaker](../../.gitbook/assets/speaker.jpg)
+![Speaker \(side view\)](../../.gitbook/assets/speaker.jpg)
 
 ## How to Connect Speaker
 
@@ -10,7 +10,7 @@ A speaker is a [polarized](https://learn.sparkfun.com/tutorials/polarity) part, 
 
 The speaker in your Photon kit has a positive leg and a negative leg. These can be identified by labels on the bottom of the speaker:
 
-![](../../.gitbook/assets/speaker-polarity.jpg)
+![Speaker \(bottom view\): Polarity Labels for Legs](../../.gitbook/assets/speaker-polarity.jpg)
 
 Also, there is a positive symbol \( ⊕ \) printed on the side of the speaker to identify which side has the positive leg. This allows you to verify the polarity while the speaker is plugged into a breadboard.
 
