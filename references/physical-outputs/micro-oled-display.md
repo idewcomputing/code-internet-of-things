@@ -26,6 +26,12 @@ If the pins along the top edge of the display were numbered left to right as 1-8
 | Pin 7 – 3V3 | 3.3V |
 | Pin 8 – GND | GND |
 
+{% hint style="success" %}
+**3.3V REQUIRED:**  The Micro OLED display operates on 3.3V of power. Connect it to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
+
+Do **NOT** connect the Micro OLED to VIN or V-USB because the higher voltage could damage or burn out the display.
+{% endhint %}
+
 Here are the steps to connect the Micro OLED to your Photon using the breadboard:
 
 1. Insert the 8 pins of the Micro OLED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
