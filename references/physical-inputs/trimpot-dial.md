@@ -52,7 +52,7 @@ The basic steps to control a trimpot dial in your app code are:
 
 1. Declare a global variable to store the I/O pin number for the trimpot.
 2. Use the `analogRead()` method to measure the trimpot dial position.
-3. **Optional:**  Use the `map()` method to translate the trimpot reading to a custom range of values.
+3. **Optional:**  Use the `map()` method to convert the trimpot reading to a custom range.
 
 ### Global Variable
 
@@ -97,11 +97,11 @@ The `analogRead()` method will return an integer \(whole number\) value ranging 
 * If the dial is rotated all the way to the right \(clockwise\), the value will be 4095.
 * If the dial is rotated somewhere in-between, the value will be proportional to the dial's position. For example, if the dial is rotated exactly halfway, the value will be 2048.
 
-### Mapping to Custom Range {#mapping-dial-position-to-custom-range-of-values}
+### Map Value to Custom Range {#mapping-dial-position-to-custom-range-of-values}
 
-In many cases, it may not be convenient to work with a value that ranges from 0-4095. Instead, it might be easier to have a value within a smaller custom range \(such as:  0-10, 0-100, etc.\).
+In many cases, it may not be convenient to work with a value that ranges from 0-4095. Instead, it might be easier to have a value within a smaller custom range \(such as:  0-10, 0-100, etc.\) that makes more sense for your particular task.
 
-The `map()` function can be used to convert a value from its original range \(such as 0-4095\) into a new range of your choice. You get to decide the minimum and maximum values for the new range.
+The `map()` function can be used to convert a value from its original range \(such as 0-4095\) into a new range of your choice. You decide the minimum and maximum values for the new range.
 
 For example, if a trimpot dial were being used to control the brightness of an LED light, you might want the trimpot to return a value between 0-255 because the `analogWrite()` method used to set the brightness of an LED requires a value in this range.
 
@@ -115,5 +115,9 @@ int mapValue = round(map(trimpotValue, 0, 4095, minValue, maxValue + 1));
 // add code to do something with mapValue
 ```
 
-**NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to select the maximum value even if the trimpot dial is turned all the way to the right.
+As necessary, change the values assigned to `minValue` and `maxValue` to whatever numbers you want to use for your custom range. Also, the `minValue` **doesn't** have to be zero.
+
+Be sure to add code to do something with `mapValue`.
+
+**NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to get the maximum value even if the trimpot dial is turned all the way to the right \(clockwise\).
 
