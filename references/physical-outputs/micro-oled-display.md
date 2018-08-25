@@ -1,6 +1,6 @@
 # Micro OLED Display
 
-The Micro OLED display included in your Photon kit is a monochrome \(single-color\) screen that is 64 pixels in width and 48 pixels in height. It can be used to display text, simple graphics, or a combination.
+The Micro OLED display included in your Photon kit is a monochrome \(single-color\) screen that is 64 pixels in width and 48 pixels in height. It can be used to display text, simple graphics, or a combination. You can even create simple animations by drawing an object, leaving it on the screen briefly, erasing it, and repeating these steps with the object drawn at a new position on the screen.
 
 ![Micro OLED Display](../../.gitbook/assets/micro-oled.jpg)
 
@@ -421,7 +421,7 @@ For example, to draw a filled circle with its center at \(32, 24\) and a radius 
 oled.circleFill(32, 24, 20);
 ```
 
-#### DRAW WITH BLACK
+#### DRAW WITH BLACK \(ERASING\)
 
 By default, all the drawing methods will draw using "white" pixels \(which are actually light blue on your Micro OLED screen\). However, you can modify each method to draw using black pixels instead, which represents erasing.
 
@@ -465,11 +465,11 @@ oled.circleFill(32, 24, 10);
 oled.circleFill(32, 24, 5, BLACK, NORM);
 ```
 
-This example code draws 4 filled circles that have the same center but each have a different radius:
+This example code draws 4 filled circles that have the same center point but a different radius:
 
 1. First, a white filled circle with a radius of 20 pixels is drawn.
 2. Then, a black filled circle with a radius of 15 pixels erases part of the white circle.
-3. Then, a new white filled circle with a radius of 10 pixels is added.
+3. Then, a new white filled circle with a radius of 10 pixels is drawn that fills part of the black circle.
 4. Finally, a black filled circle with a radius of 5 pixels erases part of the second white circle.
 
 The overall pattern ends up looking like a "target" symbol:
@@ -478,7 +478,33 @@ The overall pattern ends up looking like a "target" symbol:
 
 #### SIMPLE ANIMATIONS
 
-You can also create simple animations by repeatedly drawing \(with white pixels\) and erasing \(with black pixels\) something at different positions on the screen. A `for` loop can be used to repeat the "animation" steps for a certain number of times.
+You can also create simple animations by drawing something \(with white pixels\), leaving it on the screen briefly, erasing it \(with black pixels\), and then changing its position on the screen. A `for` loop can be used to repeat the "animation" for a certain number of times.
+
+For example, here is code for a simple animation that makes a circle "bounce" back and forth on the screen. The code inside each `for` loop draws and displays a white filled circle, leaves the circle on the screen for a brief `delay()`, and then erases the circle \(by drawing and displaying a black filled circle of the same size at the same position\).
+
+```cpp
+void bouncingCircle() {
+    oled.clear(PAGE);  
+    // move circle from left to right
+    for (int x = 10; x < 54; x++) {
+        oled.circleFill(x, 24, 10);
+        oled.display();
+        delay(20);
+        oled.circleFill(x, 24, 10, BLACK, NORM);
+        oled.display();
+    }
+    // move circle from right to left
+    for (int x = 53; x > 9; x--) {
+        oled.circleFill(x, 24, 10);
+        oled.display();
+        delay(20);
+        oled.circleFill(x, 24, 10, BLACK, NORM);
+        oled.display();
+    }
+}
+```
+
+The first `for` loop increases the x-position of the circle's center from 10 to 53, which slowly moves the circle across the screen from left to right.  The second `for` loop decreases the x-position of the circle's center from 53 to 10, which moves the circle from the right back to the left.
 
 ### Display Text + Graphics
 
@@ -494,4 +520,6 @@ oled.setCursor(18,41);
 oled.println("World");
 oled.display();
 ```
+
+Use the limited screen space of the Micro OLED display effectively. It's only 64 pixels in width by 48 pixels in height. Design your text and graphics to be "glanceable" – a person should be able to very quickly and easily read and understand the information.
 
