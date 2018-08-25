@@ -4,7 +4,7 @@ Physical buttons that people can push are used as inputs on many different types
 
 Your Photon kit has a set of 4 push buttons with different cap colors: red, yellow, green, and blue.
 
-![Push Buttons in various colors](../../.gitbook/assets/buttons-assorted.jpg)
+![Push Buttons](../../.gitbook/assets/buttons-assorted.jpg)
 
 The buttons in your Photon kit are classified as **momentary switches**, which means they detect when they are being pressed or pushed. For example, the keys on a computer keyboard are momentary switches:  they are only "on" when you press them \(and they turn "off" when you release them\).
 

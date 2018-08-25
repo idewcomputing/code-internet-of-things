@@ -6,7 +6,7 @@ Your Photon kit includes a "trimpot" \(trimmable potentiometer\) that can be rot
 
 The trimpot dial can be rotated clockwise or counterclockwise approximately 270° \(it does **NOT** rotate all the way around\). The position of the dial can be measured and used as an input for a value that has a range from minimum to maximum.
 
-![Trimpot \(top view\): Max. Range of Rotation](../../.gitbook/assets/trimpot-max.jpg)
+![Trimpot Dial \(top view\): Maximum Range of Rotation](../../.gitbook/assets/trimpot-max.jpg)
 
 ## How to Connect Trimpot
 
@@ -22,15 +22,15 @@ To connect a trimpot dial to your Photon using the breadboard, you will need:
 | Outer Leg \(other one\) | GND |
 
 {% hint style="success" %}
-**3.3V MAXIMUM:**  Analog inputs, such as the trimpot, require 3.3V of power for accurate measurements. Connect the trimpot to the 3.3V pin on your Photon, or connect it to a positive power rail on the breadboard that's connected to the 3.3V pin.
+**3.3V MAXIMUM:**  Analog inputs, such as the trimpot, require 3.3V of power for accurate measurements. Connect the trimpot to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 {% endhint %}
 
 Here are the steps to connect the trimpot to your Photon using the breadboard:
 
 1. Insert the three metal legs of the trimpot into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
-2. Plug one end of a **jumper wire** into the **same** terminal strip row as an **outer leg** of the trimpot \(either outer leg\). Plug the other end of this jumper wire into the 3.3V pin on the Photon circuit board \(or plug it into a positive power rail on the breadboard that's connected to the 3.3V pin via a different jumper wire\).
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as an **outer leg** of the trimpot. Plug the other end of this jumper wire into the 3.3V pin on the Photon circuit board \(or plug it into a positive power rail that's connected to the 3.3V pin via a different jumper wire\).
 3. Plug one end of a **second jumper wire** into the same terminal strip row as the **middle leg** of the trimpot. Plug the other end of this jumper wire into any analog I/O pin on the Photon circuit board. 
-4. Plug one end of the **third jumper wire** into the **same** terminal strip row as the **other outer leg** of the trimpot. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail on the breadboard \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+4. Plug one end of the **third jumper wire** into the **same** terminal strip row as the **other outer leg** of the trimpot. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
 Here's a wiring diagram showing a possible way to connect a trimpot \(ignore the wiring for the three push buttons\):
 

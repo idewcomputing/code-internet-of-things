@@ -11,9 +11,9 @@ To connect the Micro OLED display to your Photon using the breadboard, you will 
 * Micro OLED display
 * 7 jumper wires \(use different colors to help identify them\)
 
-The Micro OLED has pins located along the top edge of the display. There are labels for each pin printed on the underside of the Micro OLED circuit board.
+The Micro OLED has pins located along the **top edge** of the display. There are labels for each pin printed on the underside of the Micro OLED circuit board.
 
-If the pins along the top edge of the display were numbered left to right as 1-8, the connections for the jumper wires will be:
+If the pins along the top edge were numbered **left to right** as 1-8, the wiring connections would be:
 
 | OLED Pin | Photon Pin |
 | :--- | :--- |
@@ -27,9 +27,9 @@ If the pins along the top edge of the display were numbered left to right as 1-8
 | Pin 8 – GND | GND |
 
 {% hint style="success" %}
-**3.3V MAXIMUM:**  Connect the Micro OLED to the 3.3V pin on your Photon, or connect it to a positive power rail on the breadboard that's connected to the 3.3V pin.
+**3.3V MAXIMUM:**  The Micro OLED display operates at 3.3V of power. Connect it to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 
-Do **NOT** connect to VIN or V-USB because the higher voltage could damage the display.
+Do **NOT** connect it to VIN or V-USB because the higher voltage could damage the display.
 {% endhint %}
 
 Here are the steps to connect the Micro OLED to your Photon using the breadboard:
