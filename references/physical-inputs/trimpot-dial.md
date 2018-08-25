@@ -70,5 +70,50 @@ This line of code does 3 things \(in order\):
 2. **It declares the variable's name.** In this example, the variable will be called `trimpot`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `A0`. If necessary, modify this value to match the actual I/O pin that your speaker is connected to.
 
+{% hint style="info" %}
+**PIN MODE:**  Analog inputs do **NOT** need to have their pin mode set within the `setup()` function. Their pin mode gets automatically set when the `analogRead()` method is used.
+{% endhint %}
 
+### Read Trimpot Value
+
+The `analogRead()` method is used to read the trimpot dial position.
+
+Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
+
+```cpp
+int trimpotValue = analogRead(trimpot);
+// add code to do something with trimpotValue
+```
+
+A local variable named `trimpotValue` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `analogRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the trimpot pin number.
+
+The `analogRead()` method requires one parameter insides its parentheses: 
+
+1. **The I/O pin number**, which can be the actual pin number \(such as: `A0`, etc.\) or a variable that stores a pin number. In this example, the variable named `trimpot` is listed. If necessary, change this to match the variable name for your trimpot's pin number.
+
+The `analogRead()` method will return an integer \(whole number\) value ranging from 0-4095:
+
+* If the dial is rotated all the way to the left \(counterclockwise\), the value will be 0.
+* If the dial is rotated all the way to the right \(clockwise\), the value will be 4095.
+* If the dial is rotated somewhere in-between, the value will be proportional to the dial's position. For example, if the dial is rotated exactly halfway, the value will be 2048.
+
+### Mapping to Custom Range {#mapping-dial-position-to-custom-range-of-values}
+
+In many cases, it may not be convenient to work with a value that ranges from 0-4095. Instead, it might be easier to have a value within a smaller custom range \(such as:  0-10, 0-100, etc.\).
+
+The `map()` function can be used to convert a value from its original range \(such as 0-4095\) into a new range of your choice. You get to decide the minimum and maximum values for the new range.
+
+For example, if a trimpot dial were being used to control the brightness of an LED light, you might want the trimpot to return a value between 0-255 because the `analogWrite()` method used to set the brightness of an LED requires a value in this range.
+
+Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
+
+```cpp
+int trimpotValue = analogRead(trimpot);
+int minValue = 0;
+int maxValue = 100;
+int mapValue = round(map(trimpotValue, 0, 4095, minValue, maxValue + 1));
+// add code to do something with mapValue
+```
+
+**NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to select the maximum value even if the trimpot dial is turned all the way to the right.
 

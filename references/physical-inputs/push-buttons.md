@@ -119,7 +119,7 @@ In the first code statement, a local variable named `buttonState` is declared th
 
 The `digitalRead()` method requires one parameter insides its parentheses: 
 
-1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, a variable named `button` is listed. If necessary, change this to match the variable name for your button's pin number.
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, the variable named `button` is listed. If necessary, change this to match the variable name for your button's pin number.
 
 The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
 
