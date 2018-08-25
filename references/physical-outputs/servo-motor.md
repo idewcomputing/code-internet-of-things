@@ -35,6 +35,13 @@ To connect a servo motor to your Photon using the breadboard, you will need:
 | Red – Power \(4.8-6V\) | 5V through VIN or V-USB |
 | Black – Ground | GND |
 
+{% hint style="success" %}
+**5V REQUIRED:**  The servo motor requires 5V of power to operate.
+
+* If your Photon is being powered through the **barrel jack**, connect to the **VIN** pin.
+* If your Photon is being powered through the **Micro-USB** port, connect to the **V-USB** pin.
+{% endhint %}
+
 Here are the steps to connect the servo motor to your Photon using the breadboard:
 
 1. Plug one end of a **jumper wire** into the **motor's white wire connector**. Plug the other end of this jumper wire into a **PWM-capable** I/O pin on the Photon circuit board.

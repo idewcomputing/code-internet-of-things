@@ -19,6 +19,13 @@ To connect a motion sensor to your Photon using the breadboard, you will need:
 | White - Ground | GND |
 | Red - Power \(5-12V\) | 5V through VIN or V-USB |
 
+{% hint style="success" %}
+**5V REQUIRED:**  The motion sensor requires 5V of power to operate.
+
+* If your Photon is being powered through the **barrel jack**, connect to the **VIN** pin.
+* If your Photon is being powered through the **Micro-USB** port, connect to the **V-USB** pin.
+{% endhint %}
+
 Here are the steps to connect the motion sensor to your Photon using the breadboard:
 
 1. Insert the 3 pins of the motion sensor connector into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
