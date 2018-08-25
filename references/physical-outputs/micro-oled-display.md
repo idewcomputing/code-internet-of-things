@@ -4,6 +4,8 @@ The Micro OLED display included in your Photon kit is a monochrome \(single-colo
 
 ![Micro OLED Display](../../.gitbook/assets/micro-oled.jpg)
 
+Although the Micro OLED display is small, it can be useful for displaying information. Since the display is so small, design your information to be "glanceable" – a person should be able to very quickly and easily read and understand the information.
+
 ## How to Connect Micro OLED
 
 To connect the Micro OLED display to your Photon using the breadboard, you will need:
@@ -90,7 +92,7 @@ Particle Build will **automatically** insert this `#include` statement at the be
 
 You need to define the I/O pin numbers for certain Micro OLED pins. This is similar to declaring global variables \(except defined values are not allowed to change\).
 
-You will also need to create an object using the `MicroOLED` class defined in the included library, and assign this object to a global variable.
+You will also need to create an object using the `MicroOLED` class in the included library, and assign this object to a global variable.
 
 Add this code **before** the `setup()` function:
 
@@ -107,7 +109,7 @@ The **fourth line of code** creates a new object using the `MicroOLED` class, an
 
 ### Start OLED in Setup
 
-The `oled.begin()` method is used to start the Micro OLED display, which should typically be done when your app first starts running.
+The `oled.begin()` method is used to start the Micro OLED display.
 
 Add this code statement within the `setup()` function to start the OLED display:
 
@@ -130,14 +132,16 @@ Displaying text on the Micro OLED screen requires a sequence of five steps:
 For example:
 
 ```cpp
-    oled.clear(PAGE);
-    oled.setFontType(0);
-    oled.setCursor(0,0);
-    oled.println("Hello");
-    oled.display();
+oled.clear(PAGE);
+oled.setFontType(0);
+oled.setCursor(0,0);
+oled.println("Hello");
+oled.display();
 ```
 
-Rather than listing all these code statements within the `loop()` function, you may want to create a custom function that contains all the code to display your text. Then you can call this custom function within the `loop()` function.
+{% hint style="success" %}
+**CREATE CUSTOM FUNCTION:**  Rather than listing all your OLED code statements within the `loop()` function, it may be better to create a custom function that contains all the code to display your text or graphics. Then call the custom function within the `loop()` function.
+{% endhint %}
 
 #### 1. CLEAR SCREEN
 
@@ -171,10 +175,10 @@ You can use a mix of different font types by setting a new font type before prin
 For example:
 
 ```cpp
-    oled.setFontType(0);
-    oled.println("Hello");
-    oled.setFontType(1);
-    oled.println("World");
+oled.setFontType(0);
+oled.println("Hello");
+oled.setFontType(1);
+oled.println("World");
 ```
 
 #### 3. SET CURSOR POSITION
@@ -190,17 +194,17 @@ For example, to have your text start at the top-left corner of the screen:
 oled.setCursor(0,0);
 ```
 
-As you print text to the screen, the OLED display will automatically move the cursor position, so the next text printed to the screen will start at the next screen position.
+As you print text to the screen, the OLED display will automatically move the cursor position, so the next text printed to the screen will start at the next available screen position.
 
-However, if desired, you can adjust the text layout by setting a new cursor position before printing a line of text, so the new text will start printing at a specific position on the screen.
+However, if desired, you can adjust the text layout by setting a new cursor position before printing a line of text, so the new text will start at a specific position on the screen.
 
 For example:
 
 ```cpp
-    oled.setCursor(20,10);
-    oled.println("Hello");
-    oled.setCursor(20,30);
-    oled.println("World");
+oled.setCursor(20,10);
+oled.println("Hello");
+oled.setCursor(20,30);
+oled.println("World");
 ```
 
 #### 4. PRINT TEXT
@@ -271,6 +275,10 @@ Any text or graphics will **NOT** be shown until the OLED is instructed to displ
 oled.display();
 ```
 
+{% hint style="success" %}
+**GLANCEABLE:**  Because the Micro OLED display is small, your text and graphics need to be "glanceable" – a person should be able to quickly and easily understand the information.
+{% endhint %}
+
 ### Display Graphics
 
 Displaying simple graphics on the Micro OLED screen requires a sequence of three steps:
@@ -282,9 +290,9 @@ Displaying simple graphics on the Micro OLED screen requires a sequence of three
 For example:
 
 ```cpp
-    oled.clear(PAGE);
-    oled.circleFill(32, 24, 10);
-    oled.display();
+oled.clear(PAGE);
+oled.circleFill(32, 24, 10);
+oled.display();
 ```
 
 Rather than listing all these code statements within the `loop()` function, you may want to create a custom function that contains all the code to display your graphics. Then you can call this custom function within the `loop()` function.
@@ -296,14 +304,14 @@ The following drawing methods are available:
 * `oled.rect()` and `oled.rectFill()` can be used to draw a rectangle
 * `oled.circle()` and `oled.circleFill()` can be used to draw a circle
 
-All of the drawing methods require parameters for the \(x, y\) position of a point. The OLED screen is 64 pixels wide by 48 pixels tall:
+Each drawing method requires parameters for the \(x, y\) pixel position of a point \(or two points if drawing a line\). The OLED screen is 64 pixels wide by 48 pixels tall:
 
-* The `x` positions are numbered left to right as 0-63
-* The `y` positions are numbered top to bottom as 0-47
+* The `x` pixel positions are numbered left to right as 0-63
+* The `y` pixel positions are numbered top to bottom as 0-47
 
 #### DRAW DOT
 
-The `oled.pixel()` method can be used to draw a dot at specific point:
+The `oled.pixel()` method can be used to draw a dot \(pixel\) at a specific point:
 
 ```cpp
 oled.pixel(x, y);
@@ -317,7 +325,7 @@ oled.pixel(32, 24);
 
 #### DRAW LINE
 
-The `oled.line()` method can be used to draw a **straight line** from one point `(x1, y1)` to another point `(x2, y2)`:
+The `oled.line()` method can be used to draw a **line** from one point \(x1, y1\) to another point \(x2, y2\):
 
 ```cpp
 oled.line(x1, y1, x2, y2);
@@ -468,18 +476,22 @@ The overall pattern ends up looking like a "target" symbol:
 
 ![Drawing with White and Black Pixels](../../.gitbook/assets/micro-oled-graphics.jpg)
 
+#### SIMPLE ANIMATIONS
+
+You can also create simple animations by repeatedly drawing \(with white pixels\) and erasing \(with black pixels\) something at different positions on the screen. A `for` loop can be used to repeat the "animation" steps for a certain number of times.
+
 ### Display Text + Graphics
 
 You can also combine text and graphics on the OLED screen at the same time. For example:
 
 ```cpp
-    oled.clear(PAGE);
-    oled.setFontType(0);
-    oled.setCursor(18,0);
-    oled.println("Hello");
-    oled.circleFill(32, 24, 10);
-    oled.setCursor(18,41);
-    oled.println("World");
-    oled.display();
+oled.clear(PAGE);
+oled.setFontType(0);
+oled.setCursor(18,0);
+oled.println("Hello");
+oled.circleFill(32, 24, 10);
+oled.setCursor(18,41);
+oled.println("World");
+oled.display();
 ```
 

@@ -10,6 +10,8 @@ The trimpot dial can be rotated clockwise or counterclockwise approximately 270Â
 
 ## How to Connect Trimpot
 
+The trimpot dial has 3 metal legs that will be inserted into pin holes on the breadboard.
+
 To connect a trimpot dial to your Photon using the breadboard, you will need:
 
 * Trimpot
@@ -18,7 +20,7 @@ To connect a trimpot dial to your Photon using the breadboard, you will need:
 | Trimpot | Photon Pin |
 | :--- | :--- |
 | Outer Leg \(either one\) | 3.3V |
-| Middle Leg | any analog I/O pin \(A0, A1, A2, A3, A4, or A5\) |
+| Middle Leg | any analog I/O pin \(A0, A1, A2, A3, A4, A5\) |
 | Outer Leg \(other one\) | GND |
 
 {% hint style="success" %}
@@ -46,5 +48,27 @@ Keep in mind that your connection can look different than this example diagram:
 
 ## How to Code Trimpot
 
-explain
+The basic steps to control a trimpot dial in your app code are:
+
+1. Declare a global variable to store the I/O pin number for the trimpot.
+2. Use the `analogRead()` method to measure the trimpot dial position.
+3. **Optional:**  Use the `map()` method to translate the trimpot reading to a custom range of values.
+
+### Global Variable
+
+You should declare a global variable to store the I/O pin number that the trimpot is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the trimpot to a different pin number\).
+
+Add this code statement \(modify if necessary\) **before** the `setup()` function:
+
+```cpp
+int trimpot = A0;
+```
+
+This line of code does 3 things \(in order\):
+
+1. **It declares a data type for the variable's value.**  In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
+2. **It declares the variable's name.** In this example, the variable will be called `trimpot`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
+3. **It assigns a value to the variable.**  In this example, the variable's value will be equal to `A0`. If necessary, modify this value to match the actual I/O pin that your speaker is connected to.
+
+
 
