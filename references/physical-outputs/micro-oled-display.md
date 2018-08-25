@@ -521,5 +521,5 @@ oled.println("World");
 oled.display();
 ```
 
-Use the limited screen space of the Micro OLED display effectively. It's only 64 pixels in width by 48 pixels in height. Design your text and graphics to be "glanceable" – a person should be able to very quickly and easily read and understand the information.
+The Micro OLED display is only 64 pixels in width by 48 pixels in height. Use this limited screen space effectively by designing your text and graphics to be "glanceable" – a person should be able to very quickly and easily read and understand the information.
 
