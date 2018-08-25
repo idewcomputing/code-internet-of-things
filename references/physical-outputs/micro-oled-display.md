@@ -27,7 +27,7 @@ If the pins along the top edge of the display were numbered left to right as 1-8
 | Pin 8 – GND | GND |
 
 {% hint style="success" %}
-**3.3V REQUIRED:**  Connect the Micro OLED to the 3.3V pin on your Photon, or connect it to a positive power rail on the breadboard that's connected to the 3.3V pin.
+**3.3V MAXIMUM:**  Connect the Micro OLED to the 3.3V pin on your Photon, or connect it to a positive power rail on the breadboard that's connected to the 3.3V pin.
 
 Do **NOT** connect to VIN or V-USB because the higher voltage could damage the display.
 {% endhint %}

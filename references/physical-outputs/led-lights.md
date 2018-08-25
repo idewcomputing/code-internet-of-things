@@ -43,6 +43,10 @@ To connect an LED light to your Photon using the breadboard, you will need:
 | Positive Leg \(bent\) = Power | any I/O pin |
 | Negative Leg = Ground | GND using resistor |
 
+{% hint style="success" %}
+**RESISTOR REQUIRED:** Connect the LED's negative leg to GND using a resistor, which will limit the amount of current flowing through the LED. Otherwise, you will burn out the LED.
+{% endhint %}
+
 Here are the steps to connect the LED light to your Photon using the breadboard:
 
 1. Insert the positive and negative legs of the LED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
