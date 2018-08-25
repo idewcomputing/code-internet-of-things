@@ -45,8 +45,8 @@ To connect a servo motor to your Photon using the breadboard, you will need:
 Here are the steps to connect the servo motor to your Photon using the breadboard:
 
 1. Plug one end of a **jumper wire** into the **motor's white wire connector**. Plug the other end of this jumper wire into a **PWM-capable** I/O pin on the Photon circuit board.
-2. Plug one end of a **second jumper wire** into the **motor's red wire connector**. Plug the other end of this jumper wire into either the VIN pin or V-USB pin on the Photon circuit board \(or to a **positive** power rail on the breadboard that is connected to VIN or V-USB\). If your Photon is being powered through the barrel jack, connect to the VIN pin. Otherwise, if your Photon is being powered through the Micro-USB port, connect to the V-USB pin.
-3. Plug one end of a **third jumper wire** into the **motor's black wire connector**. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+2. Plug one end of a **second jumper wire** into the **motor's red wire connector**. Plug the other end of this jumper wire into either the VIN pin or V-USB pin on the Photon circuit board \(or to a **positive** power rail on the breadboard that is connected to VIN or V-USB\). If your Photon is being powered through the **barrel jack**, connect to the **VIN** pin. Otherwise, if your Photon is being powered through the **Micro-USB** port, connect to the **V-USB** pin.
+3. Plug one end of a **third jumper wire** into the **motor's black wire connector**. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail on the breadboard \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
 Here's a wiring diagram showing a possible way to connect a servo motor \(ignore the wiring for the push button\):
 

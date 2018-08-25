@@ -36,7 +36,7 @@ Here are the steps to connect the speaker to your Photon using the breadboard:
 
 1. Insert the positive and negative legs of the speaker into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
 2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **positive** leg of the speaker. Plug the other end of this jumper wire into a **PWM-capable** I/O pin on the Photon circuit board.
-3. Plug one end of the **other jumper wire** into the **same** terminal strip row as the **negative** leg of the speaker. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+3. Plug one end of the **other jumper wire** into the **same** terminal strip row as the **negative** leg of the speaker. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail on the breadboard \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
 Here's a wiring diagram showing a possible way to connect a speaker:
 
