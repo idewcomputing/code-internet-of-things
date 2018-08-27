@@ -27,6 +27,10 @@ To connect a trimpot dial to your Photon using the breadboard, you will need:
 **3.3V MAXIMUM:**  Analog inputs, such as the trimpot, require 3.3V of power for accurate measurements. Connect the trimpot to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 {% endhint %}
 
+{% hint style="warning" %}
+**TWIN PINS:** Analog pins A2, A3, A4, and A5 are each represented by **two** pins on the Photon board. The duplicate pins are labeled as: SS/A2, SCK/A3, MISO/A4, MOSI/A5. If you use one of these pins, you **cannot** use its twin at the same time.
+{% endhint %}
+
 Here are the steps to connect the trimpot to your Photon using the breadboard:
 
 1. Insert the three metal legs of the trimpot into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)

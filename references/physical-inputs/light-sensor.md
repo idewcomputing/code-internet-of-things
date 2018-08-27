@@ -41,6 +41,10 @@ To connect a light sensor to your Photon using the breadboard, you will need:
 **RESISTOR REQUIRED:** A static resistor will be used to create a voltage divider that allows the variable resistance of the light sensor to be measured.
 {% endhint %}
 
+{% hint style="warning" %}
+**TWIN PINS:** Analog pins A2, A3, A4, and A5 are each represented by **two** pins on the Photon board. The duplicate pins are labeled as: SS/A2, SCK/A3, MISO/A4, MOSI/A5. If you use one of these pins, you **cannot** use its twin at the same time.
+{% endhint %}
+
 Here are the steps to connect the light sensor to your Photon using the breadboard:
 
 1. Insert the two legs of the light sensor into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)

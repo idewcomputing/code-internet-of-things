@@ -37,6 +37,10 @@ To connect a soil moisture sensor to your Photon using the breadboard, you will 
 | GND \(Ground\) – Black | GND |
 | VCC \(Power\) – Red | any I/O pin |
 
+{% hint style="warning" %}
+**TWIN PINS:** Analog pins A2, A3, A4, and A5 are each represented by **two** pins on the Photon board. The duplicate pins are labeled as: SS/A2, SCK/A3, MISO/A4, MOSI/A5. If you use one of these pins, you **cannot** use its twin at the same time.
+{% endhint %}
+
 Here are the steps to connect the soil moisture sensor to your Photon using the breadboard:
 
 1. Plug the **SIG jumper wire** into any analog I/O pin on the Photon circuit board.

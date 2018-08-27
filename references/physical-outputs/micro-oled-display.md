@@ -34,12 +34,6 @@ If the pins along the top edge were numbered **left to right** as 1-8, the wirin
 Do **NOT** connect it to VIN or V-USB because the higher voltage could damage the display.
 {% endhint %}
 
-Here are the steps to connect the Micro OLED to your Photon using the breadboard:
-
-1. Insert the 8 pins of the Micro OLED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
-2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **first OLED pin \(CS\)**. Plug the other end of this jumper wire into its corresponding pin on the Photon circuit board.
-3. Repeat step 2 with the other jumper wires until each OLED pin is connected to its correct Photon pin. **NOTE:** The **fourth OLED pin \(SDO\)** will **not** be connected to anything.
-
 {% hint style="warning" %}
 **TWIN PINS:** Analog pins A2, A3, A4, and A5 are each represented by **two** pins on the Photon board. The duplicate pins are labeled as: SS/A2, SCK/A3, MISO/A4, MOSI/A5.
 
@@ -47,6 +41,12 @@ However, the Micro OLED has to connect to **only one** A2 pin – **not** both. 
 
 The only limitation is that once you connect the Micro OLED, you will **not** be able to have a different part \(such as an LED, etc.\) connected to the other A2, A3, or A5 pins.
 {% endhint %}
+
+Here are the steps to connect the Micro OLED to your Photon using the breadboard:
+
+1. Insert the 8 pins of the Micro OLED into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **first OLED pin \(CS\)**. Plug the other end of this jumper wire into its corresponding pin on the Photon circuit board.
+3. Repeat step 2 with the other jumper wires until each OLED pin is connected to its correct Photon pin. **NOTE:** The **fourth OLED pin \(SDO\)** will **not** be connected to anything.
 
 Here's a wiring diagram showing a possible way to connect a servo motor \(ignore the wiring for the three push buttons\):
 
