@@ -74,9 +74,9 @@ This line of code does 3 things \(in order\):
 **PIN MODE:**  Analog inputs do **NOT** need to have their pin mode set within the `setup()` function. Their pin mode gets automatically set when the `analogRead()` method is used.
 {% endhint %}
 
-### Read Trimpot Value
+### Read Trimpot
 
-The `analogRead()` method is used to read the trimpot dial position.
+The `analogRead()` method is used to read the trimpot, which indicates the trimpot dial position.
 
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 

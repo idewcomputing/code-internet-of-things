@@ -83,7 +83,7 @@ This line of code does 3 things \(in order\):
 
 ### Read Light Sensor
 
-The `analogRead()` method is used to read the light sensor's value, which indicates the amount of ambient light reaching the sensor.
+The `analogRead()` method is used to read the light sensor, which indicates the amount of ambient light reaching the sensor.
 
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 
