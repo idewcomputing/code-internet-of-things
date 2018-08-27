@@ -97,7 +97,7 @@ The `analogRead()` method will return an integer \(whole number\) value ranging 
 * If the dial is rotated all the way to the right \(clockwise\), the value will be 4095.
 * If the dial is rotated somewhere in-between, the value will be proportional to the dial's position. For example, if the dial is rotated exactly halfway, the value will be 2048.
 
-You'll need to add code to do something with the reading stored as `trimpotRead`.
+You'll need to add code to do something with the reading stored as `trimpotRead`. For example, this might be an if-else statement to perform certain actions based on whether `trimpotRead` is greater than \(or less than\) one or more specific values.
 
 ### Map Value to Custom Range {#mapping-dial-position-to-custom-range-of-values}
 
@@ -119,7 +119,7 @@ int trimpotValue = round(map(trimpotRead, 0, 4095, minValue, maxValue + 1));
 
 As necessary, change the values assigned to `minValue` and `maxValue` to whatever numbers you want to use for your custom range. Also, the `minValue` **doesn't** have to be zero.
 
-Be sure to add code to do something with `trimpotValue`.
+Be sure to add code to do something with `trimpotValue`. For example, this might be an if-else statement to perform certain actions based on whether `trimpotValue` is greater than \(or less than\) one or more specific values.
 
 **NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to get the maximum value even if the trimpot dial is turned clockwise all the way.
 

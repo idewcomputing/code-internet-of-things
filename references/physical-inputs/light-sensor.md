@@ -103,9 +103,23 @@ The `analogRead()` method will return an integer \(whole number\) value ranging 
 * When there is **less light** detected, the reading will have a **lower value**.
 * When there is **more light** detected, the reading will have a **higher value**.
 
-You'll need to add code to do something with the reading stored as `lightRead`.
+You'll need to add code to do something with the reading stored as `lightRead`. For example, this might be an if-else statement to perform certain actions based on whether `lightRead` is greater than \(or less than\) one or more specific values.
 
 Depending on the specific purpose of the light sensor in your device, you may need to gather some test data under different conditions to see how dark or how bright the environment will actually be where your device will be used. This will help you determine which values to use in your code to make decisions. For example, if the light sensor will be used to turn on an LED light when a room is too dark, what value will be used to decide that the room is too dark?
+
+For example, the code below uses a value of `250` to decide whether a room is too dark. However, you would need to gather test data to determine whether this value should be higher or lower.
+
+```cpp
+int lightRead = analogRead(light);
+if (lightRead < 250) {
+    // turn on LED when room is too dark
+    digitalWrite(LED, HIGH);
+}
+else {
+    // otherwise, turn off LED
+    digitalWrite(LED, LOW);
+}
+```
 
 ### Map Value to Custom Range {#mapping-dial-position-to-custom-range-of-values}
 
@@ -127,7 +141,7 @@ int lightValue = round(map(lightRead, 0, 4095, minValue, maxValue + 1));
 
 As necessary, change the values assigned to `minValue` and `maxValue` to whatever numbers you want to use for your custom range. Also, the `minValue` **doesn't** have to be zero.
 
-Be sure to add code to do something with `lightValue`.
+Be sure to add code to do something with `lightValue`. For example, this might be an if-else statement to perform certain actions based on whether `lightValue` is greater than \(or less than\) one or more specific values.
 
 **NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to get the maximum value even if the ambient light in the environment is very bright.
 
