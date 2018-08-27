@@ -55,8 +55,8 @@ Here's a wiring diagram showing a possible way to connect a servo motor \(ignore
 Keep in mind that your connection can look different than this example diagram:
 
 * Your servo motor's white wire could connect to a **different I/O pin capable of PWM output**. \(The example connects to the D0 pin on the Photon circuit board\).
-* Your servo motor's red wire could connect \(through a jumper wire\) to **either the VIN pin or V-USB pin** – **or to a positive power rail that's connected to one of these pins.** \(The example connects directly to the V-USB pin on the Photon circuit board\).
-* Your servo motor's black wire could connect \(through a jumper wire\) **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
+* Your servo motor's red wire could connect to **either the VIN pin or V-USB pin** – **or to a positive power rail that's connected to one of these pins.** \(The example connects directly to the V-USB pin on the Photon circuit board\).
+* Your servo motor's black wire could connect **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
 
 ### Connect Horn to Motor
 
