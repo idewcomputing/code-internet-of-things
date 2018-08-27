@@ -147,7 +147,7 @@ When calling the `checkSensor()` function within the `loop()` function, you will
 
 The `checkSensor()` function will return the mapped sensor value as an integer, which your code should store in a variable of data type `int`.
 
-For example, to call the `checkSensor()` function within the loop\(\) function:
+For example, to call the `checkSensor()` function within the `loop()` function:
 
 ```cpp
 int trimpotValue = checkSensor(trimpot, 0, 255);

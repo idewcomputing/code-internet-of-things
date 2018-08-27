@@ -109,12 +109,13 @@ The `analogRead()` method will return an integer \(whole number\) value ranging 
 
 You'll need to add code to do something with the reading stored as `lightRead`. For example, this might be an if-else statement to perform certain actions based on whether `lightRead` is greater than \(or less than\) one or more specific values.
 
-Depending on the specific purpose of the light sensor in your device, you may need to gather some test data under different conditions to see how dark or how bright the environment will actually be where your device will be used. This will help you determine which values to use in your code to make decisions. For example, if the light sensor will be used to turn on an LED light when a room is too dark, what value will be used to decide that the room is too dark?
+#### GATHER TEST VALUES
+
+Depending on the specific purpose of the light sensor in your device, you may need to gather some test values under different conditions to see how dark or how bright the environment will actually be where your device will be used. This will help you determine which values to use in your code to make decisions. For example, if the light sensor will be used to turn on an LED light when a room is too dark, what value will be used to decide that the room is too dark?
 
 For example, the code below uses a value of `250` to decide whether a room is too dark. However, you would need to gather test data to determine whether this value should be higher or lower.
 
 ```cpp
-int lightRead = analogRead(light);
 if (lightRead < 250) {
     // turn on LED when room is too dark
     digitalWrite(LED, HIGH);
@@ -169,7 +170,7 @@ When calling the `checkSensor()` function within the `loop()` function, you will
 
 The `checkSensor()` function will return the mapped sensor value as an integer, which your code should store in a variable of data type `int`.
 
-For example, to call the `checkSensor()` function within the loop\(\) function:
+For example, to call the `checkSensor()` function within the `loop()` function:
 
 ```cpp
 int lightValue = checkSensor(light, 0, 100);
