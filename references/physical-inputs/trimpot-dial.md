@@ -19,9 +19,9 @@ To connect a trimpot dial to your Photon using the breadboard, you will need:
 
 | Trimpot | Photon Pin |
 | :--- | :--- |
-| Outer Leg \(either one\) | 3.3V |
+| Outer Leg \(pick one\) | 3.3V |
 | Middle Leg | any analog I/O pin \(A0, A1, A2, A3, A4, A5\) |
-| Outer Leg \(other one\) | GND |
+| Other Outer Leg | GND |
 
 {% hint style="success" %}
 **3.3V MAXIMUM:**  Analog inputs, such as the trimpot, require 3.3V of power for accurate measurements. Connect the trimpot to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
@@ -81,11 +81,11 @@ The `analogRead()` method is used to read the trimpot dial position.
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 
 ```cpp
-int trimpotValue = analogRead(trimpot);
-// add code to do something with trimpotValue
+int trimpotRead = analogRead(trimpot);
+// add code to do something with trimpotRead
 ```
 
-A local variable named `trimpotValue` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `analogRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the trimpot pin number.
+A local variable named `trimpotRead` is declared that will have a data type of `int` \(integer\).  This variable is made equal to whatever value is returned by the `analogRead()` method.  You can change the name of this variable, but it will make sense if it's similar to the variable name used for the trimpot pin number.
 
 The `analogRead()` method requires one parameter insides its parentheses: 
 
@@ -97,7 +97,7 @@ The `analogRead()` method will return an integer \(whole number\) value ranging 
 * If the dial is rotated all the way to the right \(clockwise\), the value will be 4095.
 * If the dial is rotated somewhere in-between, the value will be proportional to the dial's position. For example, if the dial is rotated exactly halfway, the value will be 2048.
 
-You'll need to add code to do something with the reading stored as `trimpotValue`.
+You'll need to add code to do something with the reading stored as `trimpotRead`.
 
 ### Map Value to Custom Range {#mapping-dial-position-to-custom-range-of-values}
 
@@ -110,16 +110,16 @@ For example, if a trimpot dial were being used to control the brightness of an L
 Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
 
 ```cpp
-int trimpotValue = analogRead(trimpot);
+int trimpotRead = analogRead(trimpot);
 int minValue = 0;
 int maxValue = 100;
-int mapValue = round(map(trimpotValue, 0, 4095, minValue, maxValue + 1));
-// add code to do something with mapValue
+int trimpotValue = round(map(trimpotRead, 0, 4095, minValue, maxValue + 1));
+// add code to do something with trimpotValue
 ```
 
 As necessary, change the values assigned to `minValue` and `maxValue` to whatever numbers you want to use for your custom range. Also, the `minValue` **doesn't** have to be zero.
 
-Be sure to add code to do something with `mapValue`.
+Be sure to add code to do something with `trimpotValue`.
 
 **NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to get the maximum value even if the trimpot dial is turned clockwise all the way.
 
