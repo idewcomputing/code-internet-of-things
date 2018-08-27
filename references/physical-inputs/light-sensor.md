@@ -145,5 +145,37 @@ Be sure to add code to do something with `lightValue`. For example, this might b
 
 **NOTE:** The code uses the `round()` method to round the mapped value to the nearest integer because the `map()` method returns a `float` \(decimal value\). Also, inside the `map()` method, the code intentionally adds 1 to the `maxValue` because otherwise it is very difficult to get the maximum value even if the ambient light in the environment is very bright.
 
+#### CUSTOM FUNCTION TO READ ANALOG SENSORS
 
+You could incorporate this code into a custom function called `checkSensor()` that will read an analog sensor and return a value mapped to a custom range:
+
+```cpp
+int checkSensor(int pin, int minValue, int maxValue) {
+    int sensorRead = analogRead(pin);
+    int mapValue = round(map(sensorRead, 0, 4095, minValue, maxValue + 1));
+    return mapValue;
+}
+```
+
+When calling the `checkSensor()` function within the `loop()` function, you will need to include values for these 3 parameters \(in order\) inside its parentheses:
+
+1. the **sensor's pin number**, which will most likely be a variable that stores the pin number
+2. the **desired minimum value for the range**, which should be an integer \(whole number\)
+3. the **desired maximum value for the range**, which should be an integer \(whole number\)
+
+The `checkSensor()` function will return the mapped sensor value as an integer, which your code should store in a variable of data type `int`.
+
+For example, to call the `checkSensor()` function within the loop\(\) function:
+
+```cpp
+int lightValue = checkSensor(light, 0, 100);
+// add code to do something with lightValue
+```
+
+The `checkSensor()` function could also be used to read other analog sensors, such as a trimpot dial:
+
+```cpp
+int trimpotValue = checkSensor(trimpot, 0, 255);
+// add code to do something with trimpotValue
+```
 
