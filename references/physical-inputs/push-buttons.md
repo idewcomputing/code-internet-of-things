@@ -23,7 +23,7 @@ To connect a push button to your Photon using the breadboard, you will need:
 
 | Push Button | Photon Pin |
 | :--- | :--- |
-| Any Leg | any I/O pin |
+| One Leg \(any leg\) | any I/O pin |
 | Adjacent Leg on same side | GND |
 
 Here are the steps to connect the push button to your Photon using the breadboard:
