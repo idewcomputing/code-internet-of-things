@@ -157,7 +157,7 @@ The SparkFun Micro OLED library includes 4 available font types \(numbered 0-3\)
 
 | Font Type | Font Size | Characters Allowed | Used For |
 | :--- | :--- | :--- | :--- |
-| 0 | 5×7 pixels \(10 columns by 6 rows\) | any [ASCII character](https://www.w3schools.com/charsets/ref_html_ascii.asp) | General |
+| 0 | 5×7 pixels \(10 columns by 6 rows\) | any [ASCII character](https://www.ascii-code.com/) | General |
 | 1 | 8×16 pixels \(6 columns by 3 rows\) | any character on keyboard | General |
 | 2 | 10×16 pixels \(5 columns by 3 rows\) | only numbers and period | Numbers |
 | 3 | 12×48 pixels \(5 columns by 1 row\) | only numbers and colon | Numbers or Time |

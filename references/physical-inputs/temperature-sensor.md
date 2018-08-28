@@ -116,8 +116,7 @@ The `rht.update()` method is used to get new sensor readings for the relative hu
 If the update is successful, the `rht.update()` method will return a value of `1` \(which is equivalent to`true`\). Then you can use other `rht` methods to get the updated values for the relative humidity \(%\) and temperature \(in Fahrenheit or Celsius\).
 
 * The `rht.humidity()` method returns the relative humidity of the air as a value between 0-100 representing a percentage. A higher number means the air is more humid \(has more water vapor\).
-* The `rht.tempF()` method returns the temperature of the air in degrees Fahrenheit.
-* The `rht.tempC()` method returns the temperature of the air in degrees Celsius.
+* The `rht.tempF()` method returns the temperature of the air in degrees Fahrenheit – while the `rht.tempC()` method will return the temperature of the air in degrees Celsius.
 
 Each humidity and temperature measurement is returned as a `float` value \(decimal number\). In most cases, it will be simpler to round these values to the nearest integer \(whole number\).
 
@@ -131,4 +130,10 @@ if (rht.update() == true) {
     
 }
 ```
+
+This code creates two variables named `temperature` and `humidity` to store the values returned by the sensor, which have been rounded to integer values.
+
+If you want the temperature in degrees Celsius, then replace `rht.tempF()` with `rht.tempC()`.
+
+Be sure to add code to do something with the `temperature` and/or `humidity` values.
 
