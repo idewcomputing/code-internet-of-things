@@ -113,9 +113,9 @@ The `rht.begin()` method requires the sensor's I/O pin number. In this case, the
 
 The `rht.update()` method is used to get new sensor readings for the relative humidity and temperature of the air.
 
-If the update is successful, the `rht.update()` method will return a value of `1` \(which is equivalent to`true`\). Then you can use other `rht` methods to get the updated values for the relative humidity \(%\) and temperature \(in Fahrenheit or Celsius\).
+If the update is successful, the `rht.update()` method will return a value of `1` \(which is equivalent to`true`\). Then you can use these other `rht` methods to get the updated values for the relative humidity \(%\) and temperature \(in Fahrenheit or Celsius\):
 
-* The `rht.humidity()` method returns the relative humidity of the air as a value between 0-100 representing a percentage. A higher number means the air is more humid \(has more water vapor\).
+* The `rht.humidity()` method returns the relative humidity of the air as a value between 0-100, representing a percentage. A higher number means the air is more humid \(has more water vapor\).
 * The `rht.tempF()` method returns the temperature of the air in degrees Fahrenheit – while the `rht.tempC()` method will return the temperature of the air in degrees Celsius.
 
 Each humidity and temperature measurement is returned as a `float` value \(decimal number\). In most cases, it will be simpler to round these values to the nearest integer \(whole number\).
