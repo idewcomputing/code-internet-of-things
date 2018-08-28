@@ -49,7 +49,7 @@ The basic steps to use a push button in your app code are:
 
 1. Declare a global variable to store the I/O pin number for the button.
 2. Set the pin mode for the button pin in the `setup()` function.
-3. Use a `digitalRead()` statement to check whether the button is currently pressed, and add code statements that should be performed if the button is pressed \(or not pressed\).
+3. Use a `digitalRead()` statement to check whether the button is currently pressed, and add code statements that should be performed depending on the result.
 
 ### Global Variable {#global-variable}
 

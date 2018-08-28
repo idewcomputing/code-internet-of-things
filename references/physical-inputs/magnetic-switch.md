@@ -50,7 +50,86 @@ Keep in mind that your connection can look different than this example diagram:
 
 ## How to Code Switch
 
-explain
+The basic steps to use a magnetic switch in your app code are:
+
+1. Declare a global variable to store the I/O pin number for the switch.
+2. Set the pin mode for the switch pin in the `setup()` function.
+3. Use a `digitalRead()` statement to check whether the switch is currently open or closed, and add code statements that should be performed depending on the result.
+
+### Global Variable {#global-variable}
+
+You should declare a global variable to store the I/O pin number that the switch is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the button to a different pin number\).
+
+Add this code statement \(modify if necessary\) **before** the `setup()` function:
+
+```cpp
+int magSwitch = D0;
+```
+
+This line of code does 3 things \(in order\):
+
+1. **It declares a data type for the variable's value.** In this case, `int` stands for integer \(whole number\). Photon pin numbers are always treated as `int` values \(even though they have letters\).
+2. **It declares the variable's name.** In this example, the variable will be called `magSwitch`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
+3. **It assigns a value to the variable.** In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your switch is connected to.
+
+{% hint style="warning" %}
+**SWITCH = KEYWORD:**  You **cannot** use "switch" as the name of a variable \(or a custom function\) because [`switch()`](http://www.wiring.org.co/reference/switch_.html) is a reserved keyword in the Wiring programming language.
+{% endhint %}
+
+### Set Pin Mode {#set-pin-mode}
+
+You need to set the pin mode for the magnetic switch to be used as an input.
+
+Add this code statement \(modify if necessary\) **within** the `setup()` function:
+
+```cpp
+pinMode(magSwitch, INPUT_PULLUP);
+```
+
+The `pinMode()` method requires two parameters inside its parentheses \(in this order\):
+
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `magSwitch` is listed. If necessary, change this to match the variable name for your magnetic switch.
+2. **The mode value**, which will always be `INPUT_PULLUP` for a magnetic switch.
+
+### Check Switch {#check-if-button-pressed}
+
+The `digitalRead()` method is used to check whether a magnetic switch is currently open or closed.
+
+Add this code \(modify as necessary\) to your app within the `loop()` function or a custom function:
+
+```cpp
+int switchState = digitalRead(magSwitch);​
+if(switchState == HIGH) {​
+    // add code to do something if switch is open
+    
+}
+else {
+    // add code to do something if switch is closed
+    
+}
+```
+
+In the first code statement, a local variable named `switchState` is declared that will have a data type of `int` \(integer\). This variable is made equal to whatever value is returned by the `digitalRead()` method. You can change the name of this variable, but it will make sense if it's similar to the variable name used for the switch pin number.
+
+The `digitalRead()` method requires one parameter insides its parentheses:
+
+1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, the variable named `magSwitch` is listed. If necessary, change this to match the variable name for your switch's pin number.
+
+The `digitalRead()` method will return a value of either `HIGH` or `LOW` \(which are treated as if they were `int` values\):
+
+* `HIGH` indicates that the magnetic switch is currently **open**.
+* `LOW` indicates that the magnetic switch is currently **closed**.
+
+The condition listed inside the parentheses of the [if statement](http://www.wiring.org.co/reference/if_.html) checks whether the value of `switchState` is [equivalent](http://www.wiring.org.co/reference/equality.html) to `HIGH`:
+
+* If this condition is **true**, the code within the curly braces of the `if` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want when the magnetic switch is **open**.
+* Otherwise, if this condition is **false** \(because `switchState` is `LOW`\), the code within the curly braces of the `else` statement will be performed. You will need to add code statements within the curly braces that perform the actions you want when the magnetic switch is **closed**.
+
+Alternatively, you could check for just **one** condition \(either `HIGH` or `LOW`\) **without** including an `else` statement to perform actions for the opposite condition.
+
+
+
+​
 
 
 
