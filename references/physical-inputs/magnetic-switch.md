@@ -38,8 +38,8 @@ Here's a wiring diagram showing a possible way to connect a magnetic switch:
 
 Keep in mind that your connection can look different than this example diagram:
 
-* Your magnetic switch wires could be inserted into **different row numbers** on either breadboard side. \(The example connects the wires to rows 17-18 on the left side of the breadboard.\)
-* Your magnetic switch wires could be inserted into a **different column** on the breadboard. \(The example connects the LED legs into column A of the terminal strip rows\)
+* Your magnetic switch wires could be inserted into **different row numbers** on either breadboard side. \(The example connects the switch wires to rows 17-18 on the left side of the breadboard.\)
+* Your magnetic switch wires could be inserted into a **different column** on the breadboard. \(The example connects the switch wires into column A of the terminal strip rows.\)
 * Your magnetic switch could connect \(through a jumper wire\) to a **different I/O pin**. \(The example connects to the D0 pin on the Photon circuit board.\)
 * Your magnetic switch could connect \(through a jumper wire\) **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
 

@@ -46,9 +46,9 @@ Keep in mind that your connection can look different than this example diagram:
 
 * Your trimpot legs could be inserted into **different row numbers**. \(The example connects the trimpot legs to rows 26-28 on the right side of the breadboard\).
 * Your trimpot legs could be inserted into a **different column** of the breadboard. \(The example connects the trimpot legs into column F of the terminal strip rows\).
-* Your trimpot could connect \(through a jumper wire\) to a **different analog I/O pin** on the Photon circuit board. \(The example connects the trimpot to the A0 pin.\)
+* Your trimpot could connect \(through a jumper wire\) to a **different analog I/O pin**. \(The example connects the trimpot to the A0 pin.\)
 * Your trimpot could connect \(through a jumper wire\) **either directly to the 3.3V pin** **or to a positive power rail on the breadboard that's connected to the 3.3V pin.**
-* Your trimpot could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
+* Your trimpot could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins.\)
 
 ## How to Code Trimpot
 

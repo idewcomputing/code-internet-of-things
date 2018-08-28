@@ -39,9 +39,9 @@ Here's a wiring diagram showing a possible way to connect a push button \(you ca
 
 Keep in mind that your connection can look different than this example diagram:
 
-* Your button legs could be inserted into **different row numbers** on the breadboard. \(The example connects the button legs to row 4 and row 6.\)
-* Your button leg could connect to a **different I/O pin**. \(The example connects to the D2 pin on the Photon circuit board.\)
-* Your button could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
+* Your button legs could be inserted into **different row numbers**. \(The example connects the button legs to row 4 and row 6.\)
+* Your button leg could connect \(through a jumper wire\) to a **different I/O pin**. \(The example connects to the D2 pin.\)
+* Your button could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins.\)
 
 ## How to Code Button
 
