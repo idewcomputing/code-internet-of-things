@@ -119,5 +119,16 @@ If the update is successful, the `rht.update()` method will return a value of `1
 * The `rht.tempF()` method returns the temperature of the air in degrees Fahrenheit.
 * The `rht.tempC()` method returns the temperature of the air in degrees Celsius.
 
-Each humidity and temperature measurement is returned as a `float` value \(decimal number\).
+Each humidity and temperature measurement is returned as a `float` value \(decimal number\). In most cases, it will be simpler to round these values to the nearest integer \(whole number\).
+
+Add this code \(modify as necessary\) within the `loop()` function or a custom function:
+
+```cpp
+if (rht.update() == true) {
+    int temperature = round(rht.tempF());
+    int humidity = round(rht.humidity());​
+    // add code to do something with values
+    
+}
+```
 
