@@ -77,9 +77,9 @@ Your Photon app must include a code library that will allow you to control the M
 ![Libraries Icon](../../.gitbook/assets/pb-library-icon.png)
 
 1. In Particle Build, click on the Libraries icon to open the Libraries menu panel.
-2. Type `oled` into the search field. Select the result called: **SPARKFUNMICROOLED**
+2. Type `oled` into the search field. Select the result called: **SparkFunMicroOLED**
 3. Click the button to "Include in Project"
-4. Select the name of your Photon app, and then click the "Confirm" button
+4. Select the title of your Photon app, and then click the "Confirm" button
 
 Particle Build will **automatically** insert this `#include` statement at the beginning of your app code:
 
