@@ -44,10 +44,10 @@ Here's a wiring diagram showing a possible way to connect a speaker:
 
 Keep in mind that your connection can look different than this example diagram:
 
-* Your speaker legs could be inserted into **different row numbers** on the breadboard. \(The example connects the negative leg to row 3 and the positive leg to row 5\).
-* Your speaker legs could be inserted into a **different column** on the breadboard. \(The example connects the LED legs into column F of the terminal strip rows\).
-* The positive leg of your speaker could connect to a **different I/O pin capable of PWM output**. \(The example connects to the D2 pin on the Photon circuit board\).
-* The negative leg of your speaker could connect \(through a jumper wire\) **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
+* Your speaker legs could be inserted into **different row numbers** on the breadboard. \(The example connects the negative leg to row 3 and the positive leg to row 5.\)
+* Your speaker legs could be inserted into a **different column** on the breadboard. \(The example connects the LED legs into column F of the terminal strip rows.\)
+* The positive leg of your speaker could connect to a **different I/O pin capable of PWM output**. \(The example connects to the D2 pin.\)
+* The negative leg of your speaker could connect \(through a jumper wire\) **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins.\)
 
 ## How to Code Speaker
 

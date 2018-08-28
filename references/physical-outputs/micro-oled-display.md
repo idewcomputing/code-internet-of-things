@@ -54,11 +54,11 @@ Here's a wiring diagram showing a possible way to connect a servo motor \(ignore
 
 Keep in mind that your connection can look different than this example diagram:
 
-* Your Micro OLED pins could be inserted into **different row numbers** on either breadboard side. \(The example connects the OLED pins to rows 1-8 on the right side of the breadboard\).
-* Your Micro OLED pins could be inserted into a **different column** of the breadboard. \(The example connects the OLED pins into column F of the terminal strip rows\).
+* Your Micro OLED pins could be inserted into **different row numbers** on the breadboard. \(The example connects the OLED pins to rows 1-8 on the right side of the breadboard.\)
+* Your Micro OLED pins could be inserted into a **different column** of the breadboard. \(The example connects the OLED pins into column F of the terminal strip rows.\)
 * Your Micro OLED could connect \(through jumper wires\) to the **other A2, A3, and A5 pins** located on the lower left side of the Photon circuit board.
-* Your Micro OLED 3V3 pin could connect \(through a jumper wire\) **either directly to the 3.3V pin** **or to a positive power rail that's connected to the 3.3V pin.**
-* Your Micro OLED GND pin could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
+* Your Micro OLED 3V3 pin could connect \(through a jumper wire\) **either directly to the 3.3V pin** **or to a positive power rail connected to the 3.3V pin.**
+* Your Micro OLED GND pin could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins.\)
 
 ## How to Code Micro OLED
 

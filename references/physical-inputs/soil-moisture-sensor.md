@@ -57,10 +57,10 @@ Here's a wiring diagram showing a possible way to connect a soil moisture sensor
 
 Keep in mind that your connection can look different than this example diagram:
 
-* Your moisture sensor's SIG wire could connect to a **different analog I/O pin**. \(The example connects to the A2 pin on the Photon circuit board.\)
-* Your moisture sensor's GND wire could connect **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins on the Photon circuit board.\)
-* Your moisture sensor's VCC wire could connect to a **different I/O pin**. \(The example connects to the D6 pin on the Photon circuit board.\)
-* Alternatively, you could connect the sensor's wires into different terminal strip rows on a breadboard, and then use additional jumper wires to connect to the Photon circuit board.
+* Your moisture sensor's SIG wire could connect to a **different analog I/O pin**. \(The example connects to the A2 pin.\)
+* Your moisture sensor's GND wire could connect **either to a different GND pin or to a negative power rail connected to a GND pin**. \(There are three available GND pins.\)
+* Your moisture sensor's VCC wire could connect to a **different I/O pin**. \(The example connects to the D6 pin.\)
+* Alternatively, you could connect the sensor's wires into different terminal strip rows on a breadboard, and then use 3 additional jumper wires to connect to the Photon circuit board.
 
 ### Insert Sensor into Soil
 
