@@ -4,19 +4,24 @@ Your Photon kit includes a [magnetic switch](https://www.sparkfun.com/products/1
 
 ![Magnetic Switch](../../.gitbook/assets/magnetic-switch.jpg)
 
-The switch consists of two pieces, and it can detect whether or not these two pieces are close to each other. If the two pieces are within 20 mm \(about 0.75 inches\) of each other, the switch detects that is it "closed" – otherwise, the switch will detect that it is "open."
+The switch consists of two pieces, and it can detect whether these two pieces are close to each other:
 
-The piece with the wires contains a special switch called a [reed switch](http://www.explainthatstuff.com/howreedswitcheswork.html) that moves in response to the presence \(or absence\) of a magnetic field. The other piece \(without the wires\) contains a small magnet, so it can activate the reed switch when the two pieces are close to each other.
+1. The piece with the wires contains a [**reed switch**](http://www.explainthatstuff.com/howreedswitcheswork.html) that moves in response to the presence or absence of a magnetic field.
+2. The other piece without the wires contains a **magnet**, so it can activate the reed switch when the two pieces are close to each other.
 
-For example, the piece with the wires \(the reed switch\) could be attached on a stationary door frame, and the piece without the wires \(the magnet\) would be attached on the door near its edge. The two pieces would be installed so they are very close together when the door is closed. When the door is opened, the reed switch will detect that the magnet has moved away.
+If the two pieces of the magnetic switch are within 20 mm \(0.75 inches\) of each other, the switch detects that it's "closed" – otherwise, the switch will detect that it's "open."
 
-These magnetic switches are commonly used in security systems for doors and windows, but they are also used in many other products. For example, a doorbell uses a magnetic switch. Magnetic switches are also used in many laptops and tablets to detect when its lid or cover is either open or closed, in order to automatically wake up the device or put it to sleep.
+These magnetic switches are commonly used in security systems for doors and windows, but they are also used in many other products. For example, a doorbell uses a magnetic switch to detect when it is being pressed. Magnetic switches are also used in many laptops and tablets to detect when the lid/cover is open or closed, in order to automatically wake up the device or put it to sleep.
 
 ## How to Connect Switch
 
+The reed switch \(the piece with the wires\) will be connected to the Photon. Then the reed switch will be attached to a **stationary** edge near something that opens \(such as:  door, window, drawer, etc.\). For example, the reed switch could be attached to the edge of a door frame – but **not** to the door itself.
 
+The magnet \(the piece **without** wires\) would be attached to the object \(door, window, etc.\) that actually moves when opened. The two pieces of the magnetic switch should be positioned so they are very close together \(no more than 0.75 inches apart\) when the object \(door, window, etc.\) is closed.
 
-To connect a push button to your Photon using the breadboard, you will need:
+![Installing Magnetic Switch on Door](../../.gitbook/assets/magnetic-switch-install.jpg)
+
+To connect a magnetic switch to your Photon using the breadboard, you will need:
 
 * Magnetic Switch
 * 2 jumper wires \(use different colors to help identify them\)
