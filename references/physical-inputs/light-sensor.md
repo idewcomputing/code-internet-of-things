@@ -57,6 +57,14 @@ Here's a wiring diagram showing a possible way to connect a light sensor \(ignor
 
 ![](../../.gitbook/assets/experiment-6.jpg)
 
+Keep in mind that your connection can look different than this example diagram:
+
+* Your light sensor legs could be inserted into **different row numbers** on the breadboard. \(The example connects the legs to row 27 and row 30.\)
+* Your light sensor legs could be inserted into a **different column** on the breadboard. \(The example connects the legs into column F of the terminal strip rows.\)
+* Your light sensor could connect to a **different analog I/O pin**. \(The example connects to the A0 pin.\)
+* Your light sensor could connect \(through a jumper wire\) **either directly to the 3.3V pin** **or to a positive power rail on the breadboard that's connected to the 3.3V pin.**
+* The negative power rail on your breadboard could connect to a **different GND pin**. \(There are three available GND pins.\)
+
 ## How to Code Light Sensor
 
 The basic steps to control a light sensor \(photocell\) in your app code are:
