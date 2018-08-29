@@ -164,5 +164,18 @@ A local variable named `sensorDist` is declared that will have a data type of `f
 
 You'll need add code to do something with the distance measurement stored in `sensorDist`.
 
+#### TEST ULTRASONIC SENSOR
 
+A good way to test your ultrasonic sensor is to connect the Micro OLED display to your Photon, so you can show the value of `sensorDist` on the OLED screen to verify the sensor is working accurately.
+
+For example, once you've added the other necessary code for the Micro OLED, you could add this code within the `loop()` function:
+
+```cpp
+    float sensorDist = measureDistance();
+    oled.clear(PAGE);
+    oled.setFontType(2);
+    oled.setCursor(0, 0);
+    oled.println(sensorDist, 1); // print to 1 decimal place
+    oled.display();
+```
 
