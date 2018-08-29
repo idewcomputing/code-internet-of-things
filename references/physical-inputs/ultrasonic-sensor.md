@@ -1,7 +1,7 @@
 # Ultrasonic Sensor
 
 {% hint style="info" %}
-**ADD-ON COMPONENT:**  The SparkFun Photon Kit does **not** include an ultrasonic sensor as a standard component. However, SparkFun sells the [HC-SR04 Ultrasonic Sensor](https://www.sparkfun.com/products/13959), which can be easily connected to a Photon. Your teacher may have added this sensor to your kit. 
+**ADD-ON COMPONENT:**  The SparkFun Photon Kit does **NOT** include an ultrasonic sensor as a standard component. However, SparkFun sells the [HC-SR04 Ultrasonic Sensor](https://www.sparkfun.com/products/13959), which can be easily connected to a Photon. Your teacher may have added this sensor to your kit. 
 {% endhint %}
 
 An ultrasonic sensor uses sonar to measure the distance to an object, similar to how bats and dolphins use [echolocation](https://en.wikipedia.org/wiki/Animal_echolocation) for navigation and hunting.
