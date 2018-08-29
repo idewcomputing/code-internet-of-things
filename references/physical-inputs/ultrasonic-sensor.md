@@ -145,7 +145,7 @@ float measureDistance() {
 
 Possible modifications to this custom function:
 
-* If you used different variable names for the transmitter \(`TRIG_PIN`\) and receiver \(`ECHO_PIN`\), then be sure to modify this custom function to use those global variable names instead.
+* If you used different names for the global variables representing the transmitter \(`TRIG_PIN`\) and receiver \(`ECHO_PIN`\), then be sure to modify this function to use those variable names instead.
 * If you want the function to return the distance measurement in units of **centimeters** \(instead of inches\), then modify the `return` statement towards the end of the function.
 
 ### Call Function in Loop
