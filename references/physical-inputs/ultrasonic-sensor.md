@@ -66,7 +66,7 @@ The basic steps to use an ultrasonic sensor in your app code are:
 
 ### Global Variables
 
-You should declare global variables to store the I/O pin numbers that the ultrasonic sensor is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the trimpot to a different pin number\).
+You should declare global variables to store the I/O pin numbers that the ultrasonic sensor's transmitter \(Trig\) and receiver \(Echo\) are connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the trimpot to a different pin number\).
 
 Add this code \(modify if necessary\) **before** the `setup()` function:
 
