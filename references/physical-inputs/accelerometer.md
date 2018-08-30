@@ -14,20 +14,18 @@ Your accelerometer is sensitive enough that it can be used to even tiny changes 
 
 #### ORIENTATION \(TILT\) {#orientation-tilt}
 
-Even if a device with an accelerometer is **not** moving, the accelerometer can detect the orientation \(tilt\) of the device by measuring the acceleration due to Earth's gravity, which is a constant downward force acting on all objects. The accelerometer can determine if the object is parallel to the Earth's surface or if it is tilted.
+Even if a device with an accelerometer is **not** moving, the accelerometer can detect the orientation \(tilt\) of the device by measuring the acceleration due to Earth's gravity, which is a constant downward force acting on all objects. The accelerometer can determine if the object is parallel to the Earth's surface or if it's tilted.
 
-For example, smartphones and tablets use accelerometers to sense the orientation of the device, in order to change the screen orientation to match.
+For example, smartphones and tablets use accelerometers to sense the orientation of the device, in order to change the screen's orientation to match.
 
-Your accelerometer can be used to measure the amount of tilt \(in degrees\) for pitch and roll:
+Your accelerometer can be used to measure the tilt \(in degrees\) for pitch and roll:
 
-* **Pitch** is rotation on the Y-axis, which causes an object to be tilted up or down.
-* **Roll** is rotation on the X-axis, which causes an object to be tilted right or left.
+* **Pitch** is rotation on the Y-axis, which means an object is tilted up or down.
+* **Roll** is rotation on the X-axis, which means an object is tilted right or left.
 
-For example, a virtual reality headset could use an accelerometer to measure the tilt of a person's head, in order to change what's shown on the VR display.
+![Orientation of 3 Axes on Accelerometer](../../.gitbook/assets/accel-pitch-roll-yaw.jpg)
 
-![](../../.gitbook/assets/pitch-roll-yaw-vr-headset.jpg)
-
-**NOTE:**  An accelerometer cannot measure **yaw** because gravity acts in the same direction as the Z-axis, which prevents the accelerometer from measuring rotation on the Z-axis. Instead, a different sensor called a **magnetometer** \(i.e., digital compass\) could be used to measure yaw by measuring an object's orientation relative to Earth's magnetic north pole.
+**NOTE:**  An accelerometer cannot measure **yaw** because Earth's gravity acts in the same direction as the Z-axis, which prevents the accelerometer from measuring rotation on the Z-axis. Instead, a different sensor called a **magnetometer** \(i.e., digital compass\) could be used to measure yaw by measuring an object's orientation relative to Earth's magnetic north pole.
 
 ## How to Connect Accelerometer
 
@@ -55,7 +53,7 @@ Do **NOT** connect it to VIN or V-USB because the higher voltage could damage it
 
 Here are the steps to connect the accelerometer to your Photon using the breadboard:
 
-1. Insert the six metal pins of the sensor into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
+1. Insert the six metal pins of the accelerometer into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
 2. Plug one end of a **jumper wire** into the **same** terminal strip row as the accelerometer's **3.3V pin**. Plug the other end of this jumper wire into the 3.3V pin on the Photon circuit board \(or to a **positive** power rail on the breadboard connected to the 3.3V pin\).
 3. Plug one end of a **second jumper wire** into the same terminal strip row as the accelerometer's **SDA pin**. Plug the other end of this jumper wire into the D0 pin on the Photon circuit board.
 4. Plug one end of a **third jumper wire** into the same terminal strip row as the accelerometer's **SCL pin**. Plug the other end of this jumper wire into the D1 pin on the Photon circuit board.
@@ -79,7 +77,7 @@ The basic steps to control the accelerometer in your app code are:
 1. Include the SparkFun MMA8452Q library and Math library in your app.
 2. Create a `MMA8452Q` object assigned to a global variable called `accel`.
 3. Use the `accel.begin()` method to start the accelerometer in the `setup()` function. If app will detect taps, use the `accel.setupTap()` method to initialize the tap settings.
-4. Use custom functions to detect taps or calculate tilt angles using the accelerometer.
+4. Use custom functions to detect taps or measure tilt angles using the accelerometer.
 
 ### Include Libraries
 
@@ -134,7 +132,7 @@ The `accel.begin()` method can accept two parameters inside its parentheses \(in
 
 Alternatively, you can exclude the parameters from the `accel.begin()` statement. If you do this, the accelerometer will default to using `SCALE_2G` and `ODR_800`.
 
-#### SETUP FOR TAP DETECTION
+#### SET UP TAP DETECTION
 
 If your app will use the accelerometer to detect taps, then use the `accel.setupTap()` method to initialize the settings for tap detection.
 
@@ -152,7 +150,7 @@ If your app will **NOT** be detecting taps, then this code can be excluded.
 
 ### Add Function to Check Tilt
 
-You'll add a custom function named `checkTilt()` than can be called to measure tilt angles using the accelerometer. The function will measure tilt angles for pitch and roll.
+If your app will use the accelerometer to detect an object's tilt, you'll add a custom function named `checkTilt()` that measures tilt angles for pitch and roll using the accelerometer.
 
 Add this `checkTilt()` function **after** the `loop()` function:
 
@@ -178,7 +176,7 @@ void checkTilt() {
 
 You'll need to add code within the function to do something with the values of `pitch` and `roll`.
 
-When the accelerometer is perfectly level, the `pitch` and `roll` values will both be equal to `0`. Otherwise, the values will indicate the direction and angle that the accelerometer is titled.
+The values for pitch and roll indicate the direction\(s\) and angle\(s\) that the accelerometer is tilted.
 
 Pitch is rotation on the Y-axis, which means the object is rotated up or down:
 
@@ -190,6 +188,8 @@ Roll is rotation on the X-axis, which means the object is rotated to the right o
 * If the accelerometer is **rolled right**, the roll value will be a **positive** angle \(between 1° to 180°\).
 * If the accelerometer is **rolled left**, the roll value will be a **negative** angle \(between -1° to -180°\).
 
+When the accelerometer is **perfectly level**, the `pitch` and `roll` values will both be equal to `0`.
+
 To check the tilt, call this function within the `loop()` function \(or within another custom function\):
 
 ```cpp
@@ -198,7 +198,7 @@ checkTilt();
 
 ### Add Function to Check Tap
 
-You'll add a custom function named `checkTap()` than can be called to detect taps using the accelerometer.
+If your app will use the accelerometer to detect taps, you'll add a custom function named `checkTap()` that detects taps using the accelerometer.
 
 Add this `checkTap()` function **after** the `loop()` function:
 
