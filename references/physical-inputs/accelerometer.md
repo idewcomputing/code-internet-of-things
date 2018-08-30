@@ -99,7 +99,7 @@ Particle Build will **automatically** insert this `#include` statement at the be
 
 In addition, you will include a Math library that has additional mathematical functions and constants, which will be needed to calculate tilt angles. \(The Math library is available in Particle Build, but it won't show up in a search of the community libraries.\)
 
-You need to **manually** add this `#include` statement \(after the other `#include` statement\):
+You need to **manually** add this `#include` statement \(on new line **after** other `#include` statement\):
 
 ```cpp
 #include <math.h>
@@ -165,8 +165,8 @@ void checkTilt() {
         int roll = atan2(-aY, aZ) * 180 / M_PI; // rotation on X axis        
         /*
         If accelerometer is level, pitch and roll will both be 0
-        Pitch Up = 1 to 180, Pitch Down = -1 to -180
-        Roll Right = 1 to 180, Roll Left = -1 to -180
+        Pitch: Tilted Up = 1 to 180, Tilted Down = -1 to -180
+        Roll: Tilted Right = 1 to 180, Tilted Left = -1 to -180
         */     
         // add code to do something with pitch and roll
         
@@ -174,21 +174,21 @@ void checkTilt() {
 }
 ```
 
-You'll need to add code within the function to do something with the values of `pitch` and `roll`.
+You'll need to add code within the function to do something with the values of `pitch` and `roll`, which indicate the direction\(s\) and angle\(s\) that the accelerometer is tilted.
 
-The values for pitch and roll indicate the direction\(s\) and angle\(s\) that the accelerometer is tilted.
+![Orientation of 3 Axes on Accelerometer](../../.gitbook/assets/accel-pitch-roll-yaw.jpg)
 
 Pitch is rotation on the Y-axis, which means the object is rotated up or down:
 
-* If the accelerometer is **pitched up**, the pitch will be a **positive** angle \(between 1° to 180°\).
-* If the accelerometer is **pitched down**, the pitch will be a **negative** angle \(between -1° to -180°\).
+* If the accelerometer is **tilted up**, the **pitch** will be a **positive** angle \(between 1° to 180°\).
+* If the accelerometer is **tilted down**, the **pitch** will be a **negative** angle \(between -1° to -180°\).
 
 Roll is rotation on the X-axis, which means the object is rotated to the right or left:
 
-* If the accelerometer is **rolled right**, the roll value will be a **positive** angle \(between 1° to 180°\).
-* If the accelerometer is **rolled left**, the roll value will be a **negative** angle \(between -1° to -180°\).
+* If the accelerometer is **tilted right**, the **roll** will be a **positive** angle \(between 1° to 180°\).
+* If the accelerometer is **tilted left**, the **roll** will be a **negative** angle \(between -1° to -180°\).
 
-When the accelerometer is **perfectly level**, the `pitch` and `roll` values will both be equal to `0`.
+When the accelerometer is **perfectly level**, the pitch and roll will both be equal to 0 \(zero\).
 
 To check the tilt, call this function within the `loop()` function \(or within another custom function\):
 
