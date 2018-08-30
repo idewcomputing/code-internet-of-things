@@ -88,7 +88,7 @@ Particle Build will **automatically** insert this `#include` statement at the be
 #include <SparkFunMicroOLED.h>
 ```
 
-### Define Pins & Create Object
+### Global Variables
 
 You need to define the I/O pin numbers for certain Micro OLED pins. This is similar to declaring global variables \(except defined values are not allowed to change\).
 
