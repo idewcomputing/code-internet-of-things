@@ -31,7 +31,7 @@ For example, a virtual reality headset could use an accelerometer to measure the
 
 ## How to Connect Accelerometer
 
-The MMA8452Q triple-axis accelerometer in your Photon kit has pins located along its **front edge**. There are labels for each pin printed on the accelerometer circuit board. The accelerometer has 6 pins, but only 4 of them will need to be connected.
+The MMA8452Q triple-axis accelerometer in your Photon kit has 6 pins located along its **front edge** \(which determines its orientation for measuring pitch and roll\). There are labels for each pin printed on the accelerometer circuit board. However, only 4 of the pins will need to be connected to your Photon.
 
 To connect the accelerometer to your Photon using the breadboard, you will need:
 
@@ -53,16 +53,24 @@ To connect the accelerometer to your Photon using the breadboard, you will need:
 Do **NOT** connect it to VIN or V-USB because the higher voltage could damage it.
 {% endhint %}
 
-Here are the steps to connect the RHT03 sensor to your Photon using the breadboard:
+Here are the steps to connect the accelerometer to your Photon using the breadboard:
 
-1. Insert the four metal legs of the sensor into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
-2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **power leg** of the sensor. Plug the other end of this jumper wire into the 3.3V pin or a 5V pin \(VIN or V-USB\) on the Photon circuit board \(or to a **positive** power rail on the breadboard connected to 3.3V, VIN, or V-USB\). If your Photon is being powered through the **barrel jack**, connect to either the **3.3V pin or VIN pin**. Otherwise, if your Photon is being powered through the **Micro-USB** port, connect to either the **3.3V pin or V-USB pin**.
-3. Plug one end of a **second jumper wire** into the same terminal strip row as the **data leg** of the sensor. Plug the other end of this jumper wire into any I/O pin on the Photon circuit board. 
-4. Plug one end of the **third jumper wire** into the **same** terminal strip row as the **ground leg** of the sensor. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+1. Insert the six metal pins of the sensor into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as the accelerometer's **3.3V pin**. Plug the other end of this jumper wire into the 3.3V pin on the Photon circuit board \(or to a **positive** power rail on the breadboard connected to the 3.3V pin\).
+3. Plug one end of a **second jumper wire** into the same terminal strip row as the accelerometer's **SDA pin**. Plug the other end of this jumper wire into the D0 pin on the Photon circuit board.
+4. Plug one end of a **third jumper wire** into the same terminal strip row as the accelerometer's **SCL pin**. Plug the other end of this jumper wire into the D1 pin on the Photon circuit board.
+5. Plug one end of a **fourth jumper wire** into the same terminal strip row as the accelerometer's **GND pin**. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
 
-Here's a wiring diagram showing a possible way to connect the RHT03 humidity and temperature sensor \(ignore the wiring for the light sensor\):
+Here's a wiring diagram showing a possible way to connect the accelerometer \(ignore the wiring for the push button\):
 
 ![](../../.gitbook/assets/experiment-8.jpg)
+
+Keep in mind that your connection can look different than this example diagram:
+
+* Your accelerometer pins could be inserted into **different row numbers**. \(The example connects the accelerometer pins to rows 1-6 on the right side of the breadboard\).
+* Your accelerometer pins could be inserted into a **different column** of the breadboard. \(The example connects the accelerometer pins into column H of the terminal strip rows\).
+* Your accelerometer could connect \(through a jumper wire\) **directly to the 3.3V pin or to a positive power rail on the breadboard that's connected to the 3.3V pin**.
+* Your accelerometer could connect \(through a jumper wire\) **either directly to a GND pin or to a negative power rail that's connect to a GND pin**. \(There are three available GND pins.\)
 
 ## How to Code Accelerometer
 
