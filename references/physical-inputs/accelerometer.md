@@ -4,19 +4,39 @@ The triple-axis accelerometer included in your Photon kit can be used to detect 
 
 ![Accelerometer](../../.gitbook/assets/accelerometer.jpg)
 
-Smartphones and tablets use accelerometers to sense the orientation of the device, in order to change the screen orientation to match. Fitness trackers use accelerometers to count steps and measure other activity. In fact, your accelerometer has built-in functions to detect portrait vs. landscape orientation \(useful for device screens\), as well as taps \(useful for activity trackers\).
-
-#### CHANGE IN MOTION {#change-in-motion}
+#### CHANGE IN MOTION \(TAP\)
 
 Like the name implies, an accelerometer works by detecting acceleration – a change in motion. If a device with an accelerometer experiences a change in motion \(i.e., speeding up, slowing down, or changing direction\), the accelerometer can sense this change and measure the amount of acceleration in each of the 3 dimensions \(x, y, z\).
 
+For example, fitness trackers use accelerometers to count steps by detecting changes in motion.
+
+Your accelerometer is sensitive enough that it can be used to even tiny changes in motion caused by a nearby tap or bump. For example, if your Photon device is on a table, the accelerometer would be able to detect if you tapped the table with a finger.
+
 #### ORIENTATION \(TILT\) {#orientation-tilt}
 
-Even if a device with an accelerometer is **not** moving, the accelerometer can detect the orientation \(tilt\) of the device by measuring the acceleration due to Earth's gravity, which is a constant downward force acting on all objects. The accelerometer can determine if the object is parallel to the Earth's surface or if it is tilted – and can measure the amount of tilt for each of the 3 dimension \(x, y, z\).
+Even if a device with an accelerometer is **not** moving, the accelerometer can detect the orientation \(tilt\) of the device by measuring the acceleration due to Earth's gravity, which is a constant downward force acting on all objects. The accelerometer can determine if the object is parallel to the Earth's surface or if it is tilted.
+
+For example, smartphones and tablets use accelerometers to sense the orientation of the device, in order to change the screen orientation to match.
+
+Your accelerometer can be used to measure the amount of tilt \(in degrees\) for pitch and roll:
+
+* **Pitch** is rotation on the Y-axis, which causes an object to be tilted up or down.
+* **Roll** is rotation on the X-axis, which causes an object to be tilted right or left.
+
+For example, a virtual reality headset could use an accelerometer to measure the tilt of a person's head, in order to change what's shown on the VR display.
+
+![](../../.gitbook/assets/pitch-roll-yaw-vr-headset.jpg)
+
+**NOTE:**  An accelerometer cannot measure **yaw** because gravity acts in the same direction as the Z-axis, which prevents the accelerometer from measuring rotation on the Z-axis. Instead, a different sensor called a **magnetometer** \(i.e., digital compass\) could be used to measure yaw by measuring an object's orientation relative to Earth's magnetic north pole.
 
 ## How to Connect Accelerometer
 
-explain
+The MMA8452Q triple-axis accelerometer in your Photon kit has pins located along its **front edge**. There are labels for each pin printed on the accelerometer circuit board. The accelerometer has 6 pins, but only 4 of them will need to be connected.
+
+To connect the accelerometer to your Photon using the breadboard, you will need:
+
+* Accelerometer \(MMA8452Q\)
+* 4 jumper wires \(use different colors to help identify them\)
 
 | Accelerometer | Photon Pin |
 | :--- | :--- |
@@ -27,9 +47,20 @@ explain
 | I1 | \(none\) |
 | GND | GND |
 
-The accelerometer has 6 pins, but only 4 of them need to be connected.
+{% hint style="success" %}
+**3.3V MAXIMUM:**  The accelerometer operates at 3.3V of power. Connect it to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 
-explain
+Do **NOT** connect it to VIN or V-USB because the higher voltage could damage it.
+{% endhint %}
+
+Here are the steps to connect the RHT03 sensor to your Photon using the breadboard:
+
+1. Insert the four metal legs of the sensor into **different** terminal strip rows on the breadboard. \(Different terminal strip rows have different row numbers.\)
+2. Plug one end of a **jumper wire** into the **same** terminal strip row as the **power leg** of the sensor. Plug the other end of this jumper wire into the 3.3V pin or a 5V pin \(VIN or V-USB\) on the Photon circuit board \(or to a **positive** power rail on the breadboard connected to 3.3V, VIN, or V-USB\). If your Photon is being powered through the **barrel jack**, connect to either the **3.3V pin or VIN pin**. Otherwise, if your Photon is being powered through the **Micro-USB** port, connect to either the **3.3V pin or V-USB pin**.
+3. Plug one end of a **second jumper wire** into the same terminal strip row as the **data leg** of the sensor. Plug the other end of this jumper wire into any I/O pin on the Photon circuit board. 
+4. Plug one end of the **third jumper wire** into the **same** terminal strip row as the **ground leg** of the sensor. Plug the other end of this jumper wire into a pin hole connected to GND:  either plug it into a negative power rail \(which is connected to GND via a different jumper wire\), or plug it directly into a GND pin on the Photon circuit board.
+
+Here's a wiring diagram showing a possible way to connect the RHT03 humidity and temperature sensor \(ignore the wiring for the light sensor\):
 
 ![](../../.gitbook/assets/experiment-8.jpg)
 
@@ -99,7 +130,7 @@ Alternatively, you can exclude the parameters from the `accel.begin()` statement
 
 If your app will use the accelerometer to detect taps, then use the `accel.setupTap()` method to initialize the settings for tap detection.
 
-If detecting taps, add this code within the `setup()` function \(**after** the `accel.begin()` statement\):
+**If detecting taps**, add this code within the `setup()` function \(**after** the `accel.begin()` statement\):
 
 ```cpp
     // set up tap detection
@@ -109,5 +140,80 @@ If detecting taps, add this code within the `setup()` function \(**after** the `
     accel.setupTap(threshold, threshold, threshold, pulseTimeLimit, pulseLatency);
 ```
 
+If your app will **NOT** be detecting taps, then this code can be excluded.
 
+### Add Function to Check Tilt
+
+You'll add a custom function named `checkTilt()` than can be called to measure tilt angles using the accelerometer. The function will measure tilt angles for pitch and roll.
+
+Add this `checkTilt()` function **after** the `loop()` function:
+
+```cpp
+void checkTilt() {
+    if (accel.available() == true) { 
+        accel.read();
+        float aX = float(accel.x);
+        float aY = float(accel.y);
+        float aZ = float(accel.z);
+        int pitch = atan2(-aX, aZ) * 180 / M_PI; // rotation on Y axis
+        int roll = atan2(-aY, aZ) * 180 / M_PI; // rotation on X axis        
+        /*
+        If accelerometer is level, pitch and roll will both be 0
+        Pitch Up = 1 to 180, Pitch Down = -1 to -180
+        Roll Right = 1 to 180, Roll Left = -1 to -180
+        */     
+        // add code to do something with pitch and roll
+        
+    }
+}
+```
+
+You'll need to add code within the function to do something with the values of `pitch` and `roll`.
+
+When the accelerometer is perfectly level, the `pitch` and `roll` values will both be equal to `0`. Otherwise, the values will indicate the direction and angle that the accelerometer is titled.
+
+Pitch is rotation on the Y-axis, which means the object is rotated up or down:
+
+* If the accelerometer is **pitched up**, the pitch will be a **positive** angle \(between 1° to 180°\).
+* If the accelerometer is **pitched down**, the pitch will be a **negative** angle \(between -1° to -180°\).
+
+Roll is rotation on the X-axis, which means the object is rotated to the right or left:
+
+* If the accelerometer is **rolled right**, the roll value will be a **positive** angle \(between 1° to 180°\).
+* If the accelerometer is **rolled left**, the roll value will be a **negative** angle \(between -1° to -180°\).
+
+To check the tilt, call this function within the `loop()` function \(or within another custom function\):
+
+```cpp
+checkTilt();
+```
+
+### Add Function to Check Tap
+
+You'll add a custom function named `checkTap()` than can be called to detect taps using the accelerometer.
+
+Add this `checkTap()` function **after** the `loop()` function:
+
+```cpp
+void checkTap() {
+    if (accel.readTap() != 0) {
+        // add code to do something if tap detected
+
+    }
+    else {
+        // optional: add code to something if no tap detected
+        
+    }
+}
+```
+
+The `accel.readTap()` method is used to detect a tap. The method returns a value of `0` when **no** tap is detected. When a tap is detected, the method returns a non-zero value. The `if` statement condition checks whether a non-zero value was returned \(indicating a tap was detected\).
+
+You'll need to add code within the curly braces of the `if`statement to do something when a tap is detected. Optionally, you can add code within the curly braces of the `else` statement to do something when **no** tap is detected.
+
+To check for a tap, call this function within the `loop()` function \(or within another custom function\):
+
+```cpp
+checkTap();
+```
 
