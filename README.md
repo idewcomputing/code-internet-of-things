@@ -1,6 +1,6 @@
 # IoT Code Guidebook
 
-This IoT code guidebook is a supplement the [IoT project guidebook](https://docs.idew.org/project-internet-of-things/).
+This IoT Code Guidebook is a supplement the [IoT Project Guidebook](https://docs.idew.org/project-internet-of-things/).
 
 ## What's in this Guidebook?
 
