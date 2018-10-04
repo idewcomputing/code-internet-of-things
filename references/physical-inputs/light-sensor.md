@@ -28,12 +28,27 @@ To connect a light sensor to your Photon using the breadboard, you will need:
 * Resistor with bent legs
 * 2 jumper wires \(use different colors to help identify them\)
 
-| Light Sensor \(Photocell\) | Photon Pin |
-| :--- | :--- |
-| First Leg \(either one\) | 3.3V |
-| Second Leg | \(1\) any analog I/O pin \(A0, A1, A2, A3, A4, A5\)\(2\) GND using resistor |
-
-{% hint style="success" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Light Sensor (Photocell)</th>
+      <th style="text-align:left">Photon Pin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">First Leg (either one)</td>
+      <td style="text-align:left">3.3V</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Second Leg</td>
+      <td style="text-align:left">
+        <p>(1) any analog I/O pin (A0, A1, A2, A3, A4, A5)</p>
+        <p>(2) GND using resistor</p>
+      </td>
+    </tr>
+  </tbody>
+</table>{% hint style="success" %}
 **3.3V MAXIMUM:**  Analog inputs, such as the light sensor, require 3.3V of power for accurate measurements. Connect the light sensor to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 {% endhint %}
 

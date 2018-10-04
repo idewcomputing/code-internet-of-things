@@ -1,4 +1,4 @@
-# IoT Code Tutorials
+# IoT Code Guidebook
 
 This IoT code guidebook is a supplement the [IoT project guidebook](https://docs.idew.org/project-internet-of-things/).
 
@@ -15,8 +15,20 @@ Be sure to check out the recommended [prerequisite knowledge](prerequisite-knowl
 {% endhint %}
 
 {% hint style="success" %}
-**HOW TO COPY CODE:**  When using the coding tutorials and references, students can copy a code block simply by clicking the **copy icon** displayed in the upper right of the code block.
+**HOW TO COPY CODE:**  When using these coding tutorials and references, you can copy a code block by clicking the **copy icon** displayed in the upper-right corner of the code block.
 {% endhint %}
+
+```cpp
+// example code block
+
+void setup() {
+​
+}
+​
+void loop() {
+​
+}
+```
 
 ## Your IoT Electronics Kit
 
