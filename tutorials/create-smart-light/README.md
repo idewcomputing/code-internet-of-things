@@ -1,4 +1,4 @@
-# 3. Smart Light Device
+# C. Smart Light Device
 
 In this third tutorial, you'll create a "Smart Light" device and program its apps.
 

@@ -1,4 +1,4 @@
-# 1. Meet Your IoT Kit
+# A. Meet Your IoT Kit
 
 In this first tutorial, you'll become familiar with your team's IoT electronics kit.
 

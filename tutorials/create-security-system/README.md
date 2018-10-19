@@ -1,4 +1,4 @@
-# 4. Smart Security Device
+# D. Smart Security Device
 
 In this fourth tutorial, you'll modify your "Smart Light" device into a "Smart Security" device and program new apps for the device.
 
