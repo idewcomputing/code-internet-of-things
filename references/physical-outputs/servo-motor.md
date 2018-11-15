@@ -16,7 +16,7 @@ This servo motor can rotate to a specific angle \(up to ~180°\) and hold its po
 
 The servo motor has a built-in 3-wire connector. You'll plug 3 jumper wires into the connector, and then plug the other end of each wire into the breadboard or directly into a pin on the Photon circuit board.
 
-### Requires PWM Pin {#requires-pwm-pin}
+### Requires PWM Pin <a id="requires-pwm-pin"></a>
 
 The white wire of the servo motor must be connected to an I/O pin capable of [pulse-width modulation](https://learn.sparkfun.com/tutorials/pulse-width-modulation) \(PWM\), which is a process used to make a digital output signal \(which has only two values: HIGH or LOW\) act like an analog output signal \(which has a range of values\).
 
@@ -73,7 +73,7 @@ The basic steps to control a servo motor in your app code are:
 2. Create a `Servo` object assigned to a global variable called `servo`.
 3. Use a sequence of `servo.attach()`, `servo.write()`, and `servo.detach()` statements to rotate the motor to a specific angle.
 
-### Library {#library}
+### Library <a id="library"></a>
 
 The servo motor requires a code library that defines a class called `Servo` which has built-in methods \(functions\) for controlling the motor. However, this library is **already** included in the Particle firmware on your Photon device, so you do **not** need an `#include` statement to add the library to your app.
 
@@ -104,7 +104,7 @@ The **second line of code** creates a new object using the `Servo` class, and as
 **NO PIN MODE:**  Because you are controlling the servo motor using an object, you do **not** have to set a pin mode for the servo motor within the `setup()` function.
 {% endhint %}
 
-### Function to Rotate Servo {#rotate-servo-motor-to-specific-angle}
+### Function to Rotate Servo <a id="rotate-servo-motor-to-specific-angle"></a>
 
 The servo motor can rotate back or forth to any position between 0° and ~180° and hold its position.
 

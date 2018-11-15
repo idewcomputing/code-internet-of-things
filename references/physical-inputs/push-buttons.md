@@ -51,7 +51,7 @@ The basic steps to use a push button in your app code are:
 2. Set the pin mode for the button pin in the `setup()` function.
 3. Use a `digitalRead()` statement to check whether the button is currently pressed, and add code statements that should be performed depending on the result.
 
-### Global Variable {#global-variable}
+### Global Variable <a id="global-variable"></a>
 
 You should declare a global variable to store the I/O pin number that the button is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the button to a different pin number\).
 
@@ -67,7 +67,7 @@ This line of code does 3 things \(in order\):
 2. **It declares the variable's name.** In this example, the variable will be called `button`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.** In this example, the variable's value will be equal to `D2`. If necessary, modify this value to match the actual I/O pin number that your button is connected to.
 
-#### MULTIPLE BUTTONS {#multiple-led-lights}
+#### MULTIPLE BUTTONS <a id="multiple-led-lights"></a>
 
 If you have **multiple** buttons connected to your Photon, then be sure to give each button a unique variable name by adding an adjective or number to the variable names. For example:
 
@@ -76,7 +76,7 @@ int button1 = D2;
 int button2 = D3;
 ```
 
-### Set Pin Mode {#set-pin-mode}
+### Set Pin Mode <a id="set-pin-mode"></a>
 
 You need to set the pin mode for the button to be used as an input.
 
@@ -91,7 +91,7 @@ The `pinMode()` method requires two parameters inside its parentheses \(in this 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D2`, etc.\) or a variable that stores a pin number. In this example, a variable named `button` is listed. If necessary, change this to match the variable name for your button.
 2. **The mode value**, which will always be `INPUT_PULLUP` for a push button.
 
-#### MULTIPLE BUTTONS {#multiple-led-lights-1}
+#### MULTIPLE BUTTONS <a id="multiple-led-lights-1"></a>
 
 If you have **multiple** buttons connected to your Photon, then be sure to set the pin mode for each button pin variable. For example:
 

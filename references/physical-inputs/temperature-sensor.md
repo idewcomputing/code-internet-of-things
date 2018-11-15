@@ -76,7 +76,7 @@ Particle Build will **automatically** insert this `#include` statement at the be
 #include <SparkFunRHT03.h>
 ```
 
-### Global Variables {#global-variable}
+### Global Variables <a id="global-variable"></a>
 
 You should declare a global variable to store the I/O pin number that the RHT03 sensor's data leg is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the motion sensor to a different pin number\).
 

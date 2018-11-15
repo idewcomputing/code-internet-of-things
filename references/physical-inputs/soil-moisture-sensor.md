@@ -170,7 +170,7 @@ else if (soilRead > 3500) {
 }
 ```
 
-### Map Value to Custom Range {#mapping-dial-position-to-custom-range-of-values}
+### Map Value to Custom Range <a id="mapping-dial-position-to-custom-range-of-values"></a>
 
 In many cases, it may not be convenient to work with a value that ranges from 0-4095. Instead, it might be easier to have a value within a smaller custom range \(such as:  0-10, 0-100, etc.\) that makes more sense for your particular task.
 

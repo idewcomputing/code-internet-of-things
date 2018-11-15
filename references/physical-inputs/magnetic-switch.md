@@ -56,7 +56,7 @@ The basic steps to use a magnetic switch in your app code are:
 2. Set the pin mode for the switch pin in the `setup()` function.
 3. Use a `digitalRead()` statement to check whether the switch is currently open or closed, and add code statements that should be performed depending on the result.
 
-### Global Variable {#global-variable}
+### Global Variable <a id="global-variable"></a>
 
 You should declare a global variable to store the I/O pin number that the switch is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the button to a different pin number\).
 
@@ -76,7 +76,7 @@ This line of code does 3 things \(in order\):
 **SWITCH = KEYWORD:**  You **cannot** use "switch" as the name of a variable \(or a custom function\) because [`switch()`](http://www.wiring.org.co/reference/switch_.html) is a reserved keyword in the Wiring programming language.
 {% endhint %}
 
-### Set Pin Mode {#set-pin-mode}
+### Set Pin Mode <a id="set-pin-mode"></a>
 
 You need to set the pin mode for the magnetic switch to be used as an input.
 
@@ -91,7 +91,7 @@ The `pinMode()` method requires two parameters inside its parentheses \(in this 
 1. **The I/O pin number**, which can be the actual pin number \(such as: `D0`, etc.\) or a variable that stores a pin number. In this example, a variable named `magSwitch` is listed. If necessary, change this to match the variable name for your magnetic switch.
 2. **The mode value**, which will always be `INPUT_PULLUP` for a magnetic switch.
 
-### Check Switch {#check-if-button-pressed}
+### Check Switch <a id="check-if-button-pressed"></a>
 
 The `digitalRead()` method is used to check whether a magnetic switch is currently open or closed.
 

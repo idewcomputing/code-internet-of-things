@@ -12,7 +12,7 @@ For example, fitness trackers use accelerometers to count steps by detecting cha
 
 Your accelerometer is sensitive enough that it can be used to even tiny changes in motion caused by a nearby tap or bump. For example, if your Photon device is on a table, the accelerometer would be able to detect if you tapped the table with a finger.
 
-#### ORIENTATION \(TILT\) {#orientation-tilt}
+#### ORIENTATION \(TILT\) <a id="orientation-tilt"></a>
 
 Even if a device with an accelerometer is **not** moving, the accelerometer can detect the orientation \(tilt\) of the device by measuring the acceleration due to Earth's gravity, which is a constant downward force acting on all objects. The accelerometer can determine if the object is parallel to the Earth's surface or if it's tilted.
 
@@ -105,7 +105,7 @@ You need to **manually** add this `#include` statement \(on new line **after** o
 #include <math.h>
 ```
 
-### Global Variable {#global-variable}
+### Global Variable <a id="global-variable"></a>
 
 You need to create a new object using the `MMA8452Q` class in the included SparkFun MMA8452Q library, and assign this object to a global variable named `accel`.
 

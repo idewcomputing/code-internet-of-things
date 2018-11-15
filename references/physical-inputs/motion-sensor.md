@@ -53,7 +53,7 @@ The basic steps to use a motion sensor in your app code are:
 2. Set the pin mode for the motion sensor pin in the `setup()` function.
 3. Use a `digitalRead()` statement to check whether the sensor detects any motion, and add code statements that should be performed if motion is detected \(or not detected\).
 
-### Global Variable {#global-variable}
+### Global Variable <a id="global-variable"></a>
 
 You should declare a global variable to store the I/O pin number that the motion sensor's data wire is connected to. This will make it easier to understand your code \(and easier to modify the code if you were to connect the motion sensor to a different pin number\).
 
@@ -69,7 +69,7 @@ This line of code does 3 things \(in order\):
 2. **It declares the variable's name.** In this example, the variable will be called `motion`. You can change the variable name, but choose a name that will make sense to anyone reading the code.
 3. **It assigns a value to the variable.** In this example, the variable's value will be equal to `D0`. If necessary, modify this value to match the actual I/O pin number that your button is connected to.
 
-### Set Pin Mode {#set-pin-mode}
+### Set Pin Mode <a id="set-pin-mode"></a>
 
 You need to set the pin mode for the motion sensor to be used as an input.
 
