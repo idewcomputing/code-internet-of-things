@@ -58,7 +58,7 @@
   * [Temperature Sensor](references/physical-inputs/temperature-sensor.md)
   * [Soil Moisture Sensor](references/physical-inputs/soil-moisture-sensor.md)
   * [Accelerometer](references/physical-inputs/accelerometer.md)
-  * [Ultrasonic Sensor](references/physical-inputs/ultrasonic-sensor.md)
+  * [Ultrasonic Sensor \*](references/physical-inputs/ultrasonic-sensor.md)
 * [Physical Outputs](references/physical-outputs/README.md)
   * [LED Lights](references/physical-outputs/led-lights.md)
   * [Speaker](references/physical-outputs/speaker.md)

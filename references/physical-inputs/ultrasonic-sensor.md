@@ -1,4 +1,4 @@
-# Ultrasonic Sensor
+# Ultrasonic Sensor \*
 
 {% hint style="info" %}
 **ADD-ON COMPONENT:**  The SparkFun Photon Kit does **NOT** include an ultrasonic sensor as a standard component. However, SparkFun sells the [HC-SR04 Ultrasonic Sensor](https://www.sparkfun.com/products/13959), which can be easily connected to a Photon. Your teacher may have added this sensor to your kit. 
