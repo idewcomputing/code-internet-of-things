@@ -2,7 +2,7 @@
 
 ## What's Particle Build?
 
-​[Particle Build](https://login.particle.io/build) is an online code editor \(web IDE\) provided by Particle. Particle Build is part of the Particle Cloud platform. You will use Particle Build to code and store all your Photon device apps.
+​[Particle Build](https://build.particle.io/) is an online code editor \(web IDE\) provided by Particle. Particle Build is part of the Particle Cloud platform. You will use Particle Build to code and store all your Photon device apps.
 
 The Photon device itself can only store and run **one** app at a time. However, you can create and save multiple apps in Particle Build. When you need to update the specific app stored on your Photon device, you'll do this in Particle Build – and your Photon will download the new app over Wi-Fi.
 
