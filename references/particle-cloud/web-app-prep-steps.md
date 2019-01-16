@@ -37,7 +37,7 @@ Your web app JS file will be loaded as a local file from your web app folder \(w
 Add this to your web app HTML file **within** the `<body>` section \(just before the closing `</body>` tag\):
 
 ```markup
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.2.3/particle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.3.0/particle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="code.js"></script>
 ```

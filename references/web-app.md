@@ -25,7 +25,7 @@ You can use this starter code for your HTML file named `index.html`:
         
         
         <!-- Load JavaScript files -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.2.3/particle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.3.0/particle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="code.js"></script>
     </body>
