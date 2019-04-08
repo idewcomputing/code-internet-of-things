@@ -2,7 +2,7 @@
 
 You can create a web app that interacts with your Photon device through Particle Cloud.
 
-Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `code.js`.
+Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `script.js`.
 
 This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to add to the starter code \(and modify certain parts\).
 
@@ -27,7 +27,7 @@ You can use this starter code for your HTML file named `index.html`:
         <!-- Load JavaScript files -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.3.0/particle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="code.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
 ```
@@ -52,7 +52,7 @@ At the bottom of the `<body>` section, there are `<script>` tags to load several
 
 1. Particle API JS library:  `particle.min.js`
 2. jQuery JS library:  `jquery.min.js`
-3. Your web app JS file:  `code.js`
+3. Your web app JS file:  `script.js`
 
 The [Particle API JS library](https://docs.particle.io/reference/javascript/) contains methods to allow your web app to interact with your Photon device through Particle Cloud. You'll use Particle methods in your web app JS file.
 
@@ -89,7 +89,7 @@ You'll typically want to add CSS to style other HTML elements in your web app, i
 
 ## JS
 
-You can use this starter code for your JS file named `code.js` \(be sure to modify\):
+You can use this starter code for your JS file named `script.js` \(be sure to modify\):
 
 ```javascript
 var particle = new Particle();

@@ -14,18 +14,18 @@ Your web app HTML file \(`index.html`\) should include `<script>` tags to load t
 
 1. Particle API JS library:  `particle.min.js`
 2. jQuery JS library:  `jquery.min.js`
-3. Your web app JS file:  `code.js`
+3. Your web app JS file:  `script.js`
 
 The [Particle API JS library](https://docs.particle.io/reference/javascript/) contains methods to allow your web app to interact with your Photon device through Particle Cloud. You'll use Particle methods in your web app JS file.
 
 The [jQuery JS library](https://api.jquery.com/) contains methods that make it easy to modify the content and style of your web app by dynamically changing its HTML and CSS. You'll use jQuery methods in your web app JS file.
 
 {% hint style="info" %}
-**JQUERY = OPTIONAL:**  Loading jQuery is optional. However, it will be much easier to program your web app JS if you can incorporate jQuery statements into your code.
+**JQUERY = OPTIONAL:**  Loading jQuery is optional. However, it will be much easier to code your web app JS if you can incorporate jQuery statements.
 {% endhint %}
 
 {% hint style="success" %}
-**IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file must be listed **before** the `<script>` tag that loads your web app JS file \(`code.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
+**IMPORTANT:**  The `<script>` tag in your HTML that loads the Particle API JS file \(`particle.min.js`\) must be listed **before** the `<script>` tag that loads your web app JS file \(`script.js`\). Otherwise, if their order is reversed, your web app won't be able to interact with your Photon.
 {% endhint %}
 
 ### Option 1: Load from CDN
@@ -39,7 +39,7 @@ Add this to your web app HTML file **within** the `<body>` section \(just before
 ```markup
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particle-api-js/7.3.0/particle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="code.js"></script>
+<script src="script.js"></script>
 ```
 
 ### Option 2: Load Local Files
@@ -53,14 +53,14 @@ Add this to your web app HTML file **within** the `<body>` section \(just before
 ```markup
 <script src="particle.min.js"></script>
 <script src="jquery.min.js"></script>
-<script src="code.js"></script>
+<script src="script.js"></script>
 ```
 
 Be sure the file names listed in the `<script>` tags match the file names in your web app folder.
 
 ## Create Web App JS File
 
-Be sure your web app folder contains a JavaScript file named:  `code.js`
+Be sure your web app folder contains a JavaScript file named:  `script.js`
 
 This web app JS file will contain your JavaScript code to interact with your Photon device through Particle Cloud. Your JS code will also dynamically modify your HTML and CSS to display updated information from your Photon device.
 
