@@ -148,11 +148,11 @@ Possible modifications to this custom function:
 * If you used different names for the global variables representing the transmitter \(`TRIG_PIN`\) and receiver \(`ECHO_PIN`\), then be sure to modify this function to use those variable names instead.
 * If you want the function to return the distance measurement in units of **centimeters** \(instead of inches\), then modify the `return` statement towards the end of the function.
 
-### Call Function in Loop
+### Call Function to Measure Distance
 
 Each time you need a new distance measurement, you'll need to call the `measureDistance()` function.
 
-To call this custom function, add this code within the `loop()` function \(or another custom function\):
+To call this custom function, add this code within the `loop()` function \(or within another custom function\):
 
 ```cpp
     float sensorDist = measureDistance();
@@ -162,7 +162,18 @@ To call this custom function, add this code within the `loop()` function \(or an
 
 A local variable named `sensorDist` is declared that will have a data type of `float` \(decimal number\).  This variable will be made equal to the value returned by the `measureDistance()` function.
 
-You'll need add code to do something with the distance measurement stored in `sensorDist`.
+You'll need add code to do something with the distance measurement stored in `sensorDist`. It's common to use an `if` statement \(or an if-else statement\) to perform certain actions based on whether the distance is less than \(or greater than\) a specific value.
+
+For example, this code example will turn on an LED light if the distance is less than 6 inches \(otherwise it will turn the LED off\):
+
+```cpp
+    float sensorDist = measureDistance();
+    if (sensorDist < 6) {
+        digitalWrite(LED, HIGH);
+    } else {
+        digitalWrite(LED, LOW);
+    }
+```
 
 #### TEST ULTRASONIC SENSOR
 
