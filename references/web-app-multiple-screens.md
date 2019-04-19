@@ -6,7 +6,7 @@ Your web app will be a [single-page application](https://en.wikipedia.org/wiki/S
 
 This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to add to the starter code \(and modify certain parts\).
 
-This starter code has been designed to mimic the appearance and interaction of a native mobile app. An icon-based navigation menu will be displayed at the bottom of the page to allow the user to switch between screens to perform different tasks or view different information.
+This starter code has been designed to mimic the appearance and interaction of a native mobile app. A persistent navigation menu with icons will be displayed at the bottom of the  viewport to allow the user to switch between screens to perform different tasks or view different information.
 
 By default, this app code is designed to show 4 different screens \(but you can modify the code to change the number of screens\). This app code also has a `<div>` section that can be use to display an incoming notification from your smart device.
 
@@ -128,15 +128,152 @@ The [jQuery JS library](https://api.jquery.com/) contains methods that make it e
 
 You can use this starter code for your CSS file named `style.css`:
 
+```css
+/* Add or modify CSS for your web app */
 
+* {
+  box-sizing: border-box; /* use traditional box model sizing */
+}
 
-This CSS styles the `<body>` section of your web app. However, you can modify this CSS if desired.
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* #notification  */
+#notification {
+  display: none; /* hide until needed */
+  position: fixed; /* fix to viewport */
+  top: 0; /* place at top of viewport */
+  left: 50%;
+  transform: translate(-50%, 10px);
+  max-width: 300px;
+  width: calc(100vw - 20px);
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* close button for notification */
+.closebtn {
+  margin: -15px -15px 10px 10px;
+  padding: 10px;
+  color: #888888;
+  font-weight: bold;
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover effect for close button */
+.closebtn:hover {
+  color: #000000;
+}
+
+/* .screen class applies to all screens */
+.screen {
+  max-width: 480px; /* mimic largest phone width */
+  width: 100vw; /* width of viewport */
+  height: calc(100vh - 4.5em); /* height of viewport minus height of #navigation menu */
+  margin: 0 auto;
+  padding: 20px 10px;
+  overflow: auto;
+  border: 1px solid #888888;
+  /* can add other CSS for all screens, such as background-color, etc. */
+
+}
+
+/* show #screen1 when app first starts */
+#screen1 {
+	display: block;
+}
+
+/* hide other screens when app first starts */
+#screen2, #screen3, #screen4 {
+	display: none;
+}
+
+/* can add custom CSS for each specific screen */
+#screen1 {
+
+}
+
+#screen2 {
+
+}
+
+#screen3 {
+
+}
+
+#screen4 {
+
+}
+
+/* #navigation menu fixed to bottom of viewport */
+#navigation {
+  position: fixed; /* fix to viewport */
+  bottom: 0; /* place at bottom of viewport */
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 480px; /* mimic largest phone width */
+  width: 100vw; /* width of viewport */
+  height: 4.5em;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #888888;
+}
+
+/* nav menu options */
+nav > a {
+	display: inline-block;
+	/* for max-width and width, divide by number of screens */
+	max-width: calc((480px / 4) - 4px);
+	width: calc((100vw / 4) - 4px);
+	margin: 0;
+	padding: 0.5em 0;
+	text-align: center;
+	background-color: #ffffff;
+	color: #888888;
+	transition: 0.3s;
+}
+
+/* hover effect for nav menu options */
+nav > a:hover {
+	background-color: #eeeeee;
+}
+
+/* .active class indicates current screen within nav menu */
+nav > a.active {
+	background-color: #ffffff;
+	color: #0099ff;
+}
+
+/* nav menu icon label */
+nav > a > p {
+	font-size: 0.75em;
+	margin: 0.5em 0 0;
+}
+
+/* can add CSS for other elements, classes, or IDs */
+
+```
+
+This CSS styles certain elements, classes, and IDs within your web app. However, you can modify some of this CSS if desired.
 
 You'll typically want to add CSS to style other HTML elements in your web app, in order to produce the desired layout and appearance for your app's user interface.
 
 ## JS
 
-You can use this starter code for your JS file named `script.js` \(be sure to modify\):
+You can use this starter code for your JS file named `script.js`:
 
 
 
