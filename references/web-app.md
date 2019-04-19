@@ -6,7 +6,7 @@ Your web app will consist of an HTML file named`index.html`, a CSS file named `s
 
 If your web app will consist of a **single** screen, you can use the starter code below for your HTML, CSS, and JS files. Then you'll have to add your own code, as well as modify certain parts of the starter code.
 
-If your web app will need **multiple** screens, use this other starter code instead. 
+If your web app will need **multiple** screens, [use this other starter code instead](web-app-multiple-screens.md). 
 
 ## HTML
 
