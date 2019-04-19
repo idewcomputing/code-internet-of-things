@@ -305,7 +305,7 @@ function showNotification() {
   // choose temporary or persistent notification
   // only use one - comment out unused option
 
-  // temporary - closes automatically (can also close manually)
+  // temporary - closes automatically after delay (can also close manually)
   $("#notification").slideDown("fast").delay(5000).slideUp();
 
   // persistent - must close manually
