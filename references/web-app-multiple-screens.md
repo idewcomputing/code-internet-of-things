@@ -90,27 +90,27 @@ In the `<head>` section, there is a `<link>` tag to load a CSS stylesheet file n
 
 There is also a `<link>` tag to load a CSS stylesheet from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free). This will allow you to display different icons using HTML code that you'll copy from Font Awesome.
 
-#### DIV FOR NOTIFICATION
+#### &lt;DIV&gt; FOR NOTIFICATION
 
 At the beginning of the `<body>` section, there is a `<div>` section with an id name of`"notification"` that can be used to display a popup notification message. This &lt;div&gt; will normally be hidden, but you can use JavaScript to display the notification.
 
-If your web app **won't** need to display notifications, you can delete this `<div>` section \(though you can just leave it and simply not use it - in case, you change your mind later\).
+If your web app **won't** need to display notifications, you can delete this `<div>` section \(though you can just leave it and simply not use it – in case, you change your mind later\).
 
-For example, when an event notification is received from your smart device, your JavaScript can make the notification `<div>` appear \(and, if necessary, can customize the message within the notification\). The notification will appear as a popup at the top of the current screen \(though you can change the position if desired\).
+For example, when an event notification is received from your smart device, your JavaScript can make the notification `<div>` appear \(and can customize the message within the notification, if needed\). The notification will appear as a popup at the top of the current screen \(though you can change the position if desired\).
 
-#### DIV FOR EACH SCREEN
+#### &lt;DIV&gt; FOR EACH SCREEN
 
 In the middle of the `<body>` section, there are several `<div>` sections to represent the different screens in your web app.  Each `<div>` section has the same class name of `screen` to classify it as a screen but also has a unique id name to identify it as a specific screen:  `screen1`, `screen2`, `screen3`, or `screen4`.
 
 The starter code within each `<div>` simply displays a heading for the name of the screen \(so you can see that clicking the navigation menu actually does switch screens\).  You'll remove \(or revise\) this heading, and add your own HTML for each screen to display text, images, buttons, etc.
 
-#### NAV FOR SCREEN MENU
+#### &lt;NAV&gt; FOR SCREEN MENU
 
 Towards the end of the `<body>` section, there is a `<nav>` section to display a navigation menu for switching between the different screens.
 
 The `<nav>` contains anchor tags \(`<a>`\) for each screen. Normally, an anchor tag contains a link to a different HTML page, but in this case, the tags simply have an `onclick` attribute that will call a custom function in your JavaScript that will display a specific `<div>` screen.
 
-Each anchor tag displays an icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free) \(using special `<i>` code\), along with a text label. You can change the icon and the text label.
+Each anchor tag displays an icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free) \(using special `<i>` code\), along with a text label. You can change the icon and the text label. Each icon has the Font Awesome `fa-2x` class added, in order to display the icon at double size.
 
 #### LOAD JAVASCRIPT FILES
 
@@ -275,9 +275,53 @@ You'll typically want to add CSS to style other HTML elements in your web app, i
 
 You can use this starter code for your JS file named `script.js`:
 
+```javascript
+var particle = new Particle();
+var myDevice = "0000"; // Photon device ID
+var myToken = "0000"; // Photon access token
 
+// functions that hide all screens & then show a specific screen
+function showScreen1() {
+  $(".screen").hide();
+  $("#screen1").show();
+}
 
+function showScreen2() {
+  $(".screen").hide();
+  $("#screen2").show();
+}
 
+function showScreen3() {
+  $(".screen").hide();
+  $("#screen3").show();
+}
+
+function showScreen4() {
+  $(".screen").hide();
+  $("#screen4").show();
+}
+
+function showNotification() {
+  // choose temporary or persistent notification
+  // only use one - comment out unused option
+
+  // temporary - closes automatically (can also close manually)
+  $("#notification").slideDown("fast").delay(5000).slideUp();
+
+  // persistent - must close manually
+  //$("#notification").slideDown("fast");
+}
+
+// jQuery click function to indicate active screen in nav menu
+$(document).ready(function(){
+  $(".menu").click(function() {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
+
+// Add other JS for your smart device web app
+
+```
 
 {% hint style="danger" %}
 **IMPORTANT:**  You **must** modify this JS code to insert your actual Photon device ID and access token. Otherwise, your web app will **not** work properly.
@@ -286,6 +330,8 @@ You can use this starter code for your JS file named `script.js`:
 This JS creates a new `Particle()` object and assigns it to a global variable named `particle`. This object has built-in methods \(functions\) that can be used to interact with your Photon device through Particle Cloud.
 
 This JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
+
+This JS contains functions to show each specific screen in your web app. There is also a function to show the notification \(if your web app needs to display popup notifications\). Finally, there's a function to highlight the current screen in the navigation menu.
 
 Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
