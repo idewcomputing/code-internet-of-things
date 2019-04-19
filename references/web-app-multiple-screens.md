@@ -8,7 +8,7 @@ This section contains starter code that you can use for your HTML, CSS, and JS f
 
 This starter code has been designed to mimic the appearance and interaction of a native mobile app. An icon-based navigation menu will be displayed at the bottom of the page to allow the user to switch between screens to perform different tasks or view different information.
 
-By default, this app code is designed to show 4 different screens \(but you can modify the code to change the number of screens\). This app code also has a `<div>` section that can be use to display an incoming push notification from your smart device.
+By default, this app code is designed to show 4 different screens \(but you can modify the code to change the number of screens\). This app code also has a `<div>` section that can be use to display an incoming notification from your smart device.
 
 ## HTML
 
@@ -92,19 +92,29 @@ There is also a `<link>` tag to load a CSS stylesheet from [Font Awesome](https:
 
 #### DIV FOR NOTIFICATION
 
-At the beginning of the &lt;body&gt; section, there is a &lt;div&gt; section with the id name of "notification" that will can be used to display an incoming push notification message from your smart device. 
+At the beginning of the `<body>` section, there is a `<div>` section with an id name of`"notification"` that can be used to display a popup notification message. This &lt;div&gt; will normally be hidden, but you can use JavaScript to display the notification.
+
+If your web app **won't** need to display notifications, you can delete this `<div>` section \(though you can just leave it and simply not use it - in case, you change your mind later\).
+
+For example, when an event notification is received from your smart device, your JavaScript can make the notification `<div>` appear \(and, if necessary, can customize the message within the notification\). The notification will appear as a popup at the top of the current screen \(though you can change the position if desired\).
 
 #### DIV FOR EACH SCREEN
 
-In the `<body>` section, there are several blank lines are where you will add HTML for your web app.  \(You can use more lines, obviously.\)  This is where you might display text, images, links, buttons, etc.
+In the middle of the `<body>` section, there are several `<div>` sections to represent the different screens in your web app.  Each `<div>` section has the same class name of `screen` to classify it as a screen but also has a unique id name to identify it as a specific screen:  `screen1`, `screen2`, `screen3`, or `screen4`.
+
+The starter code within each `<div>` simply displays a heading for the name of the screen \(so you can see that clicking the navigation menu actually does switch screens\).  You'll remove \(or revise\) this heading, and add your own HTML for each screen to display text, images, buttons, etc.
 
 #### NAV FOR SCREEN MENU
 
-Towards the end of the 
+Towards the end of the `<body>` section, there is a `<nav>` section to display a navigation menu for switching between the different screens.
+
+The `<nav>` contains anchor tags \(`<a>`\) for each screen. Normally, an anchor tag contains a link to a different HTML page, but in this case, the tags simply have an `onclick` attribute that will call a custom function in your JavaScript that will display a specific `<div>` screen.
+
+Each anchor tag displays an icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free) \(using special `<i>` code\), along with a text label. You can change the icon and the text label.
 
 #### LOAD JAVASCRIPT FILES
 
-At the bottom of the `<body>` section, there are `<script>` tags to load several JavaScript files into your web app:
+At the end of the `<body>` section, there are `<script>` tags to load several JavaScript files into your web app:
 
 1. Particle API JS library:  `particle.min.js`
 2. jQuery JS library:  `jquery.min.js`
