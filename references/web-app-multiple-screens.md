@@ -337,3 +337,12 @@ Then you'll need to add the other necessary JS for your web app. Because your HT
 
 Review the reference section on [Particle Cloud](particle-cloud/) to learn how to make your web app JS interact with your Photon device app.
 
+## Resources
+
+If you want to learn more about web development or need a quick reference, consult these tutorials and references from [W3Schools](https://www.w3schools.com/):
+
+* [HTML](https://www.w3schools.com/html/default.asp)
+* [CSS](https://www.w3schools.com/css/default.asp)
+* [JavaScript](https://www.w3schools.com/js/default.asp)
+* [jQuery](https://www.w3schools.com/jquery/default.asp)
+
