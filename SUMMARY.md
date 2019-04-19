@@ -43,7 +43,8 @@
 
 * [Particle Build](references/particle-build.md)
 * [Photon Device App](references/device-app.md)
-* [Web App](references/web-app.md)
+* [Web App - Single Screen](references/web-app.md)
+* [Web App - Multiple Screens](references/web-app-multiple-screens.md)
 * [Particle Cloud](references/particle-cloud/README.md)
   * [Web App Prep Steps](references/particle-cloud/web-app-prep-steps.md)
   * [Get Device Variable](references/particle-cloud/get-device-variable.md)

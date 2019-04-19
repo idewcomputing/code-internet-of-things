@@ -1,10 +1,12 @@
-# Web App
+# Web App - Single Screen
 
 You can create a web app that interacts with your Photon device through Particle Cloud.
 
 Your web app will consist of an HTML file named`index.html`, a CSS file named `style.css`, and a JavaScript file named `script.js`.
 
-This section contains starter code that you can use for your HTML, CSS, and JS files. You'll need to add to the starter code \(and modify certain parts\).
+If your web app will consist of a **single** screen, you can use the starter code below for your HTML, CSS, and JS files. Then you'll have to add your own code, as well as modify certain parts of the starter code.
+
+If your web app will need **multiple** screens, use this other starter code instead. 
 
 ## HTML
 
@@ -16,7 +18,7 @@ You can use this starter code for your HTML file named `index.html`:
     <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Smart Device</title>
+        <title>Smart Device Web App</title>
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
