@@ -80,8 +80,8 @@ This HTML has been set up to display 4 different screens. However, you can modif
 This HTML does several things:
 
 1. It loads two CSS stylesheet files.
-2. It has `<div>` sections to display a notification message and 4 different screens.
-3. It has a `<nav>` section to show the icon-based navigation menu for the screens.
+2. It has `<div>` sections for a notification message and 4 different screens.
+3. It has a `<nav>` section to show the navigation menu for the screens.
 4. It loads three JavaScript files.
 
 #### LOAD CSS STYLESHEETs
@@ -110,7 +110,7 @@ Towards the end of the `<body>` section, there is a `<nav>` section to display a
 
 The `<nav>` contains anchor tags \(`<a>`\) for each screen. Normally, an anchor tag contains a link to a different HTML page, but in this case, the tags simply have an `onclick` attribute that will call a custom function in your JavaScript that will display a specific `<div>` screen.
 
-Each anchor tag displays an icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free) \(using special `<i>` code\), along with a text label. You can change the icon and the text label. Each icon has the Font Awesome `fa-2x` class added, in order to display the icon at double size.
+Each anchor tag displays an icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&m=free) \(using special `<i>` code\), along with a text label. You can change the icon and the text label. In the starter code, each icon has the Font Awesome `fa-2x` class added, in order to display the icon at double size.
 
 #### LOAD JAVASCRIPT FILES
 
