@@ -281,24 +281,33 @@ var myDevice = "0000"; // Photon device ID
 var myToken = "0000"; // Photon access token
 
 // functions that hide all screens & then show a specific screen
+// these functions also update navigation menu to highlight active screen
 function showScreen1() {
   $(".screen").hide();
   $("#screen1").show();
+  $(".menu").removeClass("active");
+  $(".menu").eq(0).addClass("active"); // eq(0) = 1st menu item
 }
 
 function showScreen2() {
   $(".screen").hide();
   $("#screen2").show();
+  $(".menu").removeClass("active");
+  $(".menu").eq(1).addClass("active"); // eq(1) = 2nd menu item
 }
 
 function showScreen3() {
   $(".screen").hide();
   $("#screen3").show();
+  $(".menu").removeClass("active");
+  $(".menu").eq(2).addClass("active"); // eq(2) = 3rd menu item
 }
 
 function showScreen4() {
   $(".screen").hide();
   $("#screen4").show();
+  $(".menu").removeClass("active");
+  $(".menu").eq(3).addClass("active"); // eq(3) = 4th menu item
 }
 
 function showNotification() {
@@ -312,13 +321,6 @@ function showNotification() {
   //$("#notification").slideDown("fast");
 }
 
-// jQuery click function to indicate active screen in nav menu
-$(document).ready(function(){
-  $(".menu").click(function() {
-    $(this).addClass("active").siblings().removeClass("active");
-  });
-});
-
 // Add other JS for your smart device web app
 
 ```
@@ -331,7 +333,7 @@ This JS creates a new `Particle()` object and assigns it to a global variable na
 
 This JS also declares global variables to store your Photon device ID and access token. You must modify these lines to list [your actual device ID and access token](particle-cloud/web-app-prep-steps.md#device-id-and-access-token), which you will need to get from your team's Particle Build account.
 
-This JS contains functions to show each specific screen in your web app. There is also a function to show the notification \(if your web app needs to display popup notifications\). Finally, there's a function to highlight the current screen in the navigation menu.
+This JS contains functions to show a specific screen in your web app \(and also highlight the current screen in the navigation menu\). There is also a function to show the notification \(if your web app needs to display popup notifications\).
 
 Then you'll need to add the other necessary JS for your web app. Because your HTML file loaded the Particle API JS library and jQuery JS library, you can include Particle statements and jQuery statements within your JS code.
 
