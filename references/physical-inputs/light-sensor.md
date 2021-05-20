@@ -48,7 +48,9 @@ To connect a light sensor to your Photon using the breadboard, you will need:
       </td>
     </tr>
   </tbody>
-</table>{% hint style="success" %}
+</table>
+
+{% hint style="success" %}
 **3.3V MAXIMUM:**  Analog inputs, such as the light sensor, require 3.3V of power for accurate measurements. Connect the light sensor to the 3.3V pin on your Photon, or connect it to a positive power rail that's connected to the 3.3V pin.
 {% endhint %}
 

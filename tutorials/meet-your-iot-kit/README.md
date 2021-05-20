@@ -25,6 +25,6 @@ SparkFun created its own Photon kit by incorporating the Photon P1 microcontroll
 {% endhint %}
 
 {% hint style="success" %}
-**WI-FI NETWORK:**  Photon devices are relatively easy to [setup to connect to home Wi-Fi networks or mobile hotspot devices](https://docs.particle.io/guide/getting-started/connect/photon/). Photon devices running firmware version 0.7.0 or higher can be setup to connect to WPA2 Enterprise Wi-Fi networks \(such as those typically found in schools, universities, and corporations\). Teachers may need to coordinate with their school's IT administrator to follow Particle's guide to [WPA2 Enterprise Setup](https://docs.particle.io/faq/particle-devices/wpa2-enterprise/photon/).
+**WI-FI NETWORK:**  Photon devices are relatively easy to [setup to connect to home Wi-Fi networks or mobile hotspot devices](https://docs.particle.io/guide/getting-started/connect/photon/). Photon devices running firmware version 0.7.0 or higher can be setup to connect to WPA2 Enterprise Wi-Fi networks \(such as those typically found in schools, universities, and corporations\). Teachers may need to coordinate with their school's IT administrator to follow Particle's guide to [WPA2 Enterprise Setup](https://docs.particle.io/support/particle-devices-faq/wpa2-enterprise/).
 {% endhint %}
 
